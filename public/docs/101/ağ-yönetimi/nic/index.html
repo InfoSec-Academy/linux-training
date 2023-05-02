@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="iproute ve net-tools bu iki paket bize Network kartımız hakkında bilgi verecek ip ve ifconfig komutlarını barındırmaktadır.
+NIC #  NIC (Network Interface Card), ağ arayüz kartı olarak da bilinen bir donanım bileşenidir. Bilgisayar veya diğer cihazlar için ağ bağlantısı sağlar ve kablosuz veya kablolu ağa bağlanmak için kullanılabilir.
+NIC, bir bilgisayarın ağa bağlanmasına izin veren bir ara yüz sağlar. Bir NIC, Ethernet kablosu, fiber optik kablo veya kablosuz ağa bağlanmak için kullanılan antenler gibi fiziksel bağlantı noktaları sağlar.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="NIC" />
+<meta property="og:description" content="iproute ve net-tools bu iki paket bize Network kartımız hakkında bilgi verecek ip ve ifconfig komutlarını barındırmaktadır.
+NIC #  NIC (Network Interface Card), ağ arayüz kartı olarak da bilinen bir donanım bileşenidir. Bilgisayar veya diğer cihazlar için ağ bağlantısı sağlar ve kablosuz veya kablolu ağa bağlanmak için kullanılabilir.
+NIC, bir bilgisayarın ağa bağlanmasına izin veren bir ara yüz sağlar. Bir NIC, Ethernet kablosu, fiber optik kablo veya kablosuz ağa bağlanmak için kullanılan antenler gibi fiziksel bağlantı noktaları sağlar." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/docs/101/a%C4%9F-y%C3%B6netimi/nic/" /><meta property="article:section" content="docs" />
+
+
+
+<title>NIC | Linux Eğitim</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.33a48f5432973b8ff9a82679d9e45d67f2c15d4399bd2829269455cfe390b5e8.css" integrity="sha256-M6SPVDKXO4/5qCZ52eRdZ/LBXUOZvSgpJpRVz&#43;OQteg=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.53a351c9376bbdf57038a0b23bb1962158bc7ad986e757ee0e69edad08038d87.js" integrity="sha256-U6NRyTdrvfVwOKCyO7GWIVi8etmG51fuDmntrQgDjYc=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Linux Eğitim</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-8c9421baa8361060d783c5adf6e0016b" class="toggle" checked />
+    <label for="section-8c9421baa8361060d783c5adf6e0016b" class="flex justify-between">
+      <a href="/docs/101/" class="">Linux 101</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a71bc27f68282d703f658ade56ec3588" class="toggle"  />
+    <label for="section-a71bc27f68282d703f658ade56ec3588" class="flex justify-between">
+      <a role="button" class="">Linux</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/linux/nedir/" class="">Linux Nedir</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/linux/tarihcesi/" class="">Linux Tarihçesi</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/linux/da%C4%9F%C4%B1t%C4%B1mlar/" class="">Dağıtımlar</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/linux/terminoloji/" class="">Terminoloji</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-d878beecb5059aac8f4f57cc1c7d19bc" class="toggle"  />
+    <label for="section-d878beecb5059aac8f4f57cc1c7d19bc" class="flex justify-between">
+      <a role="button" class="">Kurulum</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/kurulum/terminoloji/" class="">Terminoloji</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/kurulum/fedora-server/" class="">Fedora Kurulum</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/kurulum/ubuntu-server/" class="">Ubuntu Kurulum</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-ccf3432652f2f661d834afb94d891a58" class="toggle"  />
+    <label for="section-ccf3432652f2f661d834afb94d891a58" class="flex justify-between">
+      <a role="button" class="">Komutlar</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/komutlar/kabuk-komut/" class="">Temel komutlar</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-dd95113271805acbc8b49838b9ba9c68" class="toggle"  />
+    <label for="section-dd95113271805acbc8b49838b9ba9c68" class="flex justify-between">
+      <a role="button" class="">Kullanıcı Ve Yetkilendirme</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/kullan%C4%B1c%C4%B1-ve-yetkilendirme/kullan%C4%B1c%C4%B1-olu%C5%9Fturma/" class="">Kullanıcı Oluşturma</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/kullan%C4%B1c%C4%B1-ve-yetkilendirme/kullan%C4%B1c%C4%B1-silme/" class="">Kullanıcı Silme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/kullan%C4%B1c%C4%B1-ve-yetkilendirme/kullan%C4%B1c%C4%B1-%C3%B6zellikleri-de%C4%9Fi%C5%9Ftirme/" class="">Kullanıcı Özelliklerini Değiştirme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/kullan%C4%B1c%C4%B1-ve-yetkilendirme/dosya-yetkilendirme/" class="">Dosya Yetkilendirme</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-11bb86ac3069fd6d9b24198b6a8417fc" class="toggle"  />
+    <label for="section-11bb86ac3069fd6d9b24198b6a8417fc" class="flex justify-between">
+      <a role="button" class="">Paket Yönetimi</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/paket-y%C3%B6netimi/dpkg/" class="">DPKG</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/paket-y%C3%B6netimi/rpm/" class="">RPM</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/paket-y%C3%B6netimi/terminoloji/" class="">Terminoloji</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-96daf07ed24acff5f86cda3bc15068bb" class="toggle" checked />
+    <label for="section-96daf07ed24acff5f86cda3bc15068bb" class="flex justify-between">
+      <a role="button" class="">Ağ Yönetimi</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/nic/" class="active">NIC</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/ip/" class="">IP</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/resolv/" class="">resolv.conf</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/hosts/" class="">hosts.conf</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/dig/" class="">dig</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/static-ip/" class="">static IP</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/traceroute/" class="">traceroute</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/ethtool/" class="">ethtool</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/terminoloji/" class="">Terminoloji</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4df132e37d2d3ef2d4890ee600809e87" class="toggle"  />
+    <label for="section-4df132e37d2d3ef2d4890ee600809e87" class="flex justify-between">
+      <a href="/docs/102/" class="">Linux 102</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-b23b82d195398c5a48d33ecbaecffe31" class="toggle"  />
+    <label for="section-b23b82d195398c5a48d33ecbaecffe31" class="flex justify-between">
+      <a role="button" class="">Kernel</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/102/kernel/kernel-nedir/" class="">kernel nedir</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>NIC</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#nic">NIC</a></li>
+    <li><a href="#ip-a">ip a</a></li>
+    <li><a href="#ifconfig">ifconfig</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><p><strong>iproute  ve net-tools  bu iki paket bize Network kartımız hakkında bilgi verecek ip ve ifconfig komutlarını barındırmaktadır.</strong></p>
+<h2 id="nic">
+  NIC
+  <a class="anchor" href="#nic">#</a>
+</h2>
+<p>NIC (Network Interface Card), ağ arayüz kartı olarak da bilinen bir donanım bileşenidir. Bilgisayar veya diğer cihazlar için ağ bağlantısı sağlar ve kablosuz veya kablolu ağa bağlanmak için kullanılabilir.</p>
+<p>NIC, bir bilgisayarın ağa bağlanmasına izin veren bir ara yüz sağlar. Bir NIC, Ethernet kablosu, fiber optik kablo veya kablosuz ağa bağlanmak için kullanılan antenler gibi fiziksel bağlantı noktaları sağlar. Bu, bilgisayarın ağa erişim sağlamasını ve veri gönderip almasını sağlar.</p>
+<p>NIC&rsquo;ler, birçok farklı boyutta ve şekilde mevcuttur. Bazı NIC&rsquo;ler, PCI veya PCIe gibi bilgisayarın anakartına yerleştirilirken, diğerleri USB veya Thunderbolt bağlantı noktaları aracılığıyla bilgisayara bağlanır.</p>
+<p>NIC&rsquo;ler, ağ işlemleri için donanım hızlandırma sağlayabilir ve ağ trafiği yönetimi, güvenliği ve yönlendirmesi gibi görevleri yürütebilir. NIC&rsquo;ler, ayrıca özel amaçlı görevler için de yapılandırılabilir, örneğin ağ protokolü analizi yapmak için kullanılabilirler.</p>
+<h2 id="ip-a">
+  ip a
+  <a class="anchor" href="#ip-a">#</a>
+</h2>
+<p>&ldquo;ip a&rdquo; komutu, Linux tabanlı işletim sistemlerinde ağ yapılandırmasını yönetmek için kullanılan bir komuttur. Bu komutun çıktısı, cihazın ağ bağlantılarını, IP adreslerini ve diğer ağ konfigürasyon ayarlarını gösterir.</p>
+<p>örnek çıktı</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>[root@026ddc54726b opt]# ip a
+</span></span><span style="display:flex;"><span>1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+</span></span><span style="display:flex;"><span>    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+</span></span><span style="display:flex;"><span>    inet 127.0.0.1/8 scope host lo
+</span></span><span style="display:flex;"><span>       valid_lft forever preferred_lft forever
+</span></span><span style="display:flex;"><span>17: eth0@if18: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc noqueue state UP group default 
+</span></span><span style="display:flex;"><span>    link/ether 02:42:ac:11:00:02 brd ff:ff:ff:ff:ff:ff link-netnsid 0
+</span></span><span style="display:flex;"><span>    inet 172.17.0.2/16 brd 172.17.255.255 scope global eth0
+</span></span><span style="display:flex;"><span>       valid_lft forever preferred_lft forever
+</span></span></code></pre></div><p>Burada, her bir ağ arayüzü için bir blok görüntülenir.
+Blok, arayüz adı (örneğin &ldquo;lo&rdquo; veya &ldquo;eth0@if18&rdquo;), durumu, MTU (maksimum iletim birimi) ve diğer bilgileri içerir.
+Ayrıca, arayüzün IP adresi (inet) ve MAC adresi (link/ether) de görüntülenir.</p>
+<p><strong>&ldquo;BROADCAST, MULTICAST, UP, LOWER_UP&rdquo;</strong> ifadeleri, bir ağ arayüzünün durumunu ve özelliklerini tanımlayan farklı bayraklardır.</p>
+<ul>
+<li>
+<p>&ldquo;BROADCAST&rdquo; bayrağı, ağ arayüzünün yayın adresini kullanarak diğer cihazlara veri gönderebileceğini gösterir. Bu, cihazın aynı ağda diğer cihazlarla iletişim kurabilmesi için gereklidir.</p>
+</li>
+<li>
+<p>&ldquo;MULTICAST&rdquo; bayrağı, ağ arayüzünün çoklu yayın adreslerini kullanarak diğer cihazlara veri gönderebileceğini gösterir. Bu, özellikle video akışı ve diğer çoklu kullanıcılı uygulamalar için önemlidir.</p>
+</li>
+<li>
+<p>&ldquo;UP&rdquo; bayrağı, ağ arayüzünün etkin olduğunu ve kullanılabilir olduğunu gösterir. Ağ arayüzü, bu bayrağın devre dışı bırakılmasıyla devre dışı bırakılabilir.</p>
+</li>
+<li>
+<p>&ldquo;LOWER_UP&rdquo; bayrağı, ağ arayüzünün fiziksel olarak bağlı olduğunu gösterir. Yani kablo bağlandığında ağ arayüzü otomatik olarak etkinleştirilir ve &ldquo;LOWER_UP&rdquo; bayrağı ayarlanır.</p>
+</li>
+</ul>
+<h2 id="ifconfig">
+  ifconfig
+  <a class="anchor" href="#ifconfig">#</a>
+</h2>
+<p>&ldquo;ifconfig&rdquo; komutu, Unix tabanlı işletim sistemlerinde ağ arayüzlerinin yapılandırması ve yönetimi için kullanılan bir komuttur. Bu komutun çıktısı, cihazın ağ arayüzlerinin durumunu, IP adreslerini, MAC adreslerini ve diğer ağ yapılandırma bilgilerini gösterir.</p>
+<p>örnek çıktı</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>[root@026ddc54726b opt]# ifconfig 
+</span></span><span style="display:flex;"><span>eth0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
+</span></span><span style="display:flex;"><span>        inet 172.17.0.2  netmask 255.255.0.0  broadcast 172.17.255.255
+</span></span><span style="display:flex;"><span>        ether 02:42:ac:11:00:02  txqueuelen 0  (Ethernet)
+</span></span><span style="display:flex;"><span>        RX packets 69518  bytes 102955785 (98.1 MiB)
+</span></span><span style="display:flex;"><span>        RX errors 0  dropped 0  overruns 0  frame 0
+</span></span><span style="display:flex;"><span>        TX packets 36460  bytes 2495651 (2.3 MiB)
+</span></span><span style="display:flex;"><span>        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+</span></span></code></pre></div><p>Bu çıktıda, &ldquo;eth0&rdquo; adlı ağ arayüzü için bilgiler görüntülenir. Ağ arayüzü hakkındaki bilgiler, bayraklar, MTU (maksimum iletim birimi), IP adresi, alt ağ maskesi, yayın adresi ve MAC adresi gibi çeşitli bölümlerde ayrılır.</p>
+<p>Ayrıca, RX (alınan) ve TX (gönderilen) paketlerinin sayısı ve boyutu da görüntülenir. Bu bölümlerde, RX hataları, düşürülen paketler ve diğer sorunlar hakkında da bilgi alınabilir. Benzer şekilde, TX hataları, düşürülen paketler, taşıyıcı hataları ve çakışmalar hakkında da bilgi alınabilir.</p>
+<p>Bu çıktı, ağ arayüzünün durumu, yapılandırması ve performansı hakkında bilgi sağlar ve sorun giderme işlemleri sırasında kullanışlı bir araçtır.</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#nic">NIC</a></li>
+    <li><a href="#ip-a">ip a</a></li>
+    <li><a href="#ifconfig">ifconfig</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

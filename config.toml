@@ -1,0 +1,8 @@
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+title = 'Linux Eğitim'
+theme = 'hugo-book'
+
+[[module.mounts]]
+  source = 'static'
+  target = 'static'

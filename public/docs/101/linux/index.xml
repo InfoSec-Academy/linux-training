@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux Eğitim</title>
+    <link>http://example.org/docs/101/linux/</link>
+    <description>Recent content on Linux Eğitim</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://example.org/docs/101/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux Nedir</title>
+      <link>http://example.org/docs/101/linux/nedir/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/101/linux/nedir/</guid>
+      <description>Linux, açık kaynak kodlu bir işletim sistemidir. Bu işletim sistemi, Linus Torvalds tarafından geliştirilmiş ve dünya genelinde birçok geliştirici tarafından desteklenmektedir. Linux, kullanıcılara güvenli, istikrarlı, özgür ve özelleştirilebilir bir işletim sistemi sunar. Bu işletim sistemi, birçok farklı türdeki cihazda kullanılabilir, örneğin bilgisayarlarda, sunucularda, akıllı telefonlarda, tabletlerde ve hatta arabalarda bile kullanılabilir. Linux, birçok farklı dağıtım (distribution) şeklinde mevcuttur ve her bir dağıtım, belirli bir kullanıcı kitlesine yönelik özellikler sunar.</description>
+    </item>
+    
+    <item>
+      <title>Linux Tarihçesi</title>
+      <link>http://example.org/docs/101/linux/tarihcesi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/101/linux/tarihcesi/</guid>
+      <description>Linux, ilk olarak 1991 yılında Linus Torvalds tarafından geliştirildi. Torvalds, Helsinki Üniversitesi&amp;rsquo;nde bilgisayar bilimleri öğrencisiydi ve MINIX adlı bir işletim sistemi üzerinde çalışıyordu. Ancak MINIX&amp;rsquo;in sınırlamaları onu kısıtladığı için kendi işletim sistemini geliştirmeye karar verdi. Linux, açık kaynaklı bir işletim sistemi olarak geliştirildi ve tüm kaynak kodu kamuya açıktır. Bu, diğer yazılım geliştiricilerinin kodu geliştirmesine, değiştirmesine ve paylaşmasına olanak tanır. Bu nedenle, Linux birçok farklı işletim sistemi dağıtımı ile birlikte gelir, bu da kullanıcıların işletim sistemi için farklı özellikler ve uygulamalar seçmesine olanak tanır.</description>
+    </item>
+    
+    <item>
+      <title>Kurulum</title>
+      <link>http://example.org/docs/101/linux/kurulum/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/101/linux/kurulum/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dağıtımlar</title>
+      <link>http://example.org/docs/101/linux/da%C4%9F%C4%B1t%C4%B1mlar/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/101/linux/da%C4%9F%C4%B1t%C4%B1mlar/</guid>
+      <description>Linux dünyasında birçok farklı dağıtım mevcut ve bazıları diğerlerinden daha popüler veya yaygın olarak kullanılıyor. Debian ve Red Hat, bu dağıtımlardan ikisi. Debian, 1993 yılında Ian Murdock tarafından geliştirildi ve özellikle açık kaynaklı yazılım topluluğu için tasarlandı. Debian, kullanıcı dostu bir arayüz ve stabilite konusunda ün yapmıştır. Ayrıca, paket yöneticisi olan APT sayesinde, yazılım güncellemeleri ve yükleme işlemleri kolaydır. Debian, birçok farklı donanım mimarisi için mevcuttur ve farklı sürümleri var, örneğin stabil, testing ve unstable gibi.</description>
+    </item>
+    
+    <item>
+      <title>Terminoloji</title>
+      <link>http://example.org/docs/101/linux/terminoloji/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/101/linux/terminoloji/</guid>
+      <description>process #  İşlem(process), o anda sistemde çalışan derlenmiş kaynak kodudur.
+PID #  Tüm işlemlerin bir işlem kimliği veya PID&amp;rsquo;si vardır.
+PPID #  PPID (Parent Process ID - Ebeveyn İşlem Kimliği), bir işlemin oluşturulduğu ana işlemi tanımlayan bir numaradır. Yani, herhangi bir işlem oluşturulduğunda, bu işlem bir ana işlem tarafından başlatılmışsa, bu işlemin PPID&amp;rsquo;si, ana işlemin kimliği olacaktır. PPID, işletim sistemi tarafından kullanılır ve işlemlerin yönetimi için önemlidir. Örneğin, bir işlem sona erdiğinde, işletim sistemi, bu işlemin PPID&amp;rsquo;sine sahip olan ana işlemi kontrol ederek, gerektiğinde onu sonlandırabilir.</description>
+    </item>
+    
+  </channel>
+</rss>

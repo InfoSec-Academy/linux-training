@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Traceroute, ağdaki bir hedefe erişmek için verilerin nasıl ilerlediğini gösteren bir ağ teşhis aracıdır. Traceroute, paketlerin izlenebilirliğini sağlamak için ICMP (Internet Control Message Protocol) ve TTL (Time to Live) kullanır. Traceroute, bir hedefe yönelik veri paketleri gönderir ve bu paketlerin yolu boyunca hangi ağ cihazlarından geçtiğini ve hangi cihazlarda gecikme yaşandığını takip eder.
+Traceroute, bir hedefe yönelik veri paketleri gönderir ve her paketin TTL değerini arttırarak gönderir. TTL, her yönlendirici (router) geçişinde bir azaltma işlemi uygular.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="traceroute" />
+<meta property="og:description" content="Traceroute, ağdaki bir hedefe erişmek için verilerin nasıl ilerlediğini gösteren bir ağ teşhis aracıdır. Traceroute, paketlerin izlenebilirliğini sağlamak için ICMP (Internet Control Message Protocol) ve TTL (Time to Live) kullanır. Traceroute, bir hedefe yönelik veri paketleri gönderir ve bu paketlerin yolu boyunca hangi ağ cihazlarından geçtiğini ve hangi cihazlarda gecikme yaşandığını takip eder.
+Traceroute, bir hedefe yönelik veri paketleri gönderir ve her paketin TTL değerini arttırarak gönderir. TTL, her yönlendirici (router) geçişinde bir azaltma işlemi uygular." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/docs/101/a%C4%9F-y%C3%B6netimi/traceroute/" /><meta property="article:section" content="docs" />
+
+
+
+<title>traceroute | Linux Eğitim</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.33a48f5432973b8ff9a82679d9e45d67f2c15d4399bd2829269455cfe390b5e8.css" integrity="sha256-M6SPVDKXO4/5qCZ52eRdZ/LBXUOZvSgpJpRVz&#43;OQteg=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.53a351c9376bbdf57038a0b23bb1962158bc7ad986e757ee0e69edad08038d87.js" integrity="sha256-U6NRyTdrvfVwOKCyO7GWIVi8etmG51fuDmntrQgDjYc=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Linux Eğitim</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-8c9421baa8361060d783c5adf6e0016b" class="toggle" checked />
+    <label for="section-8c9421baa8361060d783c5adf6e0016b" class="flex justify-between">
+      <a href="/docs/101/" class="">Linux 101</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a71bc27f68282d703f658ade56ec3588" class="toggle"  />
+    <label for="section-a71bc27f68282d703f658ade56ec3588" class="flex justify-between">
+      <a role="button" class="">Linux</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/linux/nedir/" class="">Linux Nedir</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/linux/tarihcesi/" class="">Linux Tarihçesi</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/linux/da%C4%9F%C4%B1t%C4%B1mlar/" class="">Dağıtımlar</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/linux/terminoloji/" class="">Terminoloji</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-d878beecb5059aac8f4f57cc1c7d19bc" class="toggle"  />
+    <label for="section-d878beecb5059aac8f4f57cc1c7d19bc" class="flex justify-between">
+      <a role="button" class="">Kurulum</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/kurulum/terminoloji/" class="">Terminoloji</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/kurulum/fedora-server/" class="">Fedora Kurulum</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/kurulum/ubuntu-server/" class="">Ubuntu Kurulum</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-ccf3432652f2f661d834afb94d891a58" class="toggle"  />
+    <label for="section-ccf3432652f2f661d834afb94d891a58" class="flex justify-between">
+      <a role="button" class="">Komutlar</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/komutlar/kabuk-komut/" class="">Temel komutlar</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-dd95113271805acbc8b49838b9ba9c68" class="toggle"  />
+    <label for="section-dd95113271805acbc8b49838b9ba9c68" class="flex justify-between">
+      <a role="button" class="">Kullanıcı Ve Yetkilendirme</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/kullan%C4%B1c%C4%B1-ve-yetkilendirme/kullan%C4%B1c%C4%B1-olu%C5%9Fturma/" class="">Kullanıcı Oluşturma</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/kullan%C4%B1c%C4%B1-ve-yetkilendirme/kullan%C4%B1c%C4%B1-silme/" class="">Kullanıcı Silme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/kullan%C4%B1c%C4%B1-ve-yetkilendirme/kullan%C4%B1c%C4%B1-%C3%B6zellikleri-de%C4%9Fi%C5%9Ftirme/" class="">Kullanıcı Özelliklerini Değiştirme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/kullan%C4%B1c%C4%B1-ve-yetkilendirme/dosya-yetkilendirme/" class="">Dosya Yetkilendirme</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-11bb86ac3069fd6d9b24198b6a8417fc" class="toggle"  />
+    <label for="section-11bb86ac3069fd6d9b24198b6a8417fc" class="flex justify-between">
+      <a role="button" class="">Paket Yönetimi</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/paket-y%C3%B6netimi/dpkg/" class="">DPKG</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/paket-y%C3%B6netimi/rpm/" class="">RPM</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/paket-y%C3%B6netimi/terminoloji/" class="">Terminoloji</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-96daf07ed24acff5f86cda3bc15068bb" class="toggle" checked />
+    <label for="section-96daf07ed24acff5f86cda3bc15068bb" class="flex justify-between">
+      <a role="button" class="">Ağ Yönetimi</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/nic/" class="">NIC</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/ip/" class="">IP</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/resolv/" class="">resolv.conf</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/hosts/" class="">hosts.conf</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/dig/" class="">dig</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/static-ip/" class="">static IP</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/traceroute/" class="active">traceroute</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/ethtool/" class="">ethtool</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/terminoloji/" class="">Terminoloji</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4df132e37d2d3ef2d4890ee600809e87" class="toggle"  />
+    <label for="section-4df132e37d2d3ef2d4890ee600809e87" class="flex justify-between">
+      <a href="/docs/102/" class="">Linux 102</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-b23b82d195398c5a48d33ecbaecffe31" class="toggle"  />
+    <label for="section-b23b82d195398c5a48d33ecbaecffe31" class="flex justify-between">
+      <a role="button" class="">Kernel</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/102/kernel/kernel-nedir/" class="">kernel nedir</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>traceroute</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents"></nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><p>Traceroute, ağdaki bir hedefe erişmek için verilerin nasıl ilerlediğini gösteren bir ağ teşhis aracıdır. Traceroute, paketlerin izlenebilirliğini sağlamak için ICMP (Internet Control Message Protocol) ve TTL (Time to Live) kullanır. Traceroute, bir hedefe yönelik veri paketleri gönderir ve bu paketlerin yolu boyunca hangi ağ cihazlarından geçtiğini ve hangi cihazlarda gecikme yaşandığını takip eder.</p>
+<p>Traceroute, bir hedefe yönelik veri paketleri gönderir ve her paketin TTL değerini arttırarak gönderir. TTL, her yönlendirici (router) geçişinde bir azaltma işlemi uygular. Eğer bir paket belirli bir yönlendirici tarafından alınır ve TTL değeri sıfıra düşerse, yönlendirici paketi yok sayar ve ICMP mesajıyla geri gönderir. Traceroute, bu ICMP mesajlarını kullanarak, paketin yolu boyunca geçtiği yönlendiricilerin IP adreslerini ve gecikme sürelerini hesaplar.</p>
+<p>Traceroute, genellikle ağ bağlantı sorunlarını tespit etmek ve ağdaki yavaş noktaları belirlemek için kullanılır. Traceroute sonuçları, ağ yöneticileri tarafından kullanılarak ağ sorunlarını gidermek ve ağ performansını optimize etmek için kullanılabilir.</p>
+<p><img src="/images/traceroute.png" alt="" /></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>root@localhost network-scripts]# traceroute google.com
+</span></span><span style="display:flex;"><span>traceroute to google.com (142.251.140.14), 30 hops max, 60 byte packets
+</span></span><span style="display:flex;"><span> 1  _gateway (192.168.122.1)  0.256 ms  0.158 ms  0.120 ms
+</span></span><span style="display:flex;"><span> 2  192.168.1.1 (192.168.1.1)  1.570 ms  1.712 ms  1.852 ms
+</span></span><span style="display:flex;"><span> 3  10.76.0.1 (10.76.0.1)  5.475 ms  5.469 ms  5.525 ms
+</span></span><span style="display:flex;"><span> 4  10.36.117.186 (10.36.117.186)  6.638 ms  6.827 ms  6.594 ms
+</span></span><span style="display:flex;"><span> 5  10.54.255.14 (10.54.255.14)  6.642 ms  6.591 ms  6.676 ms
+</span></span><span style="display:flex;"><span> 6  10.54.255.49 (10.54.255.49)  7.799 ms  7.022 ms  6.895 ms
+</span></span><span style="display:flex;"><span> 7  10.40.155.155 (10.40.155.155)  10.944 ms  9.379 ms 10.40.155.156 (10.40.155.156)  9.531 ms
+</span></span><span style="display:flex;"><span> 8  10.40.141.73 (10.40.141.73)  11.124 ms * *
+</span></span><span style="display:flex;"><span> 9  10.40.168.31 (10.40.168.31)  6.627 ms  6.596 ms  6.634 ms
+</span></span><span style="display:flex;"><span>10  72.14.212.96 (72.14.212.96)  28.006 ms  27.812 ms  27.970 ms
+</span></span><span style="display:flex;"><span>11  * * *
+</span></span><span style="display:flex;"><span>12  216.239.49.198 (216.239.49.198)  28.838 ms 108.170.250.177 (108.170.250.177)  27.379 ms 172.253.65.42 (172.253.65.42)  27.878 ms
+</span></span><span style="display:flex;"><span>13  142.251.246.235 (142.251.246.235)  24.532 ms 108.170.250.178 (108.170.250.178)  106.250 ms 108.170.250.163 (108.170.250.163)  27.931 ms
+</span></span><span style="display:flex;"><span>14  sof04s04-in-f14.1e100.net (142.251.140.14)  24.847 ms 142.251.242.231 (142.251.242.231)  28.510 ms sof04s04-in-f14.1e100.net (142.251.140.14)  24.730 ms
+</span></span></code></pre></div><p>Tablodaki çıktı, Google.com&rsquo;a bir traceroute işlemi gerçekleştirilerek elde edilmiştir.</p>
+<p>İlk sütunda &ldquo;hop&rdquo; numaraları yer alır, yani verilerin geçtiği ara noktaların sayısı. &ldquo;30 hops max&rdquo; ifadesi ise, traceroute işleminde en fazla 30 ara noktaya kadar izlenebileceğini gösterir.</p>
+<p>İkinci sütunda, traceroute işlemi sırasında her ara noktanın IP adresi yer alır. Örneğin, ilk ara nokta &ldquo;_gateway&rdquo; adıyla tanımlanmış ve IP adresi 192.168.122.1&rsquo;dir.</p>
+<p>Üçüncü sütunda, her ara noktaya veri paketi gönderilmesi için geçen süreler (ms) yer alır. Örneğin, ilk ara noktaya veri paketi gönderilmesi 0.256 ms sürmüştür.</p>
+<p>Çıktıdaki bilgiler, veri paketlerinin hangi ağ cihazlarından geçtiğini ve hangi cihazlarda gecikme yaşandığını takip etmemizi sağlar. Örneğin, ilk ara nokta &ldquo;_gateway&rdquo; adıyla tanımlanmış ve bu noktada veri paketleri hemen hemen hiç gecikme yaşamamıştır. Diğer ara noktalarda ise değişken gecikmeler yaşanmıştır.</p>
+<p>Son sütunda, her ara noktanın ismi ve IP adresi yer alır. Örneğin, son ara nokta &ldquo;sof04s04-in-f14.1e100.net&rdquo; adıyla tanımlanmış ve IP adresi 142.251.140.14&rsquo;tür. Bu, Google&rsquo;ın sunucularından biridir.</p>
+<p>Traceroute işlemi, ağ sorunlarını tespit etmek ve ağ performansını optimize etmek için kullanılabilir. Bu çıktıda, Google sunucusuna ulaşmak için 14 ara noktanın geçilmesi gerektiği görülüyor ve bazı noktalarda gecikme yaşandığı gözlemleniyor. Ancak genel olarak, veri paketleri hızlı bir şekilde Google sunucusuna ulaşmış  görünüyor.</p>
+<blockquote class="book-hint info">
+  *** traceroute çıktısında &ldquo;timeout&rdquo; durumunu ifade eder. Yani, bir paket hedefe ulaşamadığında, bir sonraki hop&rsquo;a geçilir ve bu noktaya kadar olan tüm hop&rsquo;lar başarıyla geçilmiş olarak kabul edilir.
+</blockquote>
+
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents"></nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

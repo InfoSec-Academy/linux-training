@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Linux, bir işletim sistemi olarak, bilgisayar donanımını yönetir ve kullanıcıların bilgisayar kaynaklarını (dosyalar, yazılımlar, cihazlar vb.) yönetmelerine olanak tanır. Linux, çekirdek olarak adlandırılan temel bir bileşene sahiptir ve bu çekirdek, işletim sistemi işlevlerini yerine getirmek için kullanılır. Linux&rsquo;un çalışması için, bir bilgisayarda öncelikle BIOS (Basic Input/Output System) adı verilen bir yazılım yüklü olmalıdır. BIOS, bilgisayarın temel işlevlerini sağlar, örneğin sabit disk, klavye ve fare gibi bileşenlere erişim sağlar.
+Daha sonra, bilgisayarın işletim sistemi yüklenebilmesi için bir önyükleme işlemi gerçekleştirilir.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Temel komutlar" />
+<meta property="og:description" content="Linux, bir işletim sistemi olarak, bilgisayar donanımını yönetir ve kullanıcıların bilgisayar kaynaklarını (dosyalar, yazılımlar, cihazlar vb.) yönetmelerine olanak tanır. Linux, çekirdek olarak adlandırılan temel bir bileşene sahiptir ve bu çekirdek, işletim sistemi işlevlerini yerine getirmek için kullanılır. Linux&rsquo;un çalışması için, bir bilgisayarda öncelikle BIOS (Basic Input/Output System) adı verilen bir yazılım yüklü olmalıdır. BIOS, bilgisayarın temel işlevlerini sağlar, örneğin sabit disk, klavye ve fare gibi bileşenlere erişim sağlar.
+Daha sonra, bilgisayarın işletim sistemi yüklenebilmesi için bir önyükleme işlemi gerçekleştirilir." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/docs/101/komutlar/kabuk-komut/" /><meta property="article:section" content="docs" />
+
+
+
+<title>Temel komutlar | Linux Eğitim</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.33a48f5432973b8ff9a82679d9e45d67f2c15d4399bd2829269455cfe390b5e8.css" integrity="sha256-M6SPVDKXO4/5qCZ52eRdZ/LBXUOZvSgpJpRVz&#43;OQteg=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.53a351c9376bbdf57038a0b23bb1962158bc7ad986e757ee0e69edad08038d87.js" integrity="sha256-U6NRyTdrvfVwOKCyO7GWIVi8etmG51fuDmntrQgDjYc=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Linux Eğitim</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-8c9421baa8361060d783c5adf6e0016b" class="toggle" checked />
+    <label for="section-8c9421baa8361060d783c5adf6e0016b" class="flex justify-between">
+      <a href="/docs/101/" class="">Linux 101</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a71bc27f68282d703f658ade56ec3588" class="toggle"  />
+    <label for="section-a71bc27f68282d703f658ade56ec3588" class="flex justify-between">
+      <a role="button" class="">Linux</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/linux/nedir/" class="">Linux Nedir</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/linux/tarihcesi/" class="">Linux Tarihçesi</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/linux/da%C4%9F%C4%B1t%C4%B1mlar/" class="">Dağıtımlar</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/linux/terminoloji/" class="">Terminoloji</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-d878beecb5059aac8f4f57cc1c7d19bc" class="toggle"  />
+    <label for="section-d878beecb5059aac8f4f57cc1c7d19bc" class="flex justify-between">
+      <a role="button" class="">Kurulum</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/kurulum/terminoloji/" class="">Terminoloji</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/kurulum/fedora-server/" class="">Fedora Kurulum</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/kurulum/ubuntu-server/" class="">Ubuntu Kurulum</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-ccf3432652f2f661d834afb94d891a58" class="toggle" checked />
+    <label for="section-ccf3432652f2f661d834afb94d891a58" class="flex justify-between">
+      <a role="button" class="">Komutlar</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/komutlar/kabuk-komut/" class="active">Temel komutlar</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-dd95113271805acbc8b49838b9ba9c68" class="toggle"  />
+    <label for="section-dd95113271805acbc8b49838b9ba9c68" class="flex justify-between">
+      <a role="button" class="">Kullanıcı Ve Yetkilendirme</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/kullan%C4%B1c%C4%B1-ve-yetkilendirme/kullan%C4%B1c%C4%B1-olu%C5%9Fturma/" class="">Kullanıcı Oluşturma</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/kullan%C4%B1c%C4%B1-ve-yetkilendirme/kullan%C4%B1c%C4%B1-silme/" class="">Kullanıcı Silme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/kullan%C4%B1c%C4%B1-ve-yetkilendirme/kullan%C4%B1c%C4%B1-%C3%B6zellikleri-de%C4%9Fi%C5%9Ftirme/" class="">Kullanıcı Özelliklerini Değiştirme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/kullan%C4%B1c%C4%B1-ve-yetkilendirme/dosya-yetkilendirme/" class="">Dosya Yetkilendirme</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-11bb86ac3069fd6d9b24198b6a8417fc" class="toggle"  />
+    <label for="section-11bb86ac3069fd6d9b24198b6a8417fc" class="flex justify-between">
+      <a role="button" class="">Paket Yönetimi</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/paket-y%C3%B6netimi/dpkg/" class="">DPKG</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/paket-y%C3%B6netimi/rpm/" class="">RPM</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/paket-y%C3%B6netimi/terminoloji/" class="">Terminoloji</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-96daf07ed24acff5f86cda3bc15068bb" class="toggle"  />
+    <label for="section-96daf07ed24acff5f86cda3bc15068bb" class="flex justify-between">
+      <a role="button" class="">Ağ Yönetimi</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/nic/" class="">NIC</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/ip/" class="">IP</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/resolv/" class="">resolv.conf</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/hosts/" class="">hosts.conf</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/dig/" class="">dig</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/static-ip/" class="">static IP</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/traceroute/" class="">traceroute</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/ethtool/" class="">ethtool</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/terminoloji/" class="">Terminoloji</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4df132e37d2d3ef2d4890ee600809e87" class="toggle"  />
+    <label for="section-4df132e37d2d3ef2d4890ee600809e87" class="flex justify-between">
+      <a href="/docs/102/" class="">Linux 102</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-b23b82d195398c5a48d33ecbaecffe31" class="toggle"  />
+    <label for="section-b23b82d195398c5a48d33ecbaecffe31" class="flex justify-between">
+      <a role="button" class="">Kernel</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/102/kernel/kernel-nedir/" class="">kernel nedir</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Temel komutlar</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#ls">ls</a></li>
+    <li><a href="#cd">cd</a></li>
+    <li><a href="#pwd">pwd</a></li>
+    <li><a href="#mkdir">mkdir</a></li>
+    <li><a href="#rmdir">rmdir</a></li>
+    <li><a href="#rm">rm</a></li>
+    <li><a href="#cp">cp</a></li>
+    <li><a href="#mv">mv</a></li>
+    <li><a href="#touch">touch</a></li>
+    <li><a href="#cat">cat</a></li>
+    <li><a href="#less">less</a></li>
+    <li><a href="#head">head</a></li>
+    <li><a href="#tail">tail</a></li>
+    <li><a href="#grep">grep</a></li>
+    <li><a href="#echo">echo</a></li>
+    <li><a href="#sudo">sudo</a></li>
+    <li><a href="#chmod">chmod</a></li>
+    <li><a href="#chown">chown</a></li>
+    <li><a href="#df">df</a></li>
+    <li><a href="#top">top</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><p>Linux, bir işletim sistemi olarak, bilgisayar donanımını yönetir ve kullanıcıların bilgisayar kaynaklarını (dosyalar, yazılımlar, cihazlar vb.) yönetmelerine olanak tanır.
+Linux, çekirdek olarak adlandırılan temel bir bileşene sahiptir ve bu çekirdek, işletim sistemi işlevlerini yerine getirmek için kullanılır.
+Linux&rsquo;un çalışması için, bir bilgisayarda öncelikle BIOS (Basic Input/Output System) adı verilen bir yazılım yüklü olmalıdır. BIOS, bilgisayarın temel işlevlerini sağlar, örneğin sabit disk, klavye ve fare gibi bileşenlere erişim sağlar.</p>
+<p>Daha sonra, bilgisayarın işletim sistemi yüklenebilmesi için bir önyükleme işlemi gerçekleştirilir. Bu işlemde, bilgisayar önce BIOS tarafından yönlendirilir, ardından işletim sistemi önyükleyicisi olarak adlandırılan bir yazılım yüklenir.
+<strong>Önyükleyici</strong>, işletim sisteminin yüklenmesi için gereken dosyaları bulmak ve yüklemek için gerekli adımları atar.
+İşletim sistemi yüklendikten sonra, kullanıcı bir kabuk (shell) aracılığıyla işletim sistemini yönetebilir. Kabuk, kullanıcının komutlar yazmasını ve işletim sistemi ile etkileşimde bulunmasını sağlar.
+<strong>Bash (Bourne-Again SHell)</strong> kabuğu, Linux sistemlerinde en yaygın olarak kullanılan kabuktur.</p>
+<p>Ayrıca, bir Linux sistemi için önyükleme sürecinde önemli bir bileşen olan <strong>GRUB (Grand Unified Bootloader)</strong> önyükleme yükleyicisini de ekleyebiliriz.
+GRUB, bilgisayarın önyükleme işlemi sırasında işletim sistemi yükleyicisini bulmak ve yüklemek için kullanılır. Ayrıca, birden fazla işletim sistemi varsa, kullanıcının hangi işletim sistemi yüklemesini seçebileceği bir menü sunar.
+Sonuç olarak, Linux, bir işletim sistemi olarak, donanım, önyükleme işlemi, GRUB, kabuk ve işletim sistemi yükleyicisi gibi bileşenleri içeren bir bütündür. Bu bileşenler birbirleriyle etkileşime girerek, kullanıcıların bilgisayar kaynaklarını yönetmesine olanak tanır.</p>
+<h1 id="komutlar">
+  Komutlar
+  <a class="anchor" href="#komutlar">#</a>
+</h1>
+<h2 id="ls">
+  ls
+  <a class="anchor" href="#ls">#</a>
+</h2>
+<p>Bu komut, bulunduğunuz dizinin içeriğini listeler. Örneğin, ls komutunu çalıştırdığınızda dizindeki dosyalar ve diğer dizinler listelenecektir.</p>
+<h2 id="cd">
+  cd
+  <a class="anchor" href="#cd">#</a>
+</h2>
+<p>Bu komut, bir dizinden diğerine geçmenizi sağlar. Örneğin, cd /home komutu, bulunduğunuz dizinden /home dizinine geçmenizi sağlar.</p>
+<h2 id="pwd">
+  pwd
+  <a class="anchor" href="#pwd">#</a>
+</h2>
+<p>Bu komut, bulunduğunuz dizinin tam yolunu gösterir. Örneğin, pwd komutu, bulunduğunuz dizinin tam yolunu görüntüler.</p>
+<h2 id="mkdir">
+  mkdir
+  <a class="anchor" href="#mkdir">#</a>
+</h2>
+<p>Bu komut, yeni bir dizin oluşturmanızı sağlar. Örneğin, mkdir myfolder komutu, bulunduğunuz dizinde myfolder adında yeni bir dizin oluşturur.</p>
+<h2 id="rmdir">
+  rmdir
+  <a class="anchor" href="#rmdir">#</a>
+</h2>
+<p>Bu komut, boş bir dizini silmenizi sağlar. Örneğin, rmdir myfolder komutu, myfolder adındaki boş dizini siler.</p>
+<h2 id="rm">
+  rm
+  <a class="anchor" href="#rm">#</a>
+</h2>
+<p>Bu komut, bir dosya veya dizini silmenizi sağlar. Örneğin, rm myfile.txt komutu, myfile.txt adındaki dosyayı siler.</p>
+<h2 id="cp">
+  cp
+  <a class="anchor" href="#cp">#</a>
+</h2>
+<p>Bu komut, bir dosya veya dizini kopyalamanızı sağlar. Örneğin, cp myfile.txt mybackup.txt komutu, myfile.txt dosyasını mybackup.txt adında bir dosyaya kopyalar.</p>
+<h2 id="mv">
+  mv
+  <a class="anchor" href="#mv">#</a>
+</h2>
+<p>Bu komut, bir dosya veya dizini taşımanızı veya yeniden adlandırmanızı sağlar. Örneğin, mv myfile.txt myfolder komutu, myfile.txt dosyasını myfolder adındaki dizine taşır.</p>
+<h2 id="touch">
+  touch
+  <a class="anchor" href="#touch">#</a>
+</h2>
+<p>Bu komut, yeni bir dosya oluşturmanızı veya dosya zaman bilgilerini güncellemenizi sağlar. Örneğin, touch myfile.txt komutu, myfile.txt adında yeni bir dosya oluşturur veya dosyanın son değiştirilme zamanını günceller.</p>
+<h2 id="cat">
+  cat
+  <a class="anchor" href="#cat">#</a>
+</h2>
+<p>Bu komut, bir dosyanın içeriğini görüntüler. Örneğin, cat myfile.txt komutu, myfile.txt adındaki dosyanın içeriğini görüntüler.</p>
+<h2 id="less">
+  less
+  <a class="anchor" href="#less">#</a>
+</h2>
+<p>Bu komut, bir dosyanın içeriğini sayfa sayfa görüntüler. Örneğin, less myfile.txt komutu, myfile.txt adındaki dosyanın içeriğini sayfa sayfa görüntüler.</p>
+<h2 id="head">
+  head
+  <a class="anchor" href="#head">#</a>
+</h2>
+<p>Bu komut, bir dosyanın baş kısmını görüntüler. Örneğin, head myfile.txt komutu, myfile.txt adındaki dosyanın baş kısmını görüntüler.</p>
+<h2 id="tail">
+  tail
+  <a class="anchor" href="#tail">#</a>
+</h2>
+<p>Bu komut, bir dosyanın son kısmını görüntüler. Örneğin, tail myfile.txt komut</p>
+<h2 id="grep">
+  grep
+  <a class="anchor" href="#grep">#</a>
+</h2>
+<p>Bu komut, bir metin dosyasındaki belirli metinleri aramanızı sağlar. Örneğin, grep &ldquo;example&rdquo; myfile.txt komutu, myfile.txt dosyasında &ldquo;example&rdquo; kelimesini arar.</p>
+<h2 id="echo">
+  echo
+  <a class="anchor" href="#echo">#</a>
+</h2>
+<p>Bu komut, bir metin veya değişken içeriğini ekrana yazdırır. Örneğin, echo &ldquo;Hello, World!&rdquo; komutu, &ldquo;Hello, World!&rdquo; metnini ekrana yazdırır.</p>
+<h2 id="sudo">
+  sudo
+  <a class="anchor" href="#sudo">#</a>
+</h2>
+<p>Bu komut, bir komutu yönetici (root) olarak çalıştırmanızı sağlar. Örneğin, sudo apt-get install htop komutu, htop programını yüklerken yönetici izinleri gerektirir.</p>
+<h2 id="chmod">
+  chmod
+  <a class="anchor" href="#chmod">#</a>
+</h2>
+<p>Bu komut, bir dosyanın izinlerini değiştirmenizi sağlar. Örneğin, chmod 755 myfile.sh komutu, myfile.sh adındaki betik dosyasının izinlerini değiştirir.</p>
+<h2 id="chown">
+  chown
+  <a class="anchor" href="#chown">#</a>
+</h2>
+<p>Bu komut, bir dosyanın sahibini veya grup bilgisini değiştirmenizi sağlar. Örneğin, chown myuser myfile.txt komutu, myfile.txt adındaki dosyanın sahibini myuser olarak değiştirir.</p>
+<h2 id="df">
+  df
+  <a class="anchor" href="#df">#</a>
+</h2>
+<p>Bu komut, dosya sisteminizin disk kullanımını gösterir. Örneğin, df -h komutu, disk kullanımını insan tarafından okunabilir bir formatta görüntüler.</p>
+<h2 id="top">
+  top
+  <a class="anchor" href="#top">#</a>
+</h2>
+<p>Bu komut, sistemdeki işlemci kullanımını ve en yüksek CPU kullanan işlemleri görüntüler. Örneğin, top komutu, işlemci kullanımını ve en yüksek CPU kullanan işlemleri canlı olarak görüntüler.</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#ls">ls</a></li>
+    <li><a href="#cd">cd</a></li>
+    <li><a href="#pwd">pwd</a></li>
+    <li><a href="#mkdir">mkdir</a></li>
+    <li><a href="#rmdir">rmdir</a></li>
+    <li><a href="#rm">rm</a></li>
+    <li><a href="#cp">cp</a></li>
+    <li><a href="#mv">mv</a></li>
+    <li><a href="#touch">touch</a></li>
+    <li><a href="#cat">cat</a></li>
+    <li><a href="#less">less</a></li>
+    <li><a href="#head">head</a></li>
+    <li><a href="#tail">tail</a></li>
+    <li><a href="#grep">grep</a></li>
+    <li><a href="#echo">echo</a></li>
+    <li><a href="#sudo">sudo</a></li>
+    <li><a href="#chmod">chmod</a></li>
+    <li><a href="#chown">chown</a></li>
+    <li><a href="#df">df</a></li>
+    <li><a href="#top">top</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

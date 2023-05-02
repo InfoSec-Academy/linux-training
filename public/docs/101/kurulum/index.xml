@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux Eğitim</title>
+    <link>http://example.org/docs/101/kurulum/</link>
+    <description>Recent content on Linux Eğitim</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://example.org/docs/101/kurulum/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Terminoloji</title>
+      <link>http://example.org/docs/101/kurulum/terminoloji/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/101/kurulum/terminoloji/</guid>
+      <description>/ (Kök dizin): Bu, tüm dosya sisteminin kök dizinidir ve tüm diğer dizinlerin üzerinde bulunur. Bu dizin, tüm sistem dosyalarını içerir ve tüm kullanıcıların erişebileceği her şey burada bulunur.
+  /boot: Bu dizin, işletim sisteminin başlangıç ​​dosyalarını içerir. Bu, önyükleme (boot) süreci sırasında kullanılır ve burada bulunan dosyalar, sistem açıldığında yüklenir.
+  /boot/efi: Bu dizin, EFI (Extensible Firmware Interface) uyumlu bir sistemde önyükleme dosyalarını içerir. EFI, BIOS&amp;rsquo;un yerini alan bir donanım arayüzüdür.</description>
+    </item>
+    
+    <item>
+      <title>Fedora Kurulum</title>
+      <link>http://example.org/docs/101/kurulum/fedora-server/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/101/kurulum/fedora-server/</guid>
+      <description>Fedora, bir Linux işletim sistemi dağıtımıdır. Fedora, Red Hat Enterprise Linux (RHEL) işletim sistemi ve özgür ve açık kaynak kodlu yazılımlar topluluğu olan Fedora Projesi tarafından desteklenir. Fedora, ücretsizdir ve herkes tarafından kullanılabilir.
+Fedora, birçok kullanıcının özgür ve açık kaynak kodlu yazılımlarla çalışmayı tercih ettiği bir işletim sistemi olarak öne çıkar. Fedora, bir masaüstü işletim sistemi olarak kullanılabileceği gibi sunucu veya gömülü sistemler için de uygun olabilir. Fedora, sık güncellemeleri ve geniş bir yazılım deposu ile de öne çıkar.</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu Kurulum</title>
+      <link>http://example.org/docs/101/kurulum/ubuntu-server/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/101/kurulum/ubuntu-server/</guid>
+      <description>Ubuntu, özgür ve açık kaynaklı bir Linux işletim sistemidir. Mark Shuttleworth tarafından 2004 yılında piyasaya sürülmüştür ve temel olarak Debian GNU/Linux&amp;lsquo;a dayanmaktadır. Ubuntu, kullanıcı dostu bir arayüze, güçlü bir uygulama yelpazesine ve topluluk desteğine sahiptir.
+Ubuntu, masaüstü, sunucu ve bulut bilgi işlemi için sürümler sunar. Ayrıca, Raspberry Pi gibi gömülü sistemler için de özel bir sürümü bulunmaktadır. Ubuntu, geniş bir yazılım yelpazesiyle birlikte gelir ve web tarayıcıları, ofis uygulamaları, grafik tasarım araçları, multimedya uygulamaları, geliştirme araçları ve daha pek çok uygulamayı içerir.</description>
+    </item>
+    
+  </channel>
+</rss>
