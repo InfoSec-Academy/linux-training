@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="RPM (Red Hat Package Manager), Linux işletim sistemi için bir paket yönetim sistemidir. RPM, Red Hat ve diğer bazı Linux dağıtımları tarafından kullanılır ve paketlerin kurulumu, kaldırılması, güncellenmesi ve yönetimi için kullanılır.
+RPM, paketlerin dosya sistemine nasıl yerleştirileceği ve kurulum sırasında hangi diğer paketlerin gereksinimlerinin karşılanacağı gibi konuları ele alır. Ayrıca paketlerin diğer sistemlerle uyumlu olup olmadığını kontrol eder ve uyumsuzluk durumunda uygun hataları rapor eder.
+RPM, özellikle sunucu sistemleri gibi büyük ve karmaşık Linux sistemlerinde kullanımı yaygındır.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="RPM" />
+<meta property="og:description" content="RPM (Red Hat Package Manager), Linux işletim sistemi için bir paket yönetim sistemidir. RPM, Red Hat ve diğer bazı Linux dağıtımları tarafından kullanılır ve paketlerin kurulumu, kaldırılması, güncellenmesi ve yönetimi için kullanılır.
+RPM, paketlerin dosya sistemine nasıl yerleştirileceği ve kurulum sırasında hangi diğer paketlerin gereksinimlerinin karşılanacağı gibi konuları ele alır. Ayrıca paketlerin diğer sistemlerle uyumlu olup olmadığını kontrol eder ve uyumsuzluk durumunda uygun hataları rapor eder.
+RPM, özellikle sunucu sistemleri gibi büyük ve karmaşık Linux sistemlerinde kullanımı yaygındır." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/docs/101/paket-y%C3%B6netimi/rpm/" /><meta property="article:section" content="docs" />
+
+
+
+<title>RPM | Linux Eğitim</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.33a48f5432973b8ff9a82679d9e45d67f2c15d4399bd2829269455cfe390b5e8.css" integrity="sha256-M6SPVDKXO4/5qCZ52eRdZ/LBXUOZvSgpJpRVz&#43;OQteg=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.53a351c9376bbdf57038a0b23bb1962158bc7ad986e757ee0e69edad08038d87.js" integrity="sha256-U6NRyTdrvfVwOKCyO7GWIVi8etmG51fuDmntrQgDjYc=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Linux Eğitim</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-8c9421baa8361060d783c5adf6e0016b" class="toggle" checked />
+    <label for="section-8c9421baa8361060d783c5adf6e0016b" class="flex justify-between">
+      <a href="/docs/101/" class="">Linux 101</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a71bc27f68282d703f658ade56ec3588" class="toggle"  />
+    <label for="section-a71bc27f68282d703f658ade56ec3588" class="flex justify-between">
+      <a role="button" class="">Linux</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/linux/nedir/" class="">Linux Nedir</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/linux/tarihcesi/" class="">Linux Tarihçesi</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/linux/da%C4%9F%C4%B1t%C4%B1mlar/" class="">Dağıtımlar</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/linux/terminoloji/" class="">Terminoloji</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-d878beecb5059aac8f4f57cc1c7d19bc" class="toggle"  />
+    <label for="section-d878beecb5059aac8f4f57cc1c7d19bc" class="flex justify-between">
+      <a role="button" class="">Kurulum</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/kurulum/terminoloji/" class="">Terminoloji</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/kurulum/fedora-server/" class="">Fedora Kurulum</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/kurulum/ubuntu-server/" class="">Ubuntu Kurulum</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-ccf3432652f2f661d834afb94d891a58" class="toggle"  />
+    <label for="section-ccf3432652f2f661d834afb94d891a58" class="flex justify-between">
+      <a role="button" class="">Komutlar</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/komutlar/kabuk-komut/" class="">Temel komutlar</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-dd95113271805acbc8b49838b9ba9c68" class="toggle"  />
+    <label for="section-dd95113271805acbc8b49838b9ba9c68" class="flex justify-between">
+      <a role="button" class="">Kullanıcı Ve Yetkilendirme</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/kullan%C4%B1c%C4%B1-ve-yetkilendirme/kullan%C4%B1c%C4%B1-olu%C5%9Fturma/" class="">Kullanıcı Oluşturma</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/kullan%C4%B1c%C4%B1-ve-yetkilendirme/kullan%C4%B1c%C4%B1-silme/" class="">Kullanıcı Silme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/kullan%C4%B1c%C4%B1-ve-yetkilendirme/kullan%C4%B1c%C4%B1-%C3%B6zellikleri-de%C4%9Fi%C5%9Ftirme/" class="">Kullanıcı Özelliklerini Değiştirme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/kullan%C4%B1c%C4%B1-ve-yetkilendirme/dosya-yetkilendirme/" class="">Dosya Yetkilendirme</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-11bb86ac3069fd6d9b24198b6a8417fc" class="toggle" checked />
+    <label for="section-11bb86ac3069fd6d9b24198b6a8417fc" class="flex justify-between">
+      <a role="button" class="">Paket Yönetimi</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/paket-y%C3%B6netimi/dpkg/" class="">DPKG</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/paket-y%C3%B6netimi/rpm/" class="active">RPM</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/paket-y%C3%B6netimi/terminoloji/" class="">Terminoloji</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-96daf07ed24acff5f86cda3bc15068bb" class="toggle"  />
+    <label for="section-96daf07ed24acff5f86cda3bc15068bb" class="flex justify-between">
+      <a role="button" class="">Ağ Yönetimi</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/nic/" class="">NIC</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/ip/" class="">IP</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/resolv/" class="">resolv.conf</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/hosts/" class="">hosts.conf</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/dig/" class="">dig</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/static-ip/" class="">static IP</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/traceroute/" class="">traceroute</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/ethtool/" class="">ethtool</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/terminoloji/" class="">Terminoloji</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4df132e37d2d3ef2d4890ee600809e87" class="toggle"  />
+    <label for="section-4df132e37d2d3ef2d4890ee600809e87" class="flex justify-between">
+      <a href="/docs/102/" class="">Linux 102</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-b23b82d195398c5a48d33ecbaecffe31" class="toggle"  />
+    <label for="section-b23b82d195398c5a48d33ecbaecffe31" class="flex justify-between">
+      <a role="button" class="">Kernel</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/102/kernel/kernel-nedir/" class="">kernel nedir</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>RPM</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#rpm--qa">rpm -qa</a></li>
+    <li><a href="#rpm--q">rpm -q</a></li>
+    <li><a href="#rpm--uvh">rpm -Uvh</a></li>
+    <li><a href="#rpm--e">rpm -e</a></li>
+    <li><a href="#varlibrpm">/var/lib/rpm</a></li>
+    <li><a href="#yum">yum</a></li>
+    <li><a href="#yum-list">yum list</a></li>
+    <li><a href="#yum-search">yum search</a></li>
+    <li><a href="#yum-provides">yum provides</a></li>
+    <li><a href="#yum-install">yum install</a></li>
+    <li><a href="#yum-update">yum update</a></li>
+    <li><a href="#yum-grouplist">yum grouplist</a></li>
+    <li><a href="#repolar">Repolar</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><p>RPM (Red Hat Package Manager), Linux işletim sistemi için bir paket yönetim sistemidir. RPM, Red Hat ve diğer bazı Linux dağıtımları tarafından kullanılır ve paketlerin kurulumu, kaldırılması, güncellenmesi ve yönetimi için kullanılır.</p>
+<p>RPM, paketlerin dosya sistemine nasıl yerleştirileceği ve kurulum sırasında hangi diğer paketlerin gereksinimlerinin karşılanacağı gibi konuları ele alır. Ayrıca paketlerin diğer sistemlerle uyumlu olup olmadığını kontrol eder ve uyumsuzluk durumunda uygun hataları rapor eder.</p>
+<p>RPM, özellikle sunucu sistemleri gibi büyük ve karmaşık Linux sistemlerinde kullanımı yaygındır. RPM paketleri, yazılım geliştiricileri tarafından oluşturulabilir ve ayrıca çeşitli depolardan indirilebilir. RPM ayrıca, özellikle Red Hat ve Fedora gibi bazı Linux dağıtımları için yazılım güncelleme araçları tarafından da kullanılır.</p>
+<h2 id="rpm--qa">
+  rpm -qa
+  <a class="anchor" href="#rpm--qa">#</a>
+</h2>
+<p>Komutu, sisteme yüklenmiş tüm RPM paketlerinin listesini görüntülemek için kullanılır. Bu komut, kurulu olan tüm paketlerin isimlerini, sürümlerini ve yayıncılarını gösterir.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>[ergunbilsel@localhost linux-101]$ rpm -qa
+</span></span><span style="display:flex;"><span>khmeros-fonts-common-5.0-30.fc33.noarch
+</span></span><span style="display:flex;"><span>adwaita-qt4-1.1.3-4.fc33.x86_64
+</span></span><span style="display:flex;"><span>gpg-pubkey-9570ff31-5e3006fb
+</span></span></code></pre></div><h2 id="rpm--q">
+  rpm -q
+  <a class="anchor" href="#rpm--q">#</a>
+</h2>
+<p>Belirli bir RPM paketinin sistemde yüklü olup olmadığını kontrol etmek için kullanılır. Bu komut, paket adını belirtilen bir argüman olarak alır ve paketin adını, sürümünü ve yayıncısını görüntüler.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>[ergunbilsel@localhost linux-101]$ rpm -q adwaita-qt4-1.1.3-4.fc33.x86_64
+</span></span><span style="display:flex;"><span>adwaita-qt4-1.1.3-4.fc33.x86_64
+</span></span><span style="display:flex;"><span>[ergunbilsel@localhost linux-101]$ rpm -q adwaita-qt4-1.1.3-4.fc33.x86_6
+</span></span><span style="display:flex;"><span>adwaita-qt4-1.1.3-4.fc33.x86_6 paketi kurulu değil
+</span></span></code></pre></div><h2 id="rpm--uvh">
+  rpm -Uvh
+  <a class="anchor" href="#rpm--uvh">#</a>
+</h2>
+<p>Yeni bir RPM paketini yüklemek veya mevcut bir paketi güncellemek için kullanılır. Bu komut, aşağıdaki üç adımı gerçekleştirir:</p>
+<ol>
+<li>Paketi yüklemek veya güncellemek için gerekli izinleri kontrol eder.</li>
+<li>Var olan bir paketin yerine yeni bir sürümü yükler.</li>
+<li>Yeni paketin kurulumunu tamamlar ve kurulum işlemi sırasında ayrıntılı çıktılar gösterir.</li>
+</ol>
+<p>&ldquo;U&rdquo; seçeneği, güncelleştirme işlemi için kullanılırken, &ldquo;h&rdquo; seçeneği, işlem sırasında ilerlemeyi gösteren ayrıntılı bir çıktı sağlar. &ldquo;v&rdquo; seçeneği ise, yüklenen veya güncellenen paketlerle ilgili daha fazla ayrıntı sağlar.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>[ergunbilsel@localhost linux-101]$ sudo rpm -Uvh pam_ssh-2.3-12.fc37.x86_64.rpm [sudo] password for ergunbilsel: 
+</span></span><span style="display:flex;"><span>Verifying...                          ################################# [100%]
+</span></span><span style="display:flex;"><span>Hazırlanıyor...                     ################################# [100%]
+</span></span><span style="display:flex;"><span>Güncelleniyor / kuruluyor...
+</span></span><span style="display:flex;"><span>   1:pam_ssh-2.3-12.fc37              ################################# [100%]
+</span></span><span style="display:flex;"><span>[ergunbilsel@localhost linux-101]$ 
+</span></span></code></pre></div><h2 id="rpm--e">
+  rpm -e
+  <a class="anchor" href="#rpm--e">#</a>
+</h2>
+<p>RPM paketini kaldırmak için kullanılır. Bu komut, sisteme yüklenmiş olan bir paketi kaldırır ve sistemden tüm paket dosyalarını ve yapılandırma dosyalarını siler.</p>
+<p>Komut, kaldırılacak paketin adını argüman olarak alır. Örneğin, &ldquo;rpm -e myapp&rdquo; komutu, &ldquo;myapp&rdquo; adlı bir paketi kaldırır.</p>
+<p>Eğer kaldırılmak istenen paket, başka bir paket tarafından kullanılıyorsa, &ldquo;rpm&rdquo; komutu bir hata mesajı verebilir. Bu durumda, kaldırılacak paketi kullanan diğer paketlerin de önce kaldırılması gerekebilir.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>[ergunbilsel@localhost linux-101]$ sudo rpm -e pam_ssh
+</span></span></code></pre></div><h2 id="varlibrpm">
+  /var/lib/rpm
+  <a class="anchor" href="#varlibrpm">#</a>
+</h2>
+<p>Red Hat tabanlı Linux sistemlerinde RPM paket yöneticisinin kullandığı veritabanı dosyalarının depolandığı dizindir. Bu dizin, RPM paketlerinin yüklü olduğu ve kaldırıldığı hakkında bilgiyi içeren bir veritabanı dosyası olan &ldquo;Packages&rdquo; dosyasını ve paket imza anahtarlarının depolandığı birkaç diğer veritabanı dosyasını içerir.</p>
+<p>Bu dizin ayrıca, RPM paket yöneticisinin veritabanına erişmek için kullandığı diğer veritabanı dosyalarını da içerir. Bu dosyaların bazıları, imza anahtarları ve önbellek dosyalarını depolar.</p>
+<p>&ldquo;/var/lib/rpm&rdquo; dizini, RPM paketlerinin yönetimi için önemli bir rol oynar ve bu nedenle, bu dizinin izinleri ve bütünlüğü dikkatlice korunmalıdır. Ayrıca, RPM paketleri elle düzenlenmeden önce, bu dizin ve alt dizinlerindeki dosyaların yedeklenmesi önerilir.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>[ergunbilsel@localhost linux-101]$ cd /var/lib/rpm
+</span></span><span style="display:flex;"><span>[ergunbilsel@localhost rpm]$ ls
+</span></span><span style="display:flex;"><span>rpmdb.sqlite  rpmdb.sqlite-shm  rpmdb.sqlite-wal
+</span></span></code></pre></div><blockquote class="book-hint info">
+  Bir RPM Paketinin İçeriği
+<img src="/images/rpm_include.png" alt="" />
+</blockquote>
+
+<h2 id="yum">
+  yum
+  <a class="anchor" href="#yum">#</a>
+</h2>
+<p>Red Hat tabanlı Linux dağıtımlarında kullanılan bir paket yöneticisidir. Yum, RPM paket yöneticisinin üzerine inşa edilmiştir ve RPM paketlerini indirme, kurma, güncelleştirme ve kaldırma işlemlerini gerçekleştirebilir. Yum <strong>(Yellowdog Updater, Modified)</strong> ayrıca, sistemdeki paketlerin bağımlılıklarını çözer ve yeni bir paket yüklemek istendiğinde, gerekli diğer paketleri otomatik olarak indirir.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>[ergunbilsel@localhost linux-101]$ cd /var/lib/rpm
+</span></span><span style="display:flex;"><span>[ergunbilsel@localhost rpm]$ ls
+</span></span><span style="display:flex;"><span>rpmdb.sqlite  rpmdb.sqlite-shm  rpmdb.sqlite-wal
+</span></span></code></pre></div><h2 id="yum-list">
+  yum list
+  <a class="anchor" href="#yum-list">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>[ergunbilsel@localhost rpm]$ yum list | wc -l
+</span></span><span style="display:flex;"><span>Error: &#39;virtualbox&#39; deposu için üst veriler indirilemedi: repomd.xml GPG signature verification error: Bad GPG signature
+</span></span><span style="display:flex;"><span>Depolar yok sayılıyor: virtualbox
+</span></span><span style="display:flex;"><span>70733
+</span></span></code></pre></div><blockquote class="book-hint info">
+  <p>Bir repo silelim</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>[ergunbilsel@localhost static]$ yum repolist 
+</span></span><span style="display:flex;"><span>depo id                                                           depo ismi
+</span></span><span style="display:flex;"><span>Mongodb                                                           MongoDB Repository
+</span></span><span style="display:flex;"><span>anydesk                                                           AnyDesk Fedora - stable
+</span></span><span style="display:flex;"><span>docker-ce-stable                                                  Docker CE Stable - x86_64
+</span></span><span style="display:flex;"><span>fedora                                                            Fedora 37 - x86_64
+</span></span><span style="display:flex;"><span>fedora-cisco-openh264                                             Fedora 37 openh264 (From Cisco) - x86_64
+</span></span><span style="display:flex;"><span>fedora-modular                                                    Fedora Modular 37 - x86_64
+</span></span><span style="display:flex;"><span>google-chrome                                                     google-chrome
+</span></span><span style="display:flex;"><span>opera                                                             Opera packages
+</span></span><span style="display:flex;"><span>rpmfusion-free                                                    RPM Fusion for Fedora 37 - Free
+</span></span><span style="display:flex;"><span>rpmfusion-free-updates                                            RPM Fusion for Fedora 37 - Free - Updates
+</span></span><span style="display:flex;"><span>rpmfusion-nonfree                                                 RPM Fusion for Fedora 37 - Nonfree
+</span></span><span style="display:flex;"><span>rpmfusion-nonfree-updates                                         RPM Fusion for Fedora 37 - Nonfree - Updates
+</span></span><span style="display:flex;"><span>slack                                                             slack
+</span></span><span style="display:flex;"><span>teams                                                             teams
+</span></span><span style="display:flex;"><span>teamviewer                                                        TeamViewer - x86_64
+</span></span><span style="display:flex;"><span>updates                                                           Fedora 37 - x86_64 - Updates
+</span></span><span style="display:flex;"><span>updates-modular                                                   Fedora Modular 37 - x86_64 - Updates
+</span></span><span style="display:flex;"><span>virtualbox                                                        Fedora  -  - VirtualBox
+</span></span></code></pre></div><p>Öncelikle mevcut repo listesini görüntüliyelim</p>
+<h2 id="yum-config-manager---disable">
+  yum-config-manager &ndash;disable
+  <a class="anchor" href="#yum-config-manager---disable">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>[ergunbilsel@localhost static]$ sudo yum-config-manager --disable virtualbox 
+</span></span><span style="display:flex;"><span>[ergunbilsel@localhost static]$ yum repolist 
+</span></span><span style="display:flex;"><span>depo id                                                           depo ismi
+</span></span><span style="display:flex;"><span>Mongodb                                                           MongoDB Repository
+</span></span><span style="display:flex;"><span>anydesk                                                           AnyDesk Fedora - stable
+</span></span><span style="display:flex;"><span>docker-ce-stable                                                  Docker CE Stable - x86_64
+</span></span><span style="display:flex;"><span>fedora                                                            Fedora 37 - x86_64
+</span></span><span style="display:flex;"><span>fedora-cisco-openh264                                             Fedora 37 openh264 (From Cisco) - x86_64
+</span></span><span style="display:flex;"><span>fedora-modular                                                    Fedora Modular 37 - x86_64
+</span></span><span style="display:flex;"><span>google-chrome                                                     google-chrome
+</span></span><span style="display:flex;"><span>opera                                                             Opera packages
+</span></span><span style="display:flex;"><span>rpmfusion-free                                                    RPM Fusion for Fedora 37 - Free
+</span></span><span style="display:flex;"><span>rpmfusion-free-updates                                            RPM Fusion for Fedora 37 - Free - Updates
+</span></span><span style="display:flex;"><span>rpmfusion-nonfree                                                 RPM Fusion for Fedora 37 - Nonfree
+</span></span><span style="display:flex;"><span>rpmfusion-nonfree-updates                                         RPM Fusion for Fedora 37 - Nonfree - Updates
+</span></span><span style="display:flex;"><span>slack                                                             slack
+</span></span><span style="display:flex;"><span>teams                                                             teams
+</span></span><span style="display:flex;"><span>teamviewer                                                        TeamViewer - x86_64
+</span></span><span style="display:flex;"><span>updates                                                           Fedora 37 - x86_64 - Updates
+</span></span><span style="display:flex;"><span>updates-modular                                                   Fedora Modular 37 - x86_64 - Updates
+</span></span></code></pre></div>
+</blockquote>
+
+<h2 id="yum-search">
+  yum search
+  <a class="anchor" href="#yum-search">#</a>
+</h2>
+<p>YUM  paket yöneticisi komutudur ve kullanıcılara, bir veya daha fazla anahtar kelime kullanarak, mevcut paket depolarında arama yapma imkanı sağlar.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>[ergunbilsel@localhost static]$ yum search python3.8
+</span></span><span style="display:flex;"><span>========================================================== Ad Tam Olarak Eşleşti: python3.8 ==========================================================
+</span></span><span style="display:flex;"><span>python3.8.x86_64 : Version 3.8 of the Python interpreter
+</span></span><span style="display:flex;"><span>python3.8.i686 : Version 3.8 of the Python interpreter
+</span></span></code></pre></div><p>Örneğin, &ldquo;yum search python3.8&rdquo; komutu, mevcut depolarda &ldquo;python3.8&rdquo; anahtar kelimesini içeren tüm paketleri listeleyecektir. Eğer bir paket adı tam olarak bilinmiyorsa, bu komut arama sonuçlarında paket adının bir parçasını da arayabilir.</p>
+<h2 id="yum-provides">
+  yum provides
+  <a class="anchor" href="#yum-provides">#</a>
+</h2>
+<p>Paket yöneticisi komutudur ve belirli bir dosyanın hangi pakete ait olduğunu belirlemek için kullanılır.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>[ergunbilsel@localhost static]$ yum  provides git
+</span></span><span style="display:flex;"><span>git-2.37.3-1.fc37.x86_64 : Fast Version Control System
+</span></span><span style="display:flex;"><span>Depo        : fedora
+</span></span><span style="display:flex;"><span>Şuradan eşleşti:
+</span></span><span style="display:flex;"><span>Sağlayıcı    : git = 2.37.3-1.fc37
+</span></span></code></pre></div><h2 id="yum-install">
+  yum install
+  <a class="anchor" href="#yum-install">#</a>
+</h2>
+<p>Belirtilen paketi veya paketleri yüklemek için kullanılır.</p>
+<p>Örneğin, &ldquo;yum install firefox&rdquo; komutu, &ldquo;firefox&rdquo; paketini yükler.</p>
+<h2 id="yum-update">
+  yum update
+  <a class="anchor" href="#yum-update">#</a>
+</h2>
+<p>Yüklü tüm paketleri en son sürümlerine güncellemek için kullanılır.</p>
+<p>YUM, paketleri güncelleme işlemi sırasında bağımlılıkları da kontrol eder ve gerektiğinde ilgili paketleri yükleyerek güncelleme işlemini tamamlar. Bu nedenle, &ldquo;yum update&rdquo; komutu, sistemdeki tüm paketleri güncellemek için yaygın bir kullanım şeklidir.</p>
+<h2 id="yum-grouplist">
+  yum grouplist
+  <a class="anchor" href="#yum-grouplist">#</a>
+</h2>
+<p>Yüklü ve kullanıma hazır paket gruplarını ve alt gruplarını listelemek için kullanılır.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>[ergunbilsel@localhost static]$ yum grouplist
+</span></span><span style="display:flex;"><span>Son üst veri süresi sona erme denetimi: 2:52:44 önce, Çrş 26 Nis 2023 11:26:03 tarihinde.
+</span></span><span style="display:flex;"><span>Kullanılabilir Ortam Grupları:
+</span></span><span style="display:flex;"><span>   Fedora Özel İşletim Sistemi
+</span></span><span style="display:flex;"><span>   Asgari Kurulum
+</span></span><span style="display:flex;"><span>   Fedora Sunucu Sürümü
+</span></span><span style="display:flex;"><span>   Fedora İş İstasyonu
+</span></span><span style="display:flex;"><span>   Fedora Bulut Sunucu
+</span></span><span style="display:flex;"><span>   KDE Plasma Çalışma Alanları
+</span></span><span style="display:flex;"><span>   Xfce Masaüstü
+</span></span><span style="display:flex;"><span>   LXDE Masaüstü
+</span></span><span style="display:flex;"><span>   LXQt Masaüstü
+</span></span><span style="display:flex;"><span>   Cinnamon Masaüstü
+</span></span><span style="display:flex;"><span>   MATE Masaüstü
+</span></span><span style="display:flex;"><span>   Sugar Masaüstü Ortamı
+</span></span><span style="display:flex;"><span>   Deepin Masaüstü
+</span></span><span style="display:flex;"><span>   Budgie Desktop
+</span></span><span style="display:flex;"><span>   Geliştirme ve Yaratıcılık İş İstasyonu
+</span></span><span style="display:flex;"><span>   Web Sunucusu
+</span></span><span style="display:flex;"><span>   Alt Yapı Sunucusu
+</span></span><span style="display:flex;"><span>   i3 desktop
+</span></span><span style="display:flex;"><span>Kurulu Ortam Grupları:
+</span></span><span style="display:flex;"><span>   Temel Masaüstü
+</span></span><span style="display:flex;"><span>Kurulu Gruplar:
+</span></span><span style="display:flex;"><span>   Konteyner Yönetimi
+</span></span><span style="display:flex;"><span>   Geliştirme Araçları
+</span></span><span style="display:flex;"><span>   LibreOffice
+</span></span><span style="display:flex;"><span>   GNOME
+</span></span><span style="display:flex;"><span>   Fontlar
+</span></span><span style="display:flex;"><span>   Donanım Desteği
+</span></span><span style="display:flex;"><span>Kullanılabilir Gruplar:
+</span></span><span style="display:flex;"><span>   3B Yazdırma
+</span></span><span style="display:flex;"><span>   Yönetim Araçları
+</span></span><span style="display:flex;"><span>   Ses Üretimi
+</span></span><span style="display:flex;"><span>   Yazım ve Yayım
+</span></span><span style="display:flex;"><span>   Budgie
+</span></span><span style="display:flex;"><span>   Budgie Desktop Applications
+</span></span><span style="display:flex;"><span>   C Geliştirme Araçları ve Kütüphaneleri
+</span></span><span style="display:flex;"><span>   Bulut Alt Yapısı
+</span></span><span style="display:flex;"><span>   Bulut Yönetim Araçları
+</span></span><span style="display:flex;"><span>   Compiz
+</span></span><span style="display:flex;"><span>   D Geliştirme Araçları ve Kütüphaneleri
+</span></span><span style="display:flex;"><span>   Tasarım Takımı
+</span></span><span style="display:flex;"><span>   Etki Alanı Üyeliği
+</span></span><span style="display:flex;"><span>   Metin Düzenleyiciler
+</span></span><span style="display:flex;"><span>   Eğitim Yazılımı
+</span></span><span style="display:flex;"><span>   Elektronik Laboratuvarı
+</span></span><span style="display:flex;"><span>   Mühendislik ve Bilim
+</span></span><span style="display:flex;"><span>   FreeIPA Sunucusu
+</span></span><span style="display:flex;"><span>   Başsız Yönetim
+</span></span><span style="display:flex;"><span>   MATE Uygulamaları
+</span></span><span style="display:flex;"><span>   Milkymist
+</span></span><span style="display:flex;"><span>   Ağ Sunucuları
+</span></span><span style="display:flex;"><span>   Nöron Modelleme Simülatörleri
+</span></span><span style="display:flex;"><span>   Ofis/Verimlilik
+</span></span><span style="display:flex;"><span>   Python Sınıfı
+</span></span><span style="display:flex;"><span>   Bilimsel Python
+</span></span><span style="display:flex;"><span>   Robotik
+</span></span><span style="display:flex;"><span>   RPM Geliştirme Araçları
+</span></span><span style="display:flex;"><span>   Güvenlik Laboratuvarı
+</span></span><span style="display:flex;"><span>   Metin tabanlı İnternet
+</span></span><span style="display:flex;"><span>   Pencere Yöneticileri
+</span></span><span style="display:flex;"><span>   Deepin Masaüstü Ortamı
+</span></span><span style="display:flex;"><span>   Grafiksel İnternet
+</span></span><span style="display:flex;"><span>   KDE
+</span></span><span style="display:flex;"><span>   Oyunlar ve Eğlencelik
+</span></span><span style="display:flex;"><span>   Ses ve Görüntü
+</span></span><span style="display:flex;"><span>   Sistem Araçları
+</span></span></code></pre></div><p>&ldquo;yum grouplist&rdquo; komutu, sistemde hangi paket gruplarının mevcut olduğunu anlamak için faydalıdır. Ancak, tüm paket grupları hakkında ayrıntılı bilgi almak isteyen kullanıcılar, &ldquo;yum groupinfo [grup adı]&rdquo; komutunu kullanarak daha fazla bilgi alabilirler.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>[ergunbilsel@localhost linux-101]$ yum groupinfo GNOME
+</span></span><span style="display:flex;"><span>Grup: GNOME
+</span></span><span style="display:flex;"><span> Tanım: GNOME son derece sezgisel ve kullanıcı dostu bir masaüstü ortamıdır.
+</span></span><span style="display:flex;"><span> Zorunlu Paketler:
+</span></span><span style="display:flex;"><span>   dconf
+</span></span><span style="display:flex;"><span>   gdm
+</span></span><span style="display:flex;"><span>   gnome-boxes
+</span></span><span style="display:flex;"><span>   gnome-connections
+</span></span><span style="display:flex;"><span>   gnome-control-center
+</span></span><span style="display:flex;"><span>   gnome-initial-setup
+</span></span><span style="display:flex;"><span>   gnome-session-wayland-session
+</span></span><span style="display:flex;"><span>   gnome-session-xsession
+</span></span><span style="display:flex;"><span>   gnome-settings-daemon
+</span></span><span style="display:flex;"><span>   gnome-shell
+</span></span><span style="display:flex;"><span>   gnome-software
+</span></span><span style="display:flex;"><span>   gnome-terminal
+</span></span><span style="display:flex;"><span>   gnome-text-editor
+</span></span><span style="display:flex;"><span>   nautilus
+</span></span><span style="display:flex;"><span>   polkit
+</span></span><span style="display:flex;"><span>   yelp
+</span></span><span style="display:flex;"><span> Öntanımlı Paketler:
+</span></span><span style="display:flex;"><span>   ModemManager
+</span></span><span style="display:flex;"><span>   NetworkManager-adsl
+</span></span><span style="display:flex;"><span>   NetworkManager-openconnect-gnome
+</span></span><span style="display:flex;"><span>   NetworkManager-openvpn-gnome
+</span></span><span style="display:flex;"><span>   NetworkManager-ppp
+</span></span><span style="display:flex;"><span>   NetworkManager-pptp-gnome
+</span></span><span style="display:flex;"><span>   NetworkManager-ssh-gnome
+</span></span><span style="display:flex;"><span>   NetworkManager-vpnc-gnome
+</span></span><span style="display:flex;"><span>   NetworkManager-wwan
+</span></span><span style="display:flex;"><span>   PackageKit-command-not-found
+</span></span><span style="display:flex;"><span>   PackageKit-gtk3-module
+</span></span><span style="display:flex;"><span>   adobe-source-code-pro-fonts
+</span></span><span style="display:flex;"><span>   at-spi2-atk
+</span></span><span style="display:flex;"><span>   at-spi2-core
+</span></span><span style="display:flex;"><span>   avahi
+</span></span><span style="display:flex;"><span>   baobab
+</span></span><span style="display:flex;"><span>   cheese
+</span></span><span style="display:flex;"><span>   eog
+</span></span><span style="display:flex;"><span>   evince
+</span></span><span style="display:flex;"><span>   evince-djvu
+</span></span><span style="display:flex;"><span>   evince-nautilus
+</span></span><span style="display:flex;"><span>   fprintd-pam
+</span></span><span style="display:flex;"><span>   glib-networking
+</span></span><span style="display:flex;"><span>   gnome-backgrounds
+</span></span><span style="display:flex;"><span>   gnome-bluetooth
+</span></span><span style="display:flex;"><span>   gnome-browser-connector
+</span></span><span style="display:flex;"><span>   gnome-calculator
+</span></span><span style="display:flex;"><span>   gnome-calendar
+</span></span><span style="display:flex;"><span>   gnome-characters
+</span></span><span style="display:flex;"><span>   gnome-classic-session
+</span></span><span style="display:flex;"><span>   gnome-clocks
+</span></span><span style="display:flex;"><span>   gnome-color-manager
+</span></span><span style="display:flex;"><span>   gnome-contacts
+</span></span><span style="display:flex;"><span>   gnome-disk-utility
+</span></span><span style="display:flex;"><span>   gnome-font-viewer
+</span></span><span style="display:flex;"><span>   gnome-logs
+</span></span><span style="display:flex;"><span>   gnome-maps
+</span></span><span style="display:flex;"><span>   gnome-photos
+</span></span><span style="display:flex;"><span>   gnome-remote-desktop
+</span></span><span style="display:flex;"><span>   gnome-system-monitor
+</span></span><span style="display:flex;"><span>   gnome-terminal-nautilus
+</span></span><span style="display:flex;"><span>   gnome-themes-extra
+</span></span><span style="display:flex;"><span>   gnome-user-docs
+</span></span><span style="display:flex;"><span>   gnome-user-share
+</span></span><span style="display:flex;"><span>   gnome-weather
+</span></span><span style="display:flex;"><span>   gvfs-afc
+</span></span><span style="display:flex;"><span>   gvfs-afp
+</span></span><span style="display:flex;"><span>   gvfs-archive
+</span></span><span style="display:flex;"><span>   gvfs-fuse
+</span></span><span style="display:flex;"><span>   gvfs-goa
+</span></span><span style="display:flex;"><span>   gvfs-gphoto2
+</span></span><span style="display:flex;"><span>   gvfs-mtp
+</span></span><span style="display:flex;"><span>   gvfs-smb
+</span></span><span style="display:flex;"><span>   libcanberra-gtk3
+</span></span><span style="display:flex;"><span>   libproxy-duktape
+</span></span><span style="display:flex;"><span>   librsvg2
+</span></span><span style="display:flex;"><span>   libsane-hpaio
+</span></span><span style="display:flex;"><span>   mesa-dri-drivers
+</span></span><span style="display:flex;"><span>   mesa-libEGL
+</span></span><span style="display:flex;"><span>   orca
+</span></span><span style="display:flex;"><span>   rygel
+</span></span><span style="display:flex;"><span>   sane-backends-drivers-scanners
+</span></span><span style="display:flex;"><span>   simple-scan
+</span></span><span style="display:flex;"><span>   sushi
+</span></span><span style="display:flex;"><span>   systemd-oomd-defaults
+</span></span><span style="display:flex;"><span>   totem
+</span></span><span style="display:flex;"><span>   tracker
+</span></span><span style="display:flex;"><span>   tracker-miners
+</span></span><span style="display:flex;"><span>   xdg-desktop-portal
+</span></span><span style="display:flex;"><span>   xdg-desktop-portal-gnome
+</span></span><span style="display:flex;"><span>   xdg-desktop-portal-gtk
+</span></span><span style="display:flex;"><span>   xdg-user-dirs-gtk
+</span></span><span style="display:flex;"><span> İsteğe Bağlı Paketler:
+</span></span><span style="display:flex;"><span>   vlc
+</span></span></code></pre></div><h2 id="repolar">
+  Repolar
+  <a class="anchor" href="#repolar">#</a>
+</h2>
+<p>Örnek bir repo taslağı</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>[$repo]
+</span></span><span style="display:flex;"><span>name=My Repository
+</span></span><span style="display:flex;"><span>baseurl=http://path/to/MyRepo
+</span></span><span style="display:flex;"><span>gpgcheck=1
+</span></span><span style="display:flex;"><span>gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-MyRep
+</span></span></code></pre></div></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#rpm--qa">rpm -qa</a></li>
+    <li><a href="#rpm--q">rpm -q</a></li>
+    <li><a href="#rpm--uvh">rpm -Uvh</a></li>
+    <li><a href="#rpm--e">rpm -e</a></li>
+    <li><a href="#varlibrpm">/var/lib/rpm</a></li>
+    <li><a href="#yum">yum</a></li>
+    <li><a href="#yum-list">yum list</a></li>
+    <li><a href="#yum-search">yum search</a></li>
+    <li><a href="#yum-provides">yum provides</a></li>
+    <li><a href="#yum-install">yum install</a></li>
+    <li><a href="#yum-update">yum update</a></li>
+    <li><a href="#yum-grouplist">yum grouplist</a></li>
+    <li><a href="#repolar">Repolar</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

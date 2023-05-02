@@ -2,6 +2,7 @@ baseURL = 'http://example.org/'
 languageCode = 'en-us'
 title = 'Linux Eğitim'
 theme = 'hugo-book'
+publishDir = "docs"
 
 [[module.mounts]]
   source = 'static'

@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="&ldquo;nmcli&rdquo; (Network Manager Command Line Interface), Linux işletim sistemlerinde Network Manager&rsquo;ı yönetmek için kullanılan bir komut satırı arayüzüdür. Bu araç, kablosuz ve kablolu ağ bağlantılarını yapılandırmak, yönetmek ve izlemek için kullanılabilir.
+&ldquo;nmcli&rdquo; aracı, ağ bağlantılarını yapılandırmak, düzenlemek ve silmek için kullanılabilir. Ayrıca, ağ bağlantılarını listelemek, bağlantı durumunu kontrol etmek ve ağ profillerini yönetmek için de kullanılabilir. Bu araç, komut satırından çalıştırıldığı için otomasyon ve betikleme için de uygundur.
+ Önceden, NetworkManager ağ profillerini ifcfg biçiminde saklıyordu.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="static IP" />
+<meta property="og:description" content="&ldquo;nmcli&rdquo; (Network Manager Command Line Interface), Linux işletim sistemlerinde Network Manager&rsquo;ı yönetmek için kullanılan bir komut satırı arayüzüdür. Bu araç, kablosuz ve kablolu ağ bağlantılarını yapılandırmak, yönetmek ve izlemek için kullanılabilir.
+&ldquo;nmcli&rdquo; aracı, ağ bağlantılarını yapılandırmak, düzenlemek ve silmek için kullanılabilir. Ayrıca, ağ bağlantılarını listelemek, bağlantı durumunu kontrol etmek ve ağ profillerini yönetmek için de kullanılabilir. Bu araç, komut satırından çalıştırıldığı için otomasyon ve betikleme için de uygundur.
+ Önceden, NetworkManager ağ profillerini ifcfg biçiminde saklıyordu." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/docs/101/a%C4%9F-y%C3%B6netimi/static-ip/" /><meta property="article:section" content="docs" />
+
+
+
+<title>static IP | Linux Eğitim</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.33a48f5432973b8ff9a82679d9e45d67f2c15d4399bd2829269455cfe390b5e8.css" integrity="sha256-M6SPVDKXO4/5qCZ52eRdZ/LBXUOZvSgpJpRVz&#43;OQteg=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.53a351c9376bbdf57038a0b23bb1962158bc7ad986e757ee0e69edad08038d87.js" integrity="sha256-U6NRyTdrvfVwOKCyO7GWIVi8etmG51fuDmntrQgDjYc=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Linux Eğitim</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-8c9421baa8361060d783c5adf6e0016b" class="toggle" checked />
+    <label for="section-8c9421baa8361060d783c5adf6e0016b" class="flex justify-between">
+      <a href="/docs/101/" class="">Linux 101</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a71bc27f68282d703f658ade56ec3588" class="toggle"  />
+    <label for="section-a71bc27f68282d703f658ade56ec3588" class="flex justify-between">
+      <a role="button" class="">Linux</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/linux/nedir/" class="">Linux Nedir</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/linux/tarihcesi/" class="">Linux Tarihçesi</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/linux/da%C4%9F%C4%B1t%C4%B1mlar/" class="">Dağıtımlar</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/linux/terminoloji/" class="">Terminoloji</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-d878beecb5059aac8f4f57cc1c7d19bc" class="toggle"  />
+    <label for="section-d878beecb5059aac8f4f57cc1c7d19bc" class="flex justify-between">
+      <a role="button" class="">Kurulum</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/kurulum/terminoloji/" class="">Terminoloji</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/kurulum/fedora-server/" class="">Fedora Kurulum</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/kurulum/ubuntu-server/" class="">Ubuntu Kurulum</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-ccf3432652f2f661d834afb94d891a58" class="toggle"  />
+    <label for="section-ccf3432652f2f661d834afb94d891a58" class="flex justify-between">
+      <a role="button" class="">Komutlar</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/komutlar/kabuk-komut/" class="">Temel komutlar</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-dd95113271805acbc8b49838b9ba9c68" class="toggle"  />
+    <label for="section-dd95113271805acbc8b49838b9ba9c68" class="flex justify-between">
+      <a role="button" class="">Kullanıcı Ve Yetkilendirme</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/kullan%C4%B1c%C4%B1-ve-yetkilendirme/kullan%C4%B1c%C4%B1-olu%C5%9Fturma/" class="">Kullanıcı Oluşturma</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/kullan%C4%B1c%C4%B1-ve-yetkilendirme/kullan%C4%B1c%C4%B1-silme/" class="">Kullanıcı Silme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/kullan%C4%B1c%C4%B1-ve-yetkilendirme/kullan%C4%B1c%C4%B1-%C3%B6zellikleri-de%C4%9Fi%C5%9Ftirme/" class="">Kullanıcı Özelliklerini Değiştirme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/kullan%C4%B1c%C4%B1-ve-yetkilendirme/dosya-yetkilendirme/" class="">Dosya Yetkilendirme</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-11bb86ac3069fd6d9b24198b6a8417fc" class="toggle"  />
+    <label for="section-11bb86ac3069fd6d9b24198b6a8417fc" class="flex justify-between">
+      <a role="button" class="">Paket Yönetimi</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/paket-y%C3%B6netimi/dpkg/" class="">DPKG</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/paket-y%C3%B6netimi/rpm/" class="">RPM</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/paket-y%C3%B6netimi/terminoloji/" class="">Terminoloji</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-96daf07ed24acff5f86cda3bc15068bb" class="toggle" checked />
+    <label for="section-96daf07ed24acff5f86cda3bc15068bb" class="flex justify-between">
+      <a role="button" class="">Ağ Yönetimi</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/nic/" class="">NIC</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/ip/" class="">IP</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/resolv/" class="">resolv.conf</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/hosts/" class="">hosts.conf</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/dig/" class="">dig</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/static-ip/" class="active">static IP</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/traceroute/" class="">traceroute</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/ethtool/" class="">ethtool</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/terminoloji/" class="">Terminoloji</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4df132e37d2d3ef2d4890ee600809e87" class="toggle"  />
+    <label for="section-4df132e37d2d3ef2d4890ee600809e87" class="flex justify-between">
+      <a href="/docs/102/" class="">Linux 102</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-b23b82d195398c5a48d33ecbaecffe31" class="toggle"  />
+    <label for="section-b23b82d195398c5a48d33ecbaecffe31" class="flex justify-between">
+      <a role="button" class="">Kernel</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/102/kernel/kernel-nedir/" class="">kernel nedir</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>static IP</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#up--down">Up &amp; Down</a></li>
+    <li><a href="#edit">edit</a></li>
+    <li><a href="#config-file">Config File</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><blockquote class="book-hint info">
+  <p>&ldquo;nmcli&rdquo; (Network Manager Command Line Interface), Linux işletim sistemlerinde Network Manager&rsquo;ı yönetmek için kullanılan bir komut satırı arayüzüdür. Bu araç, kablosuz ve kablolu ağ bağlantılarını yapılandırmak, yönetmek ve izlemek için kullanılabilir.</p>
+<p>&ldquo;nmcli&rdquo; aracı, ağ bağlantılarını yapılandırmak, düzenlemek ve silmek için kullanılabilir. Ayrıca, ağ bağlantılarını listelemek, bağlantı durumunu kontrol etmek ve ağ profillerini yönetmek için de kullanılabilir. Bu araç, komut satırından çalıştırıldığı için otomasyon ve betikleme için de uygundur.</p>
+
+</blockquote>
+
+<blockquote class="book-hint info">
+  Önceden, NetworkManager ağ profillerini ifcfg biçiminde saklıyordu.
+bu dizinde (/etc/sysconfig/network-scripts/). Ancak, ifcfg
+format kullanımdan kaldırıldı.
+</blockquote>
+
+<p>Öncelikle mevcut network kartlarını görüntüleyelim;</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>[root@localhost ~]# nmcli connection show
+</span></span><span style="display:flex;"><span>NAME    UUID                                  TYPE      DEVICE 
+</span></span><span style="display:flex;"><span>enp1s0  081eac1c-b9ab-3f1f-ba81-4acfbca5e469  ethernet  enp1s0 
+</span></span><span style="display:flex;"><span>lo      4f3307e7-8e4f-4817-bade-89180fd581a1  loopback  lo  
+</span></span></code></pre></div><p>Yeni bir nic profili tanımlayalım;</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>root@localhost ~]# nmcli con add type ethernet con-name &#34;static-ip&#34; ifname enp1s0 ipv4.addresses 192.168.122.150/24 gw4 192.168.122.1
+</span></span><span style="display:flex;"><span>Connection &#39;static-ip&#39; (be6f4767-448e-4daa-89b6-55e335c09071) successfully added.
+</span></span></code></pre></div><p>Mevcut profilleri görüntüliyelim;</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>[root@localhost ~]# nmcli connection show
+</span></span><span style="display:flex;"><span>NAME       UUID                                  TYPE      DEVICE 
+</span></span><span style="display:flex;"><span>enp1s0     081eac1c-b9ab-3f1f-ba81-4acfbca5e469  ethernet  enp1s0 
+</span></span><span style="display:flex;"><span>lo         4f3307e7-8e4f-4817-bade-89180fd581a1  loopback  lo     
+</span></span><span style="display:flex;"><span>static-ip  be6f4767-448e-4daa-89b6-55e335c09071  ethernet  --    
+</span></span></code></pre></div><p>static-ip isminde bir profil oluştuğunu görmekteyiz. Bu profile DNS ayaralarını ekliyoruz.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>[root@localhost ~]#  nmcli con mod static-ip ipv4.dns &#34;8.8.8.8 8.8.4.4&#34;
+</span></span></code></pre></div><p>oluşturdğumuz kartı aktif hale getiriyoruz.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>[root@localhost ~]# nmcli con up static-ip ifname enp1s0
+</span></span><span style="display:flex;"><span>Connection successfully activated (D-Bus active path: /org/freedesktop/NetworkManager/ActiveConnection/6)
+</span></span></code></pre></div><p>Enp1s0 ağ arayüzümüze başka bir IP adresi ekledik. IP adresinin başarıyla eklendiğini doğrulamak için ip komutunu çalıştıracağız:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>[root@localhost ~]# ip addr
+</span></span><span style="display:flex;"><span>1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+</span></span><span style="display:flex;"><span>    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+</span></span><span style="display:flex;"><span>    inet 127.0.0.1/8 scope host lo
+</span></span><span style="display:flex;"><span>       valid_lft forever preferred_lft forever
+</span></span><span style="display:flex;"><span>    inet6 ::1/128 scope host 
+</span></span><span style="display:flex;"><span>       valid_lft forever preferred_lft forever
+</span></span><span style="display:flex;"><span>2: enp1s0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc fq_codel state UP group default qlen 1000
+</span></span><span style="display:flex;"><span>    link/ether 52:54:00:1e:33:52 brd ff:ff:ff:ff:ff:ff
+</span></span><span style="display:flex;"><span>    inet 192.168.122.150/24 brd 192.168.122.255 scope global noprefixroute enp1s0
+</span></span><span style="display:flex;"><span>       valid_lft forever preferred_lft forever
+</span></span><span style="display:flex;"><span>    inet 192.168.122.10/24 brd 192.168.122.255 scope global secondary dynamic noprefixroute enp1s0
+</span></span><span style="display:flex;"><span>       valid_lft 3512sec preferred_lft 3512sec
+</span></span><span style="display:flex;"><span>    inet6 fe80::2eb2:fd3c:7c3f:a8a3/64 scope link noprefixroute 
+</span></span><span style="display:flex;"><span>       valid_lft forever preferred_lft forever
+</span></span><span style="display:flex;"><span>[root@localhost ~]# 
+</span></span></code></pre></div><h2 id="up--down">
+  Up &amp; Down
+  <a class="anchor" href="#up--down">#</a>
+</h2>
+<p>Bağlantıyı etkinleştirerek veya devre dışı bırakarak nasıl yönetebileceğinizi keşfedeceğiz. Bir bağlantıyı devre dışı bırakmak veya devre dışı bırakmak için şu komutu çalıştırın:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>nmcli con down id &#34;static-ip&#34; ifname enp1s0
+</span></span></code></pre></div><p><img src="/images/down-nic.png" alt="" /></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>nmcli con up id &#34;static-ip&#34; ifname enp1s0
+</span></span></code></pre></div><p><img src="/images/nic-up.png" alt="" /></p>
+<h2 id="edit">
+  edit
+  <a class="anchor" href="#edit">#</a>
+</h2>
+<p>Oluşturmuş olduğumuz profili editlemek için;</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>[root@localhost network-scripts]# nmcli connection edit static-ip
+</span></span><span style="display:flex;"><span>nmcli&gt; set ipv4.method manual
+</span></span><span style="display:flex;"><span>nmcli&gt; set ipv4.address 192.168.122.151/24
+</span></span><span style="display:flex;"><span>nmcli&gt; save
+</span></span></code></pre></div><h2 id="config-file">
+  Config File
+  <a class="anchor" href="#config-file">#</a>
+</h2>
+<p>Yapılan tüm değişiklikler  <strong>/etc/NetworkManager/system-connections/</strong> dizininde tutulmaktadır.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>[root@localhost network-scripts]# cat /etc/NetworkManager/system-connections/static-ip.nmconnection 
+</span></span><span style="display:flex;"><span>[connection]
+</span></span><span style="display:flex;"><span>id=static-ip
+</span></span><span style="display:flex;"><span>uuid=be6f4767-448e-4daa-89b6-55e335c09071
+</span></span><span style="display:flex;"><span>type=ethernet
+</span></span><span style="display:flex;"><span>interface-name=enp1s0
+</span></span><span style="display:flex;"><span>timestamp=1682674842
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[ethernet]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[ipv4]
+</span></span><span style="display:flex;"><span>address1=192.168.122.150/24,192.168.122.1
+</span></span><span style="display:flex;"><span>address2=192.168.122.151/24
+</span></span><span style="display:flex;"><span>dns=8.8.8.8;8.8.4.4;
+</span></span><span style="display:flex;"><span>method=manual
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[ipv6]
+</span></span><span style="display:flex;"><span>addr-gen-mode=default
+</span></span><span style="display:flex;"><span>method=auto
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[proxy]
+</span></span></code></pre></div></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#up--down">Up &amp; Down</a></li>
+    <li><a href="#edit">edit</a></li>
+    <li><a href="#config-file">Config File</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

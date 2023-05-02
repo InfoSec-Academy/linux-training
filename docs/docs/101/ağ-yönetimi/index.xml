@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux Eğitim</title>
+    <link>http://example.org/docs/101/a%C4%9F-y%C3%B6netimi/</link>
+    <description>Recent content on Linux Eğitim</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://example.org/docs/101/a%C4%9F-y%C3%B6netimi/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>NIC</title>
+      <link>http://example.org/docs/101/a%C4%9F-y%C3%B6netimi/nic/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/101/a%C4%9F-y%C3%B6netimi/nic/</guid>
+      <description>iproute ve net-tools bu iki paket bize Network kartımız hakkında bilgi verecek ip ve ifconfig komutlarını barındırmaktadır.
+NIC #  NIC (Network Interface Card), ağ arayüz kartı olarak da bilinen bir donanım bileşenidir. Bilgisayar veya diğer cihazlar için ağ bağlantısı sağlar ve kablosuz veya kablolu ağa bağlanmak için kullanılabilir.
+NIC, bir bilgisayarın ağa bağlanmasına izin veren bir ara yüz sağlar. Bir NIC, Ethernet kablosu, fiber optik kablo veya kablosuz ağa bağlanmak için kullanılan antenler gibi fiziksel bağlantı noktaları sağlar.</description>
+    </item>
+    
+    <item>
+      <title>IP</title>
+      <link>http://example.org/docs/101/a%C4%9F-y%C3%B6netimi/ip/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/101/a%C4%9F-y%C3%B6netimi/ip/</guid>
+      <description>İki farklı IP adresi türü mevcuttur: IPv4 (sürüm 4) ve IPv6 (sürüm 6). IPv4 daha eskidir ve çok daha yaygın olarak kullanılırken, IPv6 daha yenidir ve eski standardın doğasında bulunan sınırlamaları aşmak ve daha birçok olası adres sağlamak için tasarlanmıştır.
+IPv4, adresler için 32 bit kullanır; yalnızca 4,3 milyar benzersiz adres mevcuttur. Ayrıca, birçok adres tahsis edilir ve rezerve edilir, ancak gerçekte kullanılmaz. IPv4&amp;rsquo;ün gelecekteki ihtiyaçları karşılamak için yetersiz olduğu düşünülüyor çünkü küresel ağda bulunan cihazların sayısı son yıllarda çok arttı.</description>
+    </item>
+    
+    <item>
+      <title>resolv.conf</title>
+      <link>http://example.org/docs/101/a%C4%9F-y%C3%B6netimi/resolv/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/101/a%C4%9F-y%C3%B6netimi/resolv/</guid>
+      <description>/etc/resolv.conf, Unix benzeri işletim sistemlerinde DNS (Domain Name System) yapılandırmasını ayarlamak için kullanılan bir dosyadır. Bu dosya, DNS sorguları yapmak için kullanılan DNS sunucularının IP adreslerini ve diğer yapılandırma seçeneklerini içerir.
+Örneğin, bir bilgisayarın /etc/resolv.conf dosyasında aşağıdaki satırlar bulunabilir:
+nameserver 8.8.8.8 nameserver 8.8.4.4 Bu, bilgisayarın DNS sorgularını Google Public DNS sunucularına yönlendireceğini belirtir. Başka seçenekler de vardır, örneğin, arama alanlarını belirlemek veya sorguları sınırlamak için yerel bir DNS sunucusu kullanmak gibi.</description>
+    </item>
+    
+    <item>
+      <title>hosts.conf</title>
+      <link>http://example.org/docs/101/a%C4%9F-y%C3%B6netimi/hosts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/101/a%C4%9F-y%C3%B6netimi/hosts/</guid>
+      <description>/etc/hosts, Unix benzeri işletim sistemlerinde kullanılan bir dosyadır ve IP adresleri ile alan adları arasında elle yapılan eşleştirmeleri sağlar. Bu dosya, bir bilgisayarın DNS sunucularını kullanmadan, yerel olarak alan adlarına IP adresleri atamak için kullanılabilir.
+Örneğin, /etc/hosts dosyasında aşağıdaki satırlar bulunabilir:
+127.0.0.1 localhost 192.168.1.10 myserver.com Bu, bilgisayarın yerel DNS sunucusunu kullanmadan, &amp;ldquo;localhost&amp;rdquo; adının her zaman 127.0.0.1 IP adresine eşit olduğunu ve &amp;ldquo;myserver.com&amp;rdquo; adının 192.168.1.10 IP adresine eşit olduğunu belirtir.
+/etc/hosts dosyası, bir bilgisayarın yerel ağındaki diğer bilgisayarları adlandırmak veya test amaçlı web sitelerini yönlendirmek gibi çeşitli amaçlar için kullanılabilir.</description>
+    </item>
+    
+    <item>
+      <title>dig</title>
+      <link>http://example.org/docs/101/a%C4%9F-y%C3%B6netimi/dig/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/101/a%C4%9F-y%C3%B6netimi/dig/</guid>
+      <description>dig, Domain Information Groper (Alan Bilgisi Kazıyıcısı) olarak adlandırılan, DNS (Domain Name System) sorguları yapmak için kullanılan bir komut satırı aracıdır. Unix ve Unix benzeri işletim sistemlerinde kullanılabilir.
+dig, DNS sorguları yaparak belirtilen bir alan adının IP adresi veya tersi bir DNS sorgusu yaparak bir IP adresinin alan adı gibi bilgileri almanıza olanak tanır. Ayrıca, DNS sunucularını doğrulamak ve bağlantı sorunlarını gidermek için de kullanılabilir.
+Örneğin, aşağıdaki komut bir alan adının IP adresini almak için kullanılabilir:</description>
+    </item>
+    
+    <item>
+      <title>static IP</title>
+      <link>http://example.org/docs/101/a%C4%9F-y%C3%B6netimi/static-ip/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/101/a%C4%9F-y%C3%B6netimi/static-ip/</guid>
+      <description>&amp;ldquo;nmcli&amp;rdquo; (Network Manager Command Line Interface), Linux işletim sistemlerinde Network Manager&amp;rsquo;ı yönetmek için kullanılan bir komut satırı arayüzüdür. Bu araç, kablosuz ve kablolu ağ bağlantılarını yapılandırmak, yönetmek ve izlemek için kullanılabilir.
+&amp;ldquo;nmcli&amp;rdquo; aracı, ağ bağlantılarını yapılandırmak, düzenlemek ve silmek için kullanılabilir. Ayrıca, ağ bağlantılarını listelemek, bağlantı durumunu kontrol etmek ve ağ profillerini yönetmek için de kullanılabilir. Bu araç, komut satırından çalıştırıldığı için otomasyon ve betikleme için de uygundur.
+ Önceden, NetworkManager ağ profillerini ifcfg biçiminde saklıyordu.</description>
+    </item>
+    
+    <item>
+      <title>traceroute</title>
+      <link>http://example.org/docs/101/a%C4%9F-y%C3%B6netimi/traceroute/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/101/a%C4%9F-y%C3%B6netimi/traceroute/</guid>
+      <description>Traceroute, ağdaki bir hedefe erişmek için verilerin nasıl ilerlediğini gösteren bir ağ teşhis aracıdır. Traceroute, paketlerin izlenebilirliğini sağlamak için ICMP (Internet Control Message Protocol) ve TTL (Time to Live) kullanır. Traceroute, bir hedefe yönelik veri paketleri gönderir ve bu paketlerin yolu boyunca hangi ağ cihazlarından geçtiğini ve hangi cihazlarda gecikme yaşandığını takip eder.
+Traceroute, bir hedefe yönelik veri paketleri gönderir ve her paketin TTL değerini arttırarak gönderir. TTL, her yönlendirici (router) geçişinde bir azaltma işlemi uygular.</description>
+    </item>
+    
+    <item>
+      <title>ethtool</title>
+      <link>http://example.org/docs/101/a%C4%9F-y%C3%B6netimi/ethtool/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/101/a%C4%9F-y%C3%B6netimi/ethtool/</guid>
+      <description>ethtool bir Linux aracıdır ve Ethernet kartının ayarlarını değiştirmek için kullanılır. ethtool aracı, bir Ethernet kartının desteklediği özellikleri listelemek, NIC ayarlarını görüntülemek ve yapılandırmak için kullanılabilir.
+Birkaç kullanışlı ethtool komutu şunlardır:
+ ethtool enp1s0: enp1s0 arayüzündeki NIC ayarlarını gösterir. ethtool -i enp1s0: enp1s0 arayüzündeki sürücü bilgilerini gösterir. ethtool -S enp1s0: enp1s0 arayüzündeki NIC istatistiklerini gösterir. ethtool -A enp1s0 autoneg on: enp1s0 arayüzündeki otomatik anlaşma özelliğini açar. ethtool -s enp1s0 speed 1000 duplex full: enp1s0 arayüzündeki hızı 1000Mbps ve tam çift yönlü (full duplex) modunu ayarlar.</description>
+    </item>
+    
+    <item>
+      <title>Terminoloji</title>
+      <link>http://example.org/docs/101/a%C4%9F-y%C3%B6netimi/terminoloji/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/101/a%C4%9F-y%C3%B6netimi/terminoloji/</guid>
+      <description>OSI #  OSI (Open Systems Interconnection) modeli, ağ iletişiminde kullanılan standart bir referans modelidir. OSI modeli, farklı ağ cihazları arasındaki iletişimi standartlaştırmak ve uyumluluğu sağlamak için tasarlanmıştır.
+OSI modeli, 7 farklı katmandan oluşur ve her katman, belirli bir işlevi yerine getirir. Bu katmanlar şunlardır:
+  Fiziksel Katman (Physical Layer): Bu katman, ağ cihazları arasındaki verilerin fiziksel ortamda taşınmasından sorumludur. Veriler, elektrik sinyalleri, radyo dalgaları veya fiber optik kablolama gibi farklı fiziksel ortamlarda taşınabilir.</description>
+    </item>
+    
+  </channel>
+</rss>
