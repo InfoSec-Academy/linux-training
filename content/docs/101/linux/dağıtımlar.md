@@ -14,7 +14,7 @@ Ancak, 2020 yılında Red Hat, CentOS'ün geleceğine yönelik bir değişiklik 
 Bu açıklama, CentOS topluluğunda şok etkisi yarattı ve CentOS kullanıcıları, gelecekteki sürümler için alternatif bir plana sahip olmadan kalacaklarını düşündüler. Bu nedenle, CentOS kullanıcılarından bazıları, CentOS kaynak kodunu kullanarak bağımsız bir proje olan Rocky Linux'i başlatmaya karar verdiler. Rocky Linux, CentOS projesinin özellikle sunucu ortamlarında kullanımı için stabil ve güvenilir bir alternatif olarak hizmet vermeyi amaçlamaktadır.
 Sonuç olarak, CentOS projesinin bitmesi, Red Hat'ın CentOS'u RHEL markası altında bütünleştirmesi nedeniyle gerçekleşti. Ancak, CentOS kaynak kodunun kullanılmasıyla yeni bir proje olan Rocky Linux, CentOS kullanıcıları için bir alternatif sağlamaya çalışıyor.
 
-![](/images/centos.png)
+![](/linux-training/images/centos.png)
 
 ## Diğer Dağıtımlar
 Gentoo: Kullanıcıların kendi sistemlerini özelleştirebilecekleri bir Linux dağıtımıdır. Gentoo, portage paket yöneticisi kullanarak kaynak kodundan derleme yapar.
@@ -22,4 +22,4 @@ openSUSE: SUSE Linux'un açık kaynak kodlu sürümüdür. Hem masaüstü hem de
 CentOS Stream: CentOS projesinin sonlandırılmasından sonra, CentOS Stream ortaya çıktı. CentOS Stream, Red Hat Enterprise Linux'un gelecekteki sürümleri için bir test alanıdır ve son teknolojileri içerir.
 Manjaro: Arch Linux tabanlı bir kullanıcı dostu masaüstü Linux dağıtımıdır. Manjaro, kullanıcılara kolay kurulum, güncelleme ve yapılandırma seçenekleri sunar.
 
-![](/images/linux-distros.jpg)
+![](/linux-training/images/linux-distros.jpg)
