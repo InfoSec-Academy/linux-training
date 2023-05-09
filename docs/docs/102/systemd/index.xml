@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux Eğitim</title>
+    <link>http://example.org/docs/102/systemd/</link>
+    <description>Recent content on Linux Eğitim</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://example.org/docs/102/systemd/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>systemd operasyonları</title>
+      <link>http://example.org/docs/102/systemd/servis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/102/systemd/servis/</guid>
+      <description>Systemd, modern Linux sistemlerinde başlatma ve durdurma işlemlerinin yönetimini sağlayan bir sistem yönetimi aracıdır. Systemd, birim dosyaları olarak adlandırılan yapılandırma dosyaları kullanarak sistem hizmetlerini yönetir. Bu birim dosyaları, hizmetin başlatma, durdurma, yeniden başlatma, devreye alma ve devre dışı bırakma gibi işlemlerini yönetmek için komutlar sağlar.
+Systemd ile kullanılan en temel işlemler şunlardır:
+ start: Bir hizmeti başlatmak için kullanılır. Örnek kullanım:  systemctl start nginx.service Bu komut, nginx hizmetini başlatır.</description>
+    </item>
+    
+    <item>
+      <title>servis ekleme</title>
+      <link>http://example.org/docs/102/systemd/systemd/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/102/systemd/systemd/</guid>
+      <description>systemd, bir Linux sistem yönetimi sistemidir. Sistemin açılış, kapanış ve hizmet yönetimi işlemlerini yönetir. Aynı zamanda, sistem loglarını yönetir, süreçleri yönetir ve sistem zamanlamasını sağlar.
+Systemd, BSD init sistemine alternatif olarak geliştirilmiştir ve modern Linux dağıtımlarında varsayılan olarak kullanılır. Sistem yönetimi için daha yüksek seviyeli bir arayüz sağlar ve hizmetlerin birbirine bağımlılıklarını ve önceliklerini yönetebilir.
+Örnek olarak, systemd üzerinden bir hizmetin durumunu kontrol edebilir, başlatıp durdurabilir, hizmet konfigürasyonunu değiştirebilirsiniz. Sistem başlatılırken çalıştırılacak hizmetleri belirlemek de mümkündür.</description>
+    </item>
+    
+  </channel>
+</rss>

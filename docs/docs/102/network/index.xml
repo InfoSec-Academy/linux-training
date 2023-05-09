@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux Eğitim</title>
+    <link>http://example.org/docs/102/network/</link>
+    <description>Recent content on Linux Eğitim</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://example.org/docs/102/network/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ağ Güvenliği</title>
+      <link>http://example.org/docs/102/network/network/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/102/network/network/</guid>
+      <description>Linux, birçok farklı ağ protokolü için destek sunar ve birçok ağ yönetimi aracı ve güvenlik aracı da içerir. Ağ yönetimi, ağınızı yapılandırmak, ağınızda bağlı cihazları görüntülemek, ağ bağlantılarını izlemek ve ağ sorunlarını çözmek için kullanabileceğiniz bir dizi aracı içerir. Güvenlik, Linux&amp;rsquo;ta oldukça önemli bir konudur ve bir dizi araç, güvenliği artırmak ve ağınızı korumak için kullanılabilir. Bazı popüler ağ yönetimi ve güvenlik araçları şunlardır:
+  tcpdump: Ağ trafiğini izlemek ve analiz etmek için kullanılan bir araçtır.</description>
+    </item>
+    
+    <item>
+      <title>fail2ban</title>
+      <link>http://example.org/docs/102/network/fail2ban/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/102/network/fail2ban/</guid>
+      <description>Fail2ban, sunucularda otomatik olarak güvenlik önlemleri alarak, sisteme yapılan saldırıları engellemek için kullanılan bir açık kaynaklı bir yazılımdır. Fail2ban, güvenliği artırmak için sunucu log dosyalarını izleyerek saldırıları tespit eder ve bu saldırıların ardından saldırganın IP adresini belirler ve bu IP adresini engeller.
+Fail2ban, birden fazla protokolü destekleyen bir yazılımdır ve bir dizi filtreleme kuralları içerir. Örnek olarak, SSH sunucusunda başarısız oturum açma denemelerini tespit edebilir ve ardından bu IP adreslerini belirleyip firewall kurallarını kullanarak IP adreslerini engelleyebilir.</description>
+    </item>
+    
+    <item>
+      <title>iptables</title>
+      <link>http://example.org/docs/102/network/iptables/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/102/network/iptables/</guid>
+      <description>iptables, Linux işletim sistemi için geliştirilmiş bir güvenlik yazılımıdır. Paket filtreleme, ağ adresi çevirme (NAT) ve port yönlendirme gibi işlevleri yerine getirir. İptables, Linux&amp;rsquo;un dahili bir parçasıdır ve çoğu Linux dağıtımında mevcuttur. Ayrıca, birçok güvenlik duvarı uygulaması da iptables tabanlıdır.
+İptables, bir dizi kurala dayalı olarak çalışır. Her bir kural, bir paketin belirli bir eylem için uygun olup olmadığını belirler. Paketler, gelen ve giden trafiği kontrol etmek için farklı zincirlerde işlenir.</description>
+    </item>
+    
+    <item>
+      <title>tcpdump</title>
+      <link>http://example.org/docs/102/network/tcpdump/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/102/network/tcpdump/</guid>
+      <description>tcpdump, Linux ve Unix benzeri işletim sistemlerinde ağ trafiğini yakalamak ve analiz etmek için kullanılan bir komut satırı aracıdır. tcpdump, ağ trafiğini yakalamak için promiscuous modda çalışır ve birçok protokolü destekler.
+Tcpdump, ağ trafiğini kaydetmek için kullanılabilir ve kaydedilen veriler Wireshark gibi grafik arayüzüne sahip bir araçta analiz edilebilir.
+Tcpdump ayrıca, ağda meydana gelen sorunları tespit etmek için kullanılan bir araçtır. Örneğin, ağ trafiğinde neden gecikmeler veya düşük performans yaşandığını belirlemek için kullanılabilir.</description>
+    </item>
+    
+  </channel>
+</rss>

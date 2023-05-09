@@ -1,0 +1,1432 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Docker, uygulamaların bir yazılım paketi olarak paketlenmesi, taşınması ve çalıştırılması için açık kaynaklı bir konteyner teknolojisidir. Docker, uygulamaların ve bağımlılıklarının sanal ortamlarda (konteynerler) çalıştırılmasını sağlar, bu sayede uygulamaların daha hızlı, güvenilir ve taşınabilir olmasını sağlar. Docker konteyner teknolojisi, farklı işletim sistemleri ve altyapılar üzerinde de çalışabilir.
+Docker kullanarak bir uygulama çalıştırmak için öncelikle Docker Engine yazılımının kurulması gerekiyor. Daha sonra, uygulamanın Dockerfile adı verilen bir dosyada tanımlanması ve Docker build komutu kullanılarak bir Docker imajının oluşturulması gerekiyor.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="docker" />
+<meta property="og:description" content="Docker, uygulamaların bir yazılım paketi olarak paketlenmesi, taşınması ve çalıştırılması için açık kaynaklı bir konteyner teknolojisidir. Docker, uygulamaların ve bağımlılıklarının sanal ortamlarda (konteynerler) çalıştırılmasını sağlar, bu sayede uygulamaların daha hızlı, güvenilir ve taşınabilir olmasını sağlar. Docker konteyner teknolojisi, farklı işletim sistemleri ve altyapılar üzerinde de çalışabilir.
+Docker kullanarak bir uygulama çalıştırmak için öncelikle Docker Engine yazılımının kurulması gerekiyor. Daha sonra, uygulamanın Dockerfile adı verilen bir dosyada tanımlanması ve Docker build komutu kullanılarak bir Docker imajının oluşturulması gerekiyor." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/docs/102/konteyner/docker/" /><meta property="article:section" content="docs" />
+
+
+
+<title>docker | Linux Eğitim</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.33a48f5432973b8ff9a82679d9e45d67f2c15d4399bd2829269455cfe390b5e8.css" integrity="sha256-M6SPVDKXO4/5qCZ52eRdZ/LBXUOZvSgpJpRVz&#43;OQteg=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.85cda9532203e37480076126a5f58ef438d432d119ce107eaa81577660c359ce.js" integrity="sha256-hc2pUyID43SAB2EmpfWO9DjUMtEZzhB&#43;qoFXdmDDWc4=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Linux Eğitim</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-8c9421baa8361060d783c5adf6e0016b" class="toggle"  />
+    <label for="section-8c9421baa8361060d783c5adf6e0016b" class="flex justify-between">
+      <a role="button" class="">Linux 101</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a71bc27f68282d703f658ade56ec3588" class="toggle"  />
+    <label for="section-a71bc27f68282d703f658ade56ec3588" class="flex justify-between">
+      <a role="button" class="">Linux</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/linux/nedir/" class="">Linux Nedir</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/linux/tarihcesi/" class="">Linux Tarihçesi</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/linux/da%C4%9F%C4%B1t%C4%B1mlar/" class="">Dağıtımlar</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/linux/terminoloji/" class="">Terminoloji</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-d878beecb5059aac8f4f57cc1c7d19bc" class="toggle"  />
+    <label for="section-d878beecb5059aac8f4f57cc1c7d19bc" class="flex justify-between">
+      <a role="button" class="">Kurulum</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/kurulum/terminoloji/" class="">Terminoloji</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/kurulum/fedora-server/" class="">Fedora Kurulum</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/kurulum/ubuntu-server/" class="">Ubuntu Kurulum</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-ccf3432652f2f661d834afb94d891a58" class="toggle"  />
+    <label for="section-ccf3432652f2f661d834afb94d891a58" class="flex justify-between">
+      <a role="button" class="">Komutlar</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/komutlar/kabuk-komut/" class="">Temel komutlar</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-dd95113271805acbc8b49838b9ba9c68" class="toggle"  />
+    <label for="section-dd95113271805acbc8b49838b9ba9c68" class="flex justify-between">
+      <a role="button" class="">Kullanıcı Ve Yetkilendirme</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/kullan%C4%B1c%C4%B1-ve-yetkilendirme/kullan%C4%B1c%C4%B1-olu%C5%9Fturma/" class="">Kullanıcı Oluşturma</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/kullan%C4%B1c%C4%B1-ve-yetkilendirme/kullan%C4%B1c%C4%B1-silme/" class="">Kullanıcı Silme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/kullan%C4%B1c%C4%B1-ve-yetkilendirme/kullan%C4%B1c%C4%B1-%C3%B6zellikleri-de%C4%9Fi%C5%9Ftirme/" class="">Kullanıcı Özelliklerini Değiştirme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/kullan%C4%B1c%C4%B1-ve-yetkilendirme/dosya-yetkilendirme/" class="">Dosya Yetkilendirme</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-11bb86ac3069fd6d9b24198b6a8417fc" class="toggle"  />
+    <label for="section-11bb86ac3069fd6d9b24198b6a8417fc" class="flex justify-between">
+      <a role="button" class="">Paket Yönetimi</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/paket-y%C3%B6netimi/dpkg/" class="">DPKG</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/paket-y%C3%B6netimi/rpm/" class="">RPM</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/paket-y%C3%B6netimi/terminoloji/" class="">Terminoloji</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a43896349dabd89d84727e83a0e21e0e" class="toggle"  />
+    <label for="section-a43896349dabd89d84727e83a0e21e0e" class="flex justify-between">
+      <a role="button" class="">Crontab</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/crontab/crontab/" class="">crontab</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-e25cdf69781da11b9e5e55d05c74f928" class="toggle"  />
+    <label for="section-e25cdf69781da11b9e5e55d05c74f928" class="flex justify-between">
+      <a role="button" class="">Fstab</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/fstab/fstab/" class="">fstab</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-96daf07ed24acff5f86cda3bc15068bb" class="toggle"  />
+    <label for="section-96daf07ed24acff5f86cda3bc15068bb" class="flex justify-between">
+      <a role="button" class="">Ağ Yönetimi</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/nic/" class="">NIC</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/ip/" class="">IP</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/resolv/" class="">resolv.conf</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/hosts/" class="">hosts.conf</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/dig/" class="">dig</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/static-ip/" class="">static IP</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/traceroute/" class="">traceroute</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/ethtool/" class="">ethtool</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/terminoloji/" class="">Terminoloji</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-72903c0f660ed290723876aab4279963" class="toggle"  />
+    <label for="section-72903c0f660ed290723876aab4279963" class="flex justify-between">
+      <a role="button" class="">Sorun Giderme</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/sorun-giderme/dmesg/" class="">dmesg</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/sorun-giderme/secure/" class="">secure</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4df132e37d2d3ef2d4890ee600809e87" class="toggle" checked />
+    <label for="section-4df132e37d2d3ef2d4890ee600809e87" class="flex justify-between">
+      <a role="button" class="">Linux 102</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-b23b82d195398c5a48d33ecbaecffe31" class="toggle"  />
+    <label for="section-b23b82d195398c5a48d33ecbaecffe31" class="flex justify-between">
+      <a role="button" class="">Kernel</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/102/kernel/kernel/" class="">kernel</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/102/kernel/modprobe/" class="">modprobe</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/102/kernel/grub/" class="">grub</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-02d9695836173e529e93ba7f8749a09f" class="toggle"  />
+    <label for="section-02d9695836173e529e93ba7f8749a09f" class="flex justify-between">
+      <a role="button" class="">Monitoring</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/102/monitoring/atop/" class="">atop</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/102/monitoring/iostat/" class="">iostat</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/102/monitoring/lsof/" class="">lsof</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/102/monitoring/top/" class="">top</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-b4e6a6da7ac21c0d2963ad992a31ebaa" class="toggle"  />
+    <label for="section-b4e6a6da7ac21c0d2963ad992a31ebaa" class="flex justify-between">
+      <a role="button" class="">Network</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/102/network/network/" class="">Ağ Güvenliği</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/102/network/fail2ban/" class="">fail2ban</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/102/network/iptables/" class="">iptables</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/102/network/tcpdump/" class="">tcpdump</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a3a8d3e03649a012c1e93a11a488a073" class="toggle"  />
+    <label for="section-a3a8d3e03649a012c1e93a11a488a073" class="flex justify-between">
+      <a role="button" class="">Editör</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/102/edit%C3%B6r/nano/" class="">nano</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/102/edit%C3%B6r/vim/" class="">vim</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-33d0bc4551b2d262e1ad0a6a7ccf33ec" class="toggle" checked />
+    <label for="section-33d0bc4551b2d262e1ad0a6a7ccf33ec" class="flex justify-between">
+      <a role="button" class="">Konteyner</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/102/konteyner/konteyner/" class="">konteyner teknolojisi</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/102/konteyner/lxc/" class="">lxc</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/102/konteyner/docker/" class="active">docker</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-7df0e477948b409b1bd57c17697bd0c2" class="toggle"  />
+    <label for="section-7df0e477948b409b1bd57c17697bd0c2" class="flex justify-between">
+      <a role="button" class="">Remote Connection</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/102/remote-connection/ssh/" class="">ssh</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-bb1b63a1226acdafab9eb933f76dbb6d" class="toggle"  />
+    <label for="section-bb1b63a1226acdafab9eb933f76dbb6d" class="flex justify-between">
+      <a role="button" class="">Script</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/102/script/bash/" class="">bash script</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/102/script/if/" class="">if</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/102/script/listeler/" class="">listeler</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/102/script/s%C3%B6zl%C3%BCkler/" class="">sözlükler</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/102/script/while/" class="">while</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/102/script/switch/" class="">switch/case</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/102/script/sed/" class="">sed</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/102/script/awk/" class="">awk</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-1d69d5c3a7dea57d120ece7f72317513" class="toggle"  />
+    <label for="section-1d69d5c3a7dea57d120ece7f72317513" class="flex justify-between">
+      <a role="button" class="">Systemd</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/102/systemd/servis/" class="">systemd operasyonları</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/102/systemd/systemd/" class="">servis ekleme</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-6ce8ef21c020ccdb7ed73156795b30be" class="toggle"  />
+    <label for="section-6ce8ef21c020ccdb7ed73156795b30be" class="flex justify-between">
+      <a role="button" class="">Security</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/security/shadow/" class="">shadow</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/security/sudo/" class="">sudo</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/security/who/" class="">who</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/security/pam/" class="">pam</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>docker</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#kurulum">Kurulum</a></li>
+    <li><a href="#başlatma">Başlatma</a></li>
+    <li><a href="#konteyner-kaldırma">Konteyner Kaldırma</a></li>
+    <li><a href="#durdurma">Durdurma</a></li>
+    <li><a href="#silme">Silme</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><p>Docker, uygulamaların bir yazılım paketi olarak paketlenmesi, taşınması ve çalıştırılması için açık kaynaklı bir konteyner teknolojisidir. Docker, uygulamaların ve bağımlılıklarının sanal ortamlarda (konteynerler) çalıştırılmasını sağlar, bu sayede uygulamaların daha hızlı, güvenilir ve taşınabilir olmasını sağlar. Docker konteyner teknolojisi, farklı işletim sistemleri ve altyapılar üzerinde de çalışabilir.</p>
+<p>Docker kullanarak bir uygulama çalıştırmak için öncelikle Docker Engine yazılımının kurulması gerekiyor. Daha sonra, uygulamanın Dockerfile adı verilen bir dosyada tanımlanması ve Docker build komutu kullanılarak bir Docker imajının oluşturulması gerekiyor. Bu imaj, uygulamanın ve bağımlılıklarının tam bir kopyasını içerir. Bu imaj, Docker Hub gibi bir imaj deposuna yüklenerek başkaları tarafından kullanılabilir hale getirilebilir.</p>
+<p>Bir Docker imajı çalıştırmak için Docker run komutu kullanılır. Bu komut, bir Docker konteyneri oluşturur ve imajdaki uygulamanın bu konteynerde çalışmasını sağlar. Docker konteynerleri, izole edilmiş bir çevrede çalıştığı için birden çok konteyner aynı anda aynı makinede çalıştırılabilir.</p>
+<p>Docker, uygulamaları hızlı bir şekilde dağıtmak ve güncellemek için de kullanılabilir. Docker Hub gibi bir imaj deposuna yüklenen imajlar, birden çok sunucuda hızlı bir şekilde çalıştırılabilir. Bu sayede, uygulamaların hızlı bir şekilde dağıtılması ve güncellenmesi mümkün hale gelir.</p>
+<p>Özetle, Docker konteyner teknolojisi, uygulamaların izole edilmiş sanal ortamlarda çalıştırılmasını sağlayan açık kaynaklı bir teknolojidir.</p>
+<h2 id="kurulum">
+  Kurulum
+  <a class="anchor" href="#kurulum">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>yum install docker-ce docker-ce-cli containerd.io
+</span></span></code></pre></div><h2 id="başlatma">
+  Başlatma
+  <a class="anchor" href="#ba%c5%9flatma">#</a>
+</h2>
+<p>Docker servisini başlatmak için aşağıdaki komutu çalıştırın:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>systemctl start docker
+</span></span></code></pre></div><h2 id="konteyner-kaldırma">
+  Konteyner Kaldırma
+  <a class="anchor" href="#konteyner-kald%c4%b1rma">#</a>
+</h2>
+<p>İlk konteyneri çalıştırmak için, örneğin Nginx web sunucusunu çalıştırmak için aşağıdaki komutu kullanabilirsiniz:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>docker run -d -p 8080:80 nginx
+</span></span></code></pre></div><p>Bu komut, Nginx konteyner imajını indirir ve 8080 portundan gelen trafiği konteyner içindeki 80 numaralı porta yönlendirir.</p>
+<p>Konteynerin çalışıp çalışmadığını görmek için aşağıdaki komutu çalıştırabilirsiniz:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>docker ps
+</span></span></code></pre></div><h2 id="durdurma">
+  Durdurma
+  <a class="anchor" href="#durdurma">#</a>
+</h2>
+<p>Konteyneri durdurmak için aşağıdaki komutu kullanabilirsiniz:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>docker stop &lt;CONTAINER_ID&gt;
+</span></span></code></pre></div><h2 id="silme">
+  Silme
+  <a class="anchor" href="#silme">#</a>
+</h2>
+<p>Konteyneri silmek için aşağıdaki komutu kullanabilirsiniz:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>docker rm &lt;CONTAINER_ID&gt;
+</span></span></code></pre></div></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#kurulum">Kurulum</a></li>
+    <li><a href="#başlatma">Başlatma</a></li>
+    <li><a href="#konteyner-kaldırma">Konteyner Kaldırma</a></li>
+    <li><a href="#durdurma">Durdurma</a></li>
+    <li><a href="#silme">Silme</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

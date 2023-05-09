@@ -1,0 +1,1577 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="PAM (Pluggable Authentication Modules), Linux sistemlerinde kullanıcı kimlik doğrulama mekanizmalarını yönetmek için kullanılan bir çerçevedir. Bu mekanizmalar, örneğin şifre denetimleri, hesap kilitleme, oturum açma sırasında iki faktörlü kimlik doğrulama gibi işlemleri gerçekleştirebilir.
+PAM, bir dizi modül kullanarak kimlik doğrulama işlemlerini yapılandırır. Her modül belirli bir görevi yerine getirir. Örneğin, bir modül kullanıcının şifresini kontrol ederken, diğer modüller hesap kilitleme ve oturum açma sırasında ek güvenlik önlemleri gibi işlemleri yapar.
+PAM, sistem yöneticilerine esnek bir yapı sağlar.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="pam" />
+<meta property="og:description" content="PAM (Pluggable Authentication Modules), Linux sistemlerinde kullanıcı kimlik doğrulama mekanizmalarını yönetmek için kullanılan bir çerçevedir. Bu mekanizmalar, örneğin şifre denetimleri, hesap kilitleme, oturum açma sırasında iki faktörlü kimlik doğrulama gibi işlemleri gerçekleştirebilir.
+PAM, bir dizi modül kullanarak kimlik doğrulama işlemlerini yapılandırır. Her modül belirli bir görevi yerine getirir. Örneğin, bir modül kullanıcının şifresini kontrol ederken, diğer modüller hesap kilitleme ve oturum açma sırasında ek güvenlik önlemleri gibi işlemleri yapar.
+PAM, sistem yöneticilerine esnek bir yapı sağlar." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/docs/security/pam/" /><meta property="article:section" content="docs" />
+
+
+
+<title>pam | Linux Eğitim</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.33a48f5432973b8ff9a82679d9e45d67f2c15d4399bd2829269455cfe390b5e8.css" integrity="sha256-M6SPVDKXO4/5qCZ52eRdZ/LBXUOZvSgpJpRVz&#43;OQteg=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.85cda9532203e37480076126a5f58ef438d432d119ce107eaa81577660c359ce.js" integrity="sha256-hc2pUyID43SAB2EmpfWO9DjUMtEZzhB&#43;qoFXdmDDWc4=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Linux Eğitim</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-8c9421baa8361060d783c5adf6e0016b" class="toggle"  />
+    <label for="section-8c9421baa8361060d783c5adf6e0016b" class="flex justify-between">
+      <a role="button" class="">Linux 101</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a71bc27f68282d703f658ade56ec3588" class="toggle"  />
+    <label for="section-a71bc27f68282d703f658ade56ec3588" class="flex justify-between">
+      <a role="button" class="">Linux</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/linux/nedir/" class="">Linux Nedir</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/linux/tarihcesi/" class="">Linux Tarihçesi</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/linux/da%C4%9F%C4%B1t%C4%B1mlar/" class="">Dağıtımlar</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/linux/terminoloji/" class="">Terminoloji</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-d878beecb5059aac8f4f57cc1c7d19bc" class="toggle"  />
+    <label for="section-d878beecb5059aac8f4f57cc1c7d19bc" class="flex justify-between">
+      <a role="button" class="">Kurulum</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/kurulum/terminoloji/" class="">Terminoloji</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/kurulum/fedora-server/" class="">Fedora Kurulum</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/kurulum/ubuntu-server/" class="">Ubuntu Kurulum</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-ccf3432652f2f661d834afb94d891a58" class="toggle"  />
+    <label for="section-ccf3432652f2f661d834afb94d891a58" class="flex justify-between">
+      <a role="button" class="">Komutlar</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/komutlar/kabuk-komut/" class="">Temel komutlar</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-dd95113271805acbc8b49838b9ba9c68" class="toggle"  />
+    <label for="section-dd95113271805acbc8b49838b9ba9c68" class="flex justify-between">
+      <a role="button" class="">Kullanıcı Ve Yetkilendirme</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/kullan%C4%B1c%C4%B1-ve-yetkilendirme/kullan%C4%B1c%C4%B1-olu%C5%9Fturma/" class="">Kullanıcı Oluşturma</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/kullan%C4%B1c%C4%B1-ve-yetkilendirme/kullan%C4%B1c%C4%B1-silme/" class="">Kullanıcı Silme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/kullan%C4%B1c%C4%B1-ve-yetkilendirme/kullan%C4%B1c%C4%B1-%C3%B6zellikleri-de%C4%9Fi%C5%9Ftirme/" class="">Kullanıcı Özelliklerini Değiştirme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/kullan%C4%B1c%C4%B1-ve-yetkilendirme/dosya-yetkilendirme/" class="">Dosya Yetkilendirme</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-11bb86ac3069fd6d9b24198b6a8417fc" class="toggle"  />
+    <label for="section-11bb86ac3069fd6d9b24198b6a8417fc" class="flex justify-between">
+      <a role="button" class="">Paket Yönetimi</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/paket-y%C3%B6netimi/dpkg/" class="">DPKG</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/paket-y%C3%B6netimi/rpm/" class="">RPM</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/paket-y%C3%B6netimi/terminoloji/" class="">Terminoloji</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a43896349dabd89d84727e83a0e21e0e" class="toggle"  />
+    <label for="section-a43896349dabd89d84727e83a0e21e0e" class="flex justify-between">
+      <a role="button" class="">Crontab</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/crontab/crontab/" class="">crontab</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-e25cdf69781da11b9e5e55d05c74f928" class="toggle"  />
+    <label for="section-e25cdf69781da11b9e5e55d05c74f928" class="flex justify-between">
+      <a role="button" class="">Fstab</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/fstab/fstab/" class="">fstab</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-96daf07ed24acff5f86cda3bc15068bb" class="toggle"  />
+    <label for="section-96daf07ed24acff5f86cda3bc15068bb" class="flex justify-between">
+      <a role="button" class="">Ağ Yönetimi</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/nic/" class="">NIC</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/ip/" class="">IP</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/resolv/" class="">resolv.conf</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/hosts/" class="">hosts.conf</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/dig/" class="">dig</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/static-ip/" class="">static IP</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/traceroute/" class="">traceroute</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/ethtool/" class="">ethtool</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/terminoloji/" class="">Terminoloji</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-72903c0f660ed290723876aab4279963" class="toggle"  />
+    <label for="section-72903c0f660ed290723876aab4279963" class="flex justify-between">
+      <a role="button" class="">Sorun Giderme</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/sorun-giderme/dmesg/" class="">dmesg</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/101/sorun-giderme/secure/" class="">secure</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4df132e37d2d3ef2d4890ee600809e87" class="toggle"  />
+    <label for="section-4df132e37d2d3ef2d4890ee600809e87" class="flex justify-between">
+      <a role="button" class="">Linux 102</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-b23b82d195398c5a48d33ecbaecffe31" class="toggle"  />
+    <label for="section-b23b82d195398c5a48d33ecbaecffe31" class="flex justify-between">
+      <a role="button" class="">Kernel</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/102/kernel/kernel/" class="">kernel</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/102/kernel/modprobe/" class="">modprobe</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/102/kernel/grub/" class="">grub</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-02d9695836173e529e93ba7f8749a09f" class="toggle"  />
+    <label for="section-02d9695836173e529e93ba7f8749a09f" class="flex justify-between">
+      <a role="button" class="">Monitoring</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/102/monitoring/atop/" class="">atop</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/102/monitoring/iostat/" class="">iostat</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/102/monitoring/lsof/" class="">lsof</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/102/monitoring/top/" class="">top</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-b4e6a6da7ac21c0d2963ad992a31ebaa" class="toggle"  />
+    <label for="section-b4e6a6da7ac21c0d2963ad992a31ebaa" class="flex justify-between">
+      <a role="button" class="">Network</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/102/network/network/" class="">Ağ Güvenliği</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/102/network/fail2ban/" class="">fail2ban</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/102/network/iptables/" class="">iptables</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/102/network/tcpdump/" class="">tcpdump</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a3a8d3e03649a012c1e93a11a488a073" class="toggle"  />
+    <label for="section-a3a8d3e03649a012c1e93a11a488a073" class="flex justify-between">
+      <a role="button" class="">Editör</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/102/edit%C3%B6r/nano/" class="">nano</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/102/edit%C3%B6r/vim/" class="">vim</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-33d0bc4551b2d262e1ad0a6a7ccf33ec" class="toggle"  />
+    <label for="section-33d0bc4551b2d262e1ad0a6a7ccf33ec" class="flex justify-between">
+      <a role="button" class="">Konteyner</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/102/konteyner/konteyner/" class="">konteyner teknolojisi</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/102/konteyner/lxc/" class="">lxc</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/102/konteyner/docker/" class="">docker</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-7df0e477948b409b1bd57c17697bd0c2" class="toggle"  />
+    <label for="section-7df0e477948b409b1bd57c17697bd0c2" class="flex justify-between">
+      <a role="button" class="">Remote Connection</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/102/remote-connection/ssh/" class="">ssh</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-bb1b63a1226acdafab9eb933f76dbb6d" class="toggle"  />
+    <label for="section-bb1b63a1226acdafab9eb933f76dbb6d" class="flex justify-between">
+      <a role="button" class="">Script</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/102/script/bash/" class="">bash script</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/102/script/if/" class="">if</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/102/script/listeler/" class="">listeler</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/102/script/s%C3%B6zl%C3%BCkler/" class="">sözlükler</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/102/script/while/" class="">while</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/102/script/switch/" class="">switch/case</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/102/script/sed/" class="">sed</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/102/script/awk/" class="">awk</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-1d69d5c3a7dea57d120ece7f72317513" class="toggle"  />
+    <label for="section-1d69d5c3a7dea57d120ece7f72317513" class="flex justify-between">
+      <a role="button" class="">Systemd</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/102/systemd/servis/" class="">systemd operasyonları</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/102/systemd/systemd/" class="">servis ekleme</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-6ce8ef21c020ccdb7ed73156795b30be" class="toggle" checked />
+    <label for="section-6ce8ef21c020ccdb7ed73156795b30be" class="flex justify-between">
+      <a role="button" class="">Security</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/security/shadow/" class="">shadow</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/security/sudo/" class="">sudo</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/security/who/" class="">who</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/security/pam/" class="active">pam</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>pam</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#aşamalar">Aşamalar</a></li>
+    <li><a href="#control-flag">Control-Flag</a></li>
+    <li><a href="#modüller">Modüller</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#faillock">faillock</a>
+      <ul>
+        <li><a href="#kilitli-kullanıcılar">Kilitli Kullanıcılar</a></li>
+      </ul>
+    </li>
+    <li><a href="#access">access</a></li>
+    <li><a href="#limit">limit</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><p><strong>PAM (Pluggable Authentication Modules)</strong>, Linux sistemlerinde kullanıcı kimlik doğrulama mekanizmalarını yönetmek için kullanılan bir çerçevedir. Bu mekanizmalar, örneğin şifre denetimleri, hesap kilitleme, oturum açma sırasında iki faktörlü kimlik doğrulama gibi işlemleri gerçekleştirebilir.</p>
+<p>PAM, bir dizi modül kullanarak kimlik doğrulama işlemlerini yapılandırır. Her modül belirli bir görevi yerine getirir. Örneğin, bir modül kullanıcının şifresini kontrol ederken, diğer modüller hesap kilitleme ve oturum açma sırasında ek güvenlik önlemleri gibi işlemleri yapar.</p>
+<p>PAM, sistem yöneticilerine esnek bir yapı sağlar. Kimlik doğrulama mekanizmalarının yapılandırılması, sistem yöneticilerinin ihtiyaçlarına göre değiştirilebilir. PAM, geniş bir yelpazede kimlik doğrulama yöntemlerini destekler ve birçok uygulama tarafından kullanılır.</p>
+<p>PAM, çeşitli Linux dağıtımlarında standart bir bileşen haline gelmiştir ve birçok sistem yöneticisi tarafından kullanılmaktadır.</p>
+<h2 id="aşamalar">
+  Aşamalar
+  <a class="anchor" href="#a%c5%9famalar">#</a>
+</h2>
+<p>PAM modülleri, üç ayrı aşamada çalışır:</p>
+<blockquote>
+<p>Kimlik Doğrulama PAM, kullanıcının kimliğini doğrulamak için modülleri sırayla çalıştırır. PAM modülleri, kullanıcı adı ve parolasının yanı sıra, diğer kimlik doğrulama yöntemleri için gerekli tüm bilgileri alır ve doğrulama işlemi tamamlanana kadar devam eder.</p>
+</blockquote>
+<blockquote>
+<p>Hesap Yönetimi PAM, doğrulama aşamasından sonra hesap yönetimi adımlarını yönetir. Bu adımlar, kullanıcının hesabının geçerliliğini kontrol etmek, kısıtlamaları ayarlamak ve diğer işlemleri gerçekleştirmek için kullanılır.</p>
+</blockquote>
+<blockquote>
+<p>Oturum Yönetimi Son olarak, PAM oturum yönetimini sağlar. Bu aşama, kullanıcı oturumunu başlatmak veya sonlandırmak için gereken işlemleri yönetir.</p>
+</blockquote>
+<p>Örnek bir pam çıktısı</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>[test@localhost ~]$ cat  /etc/pam.d/crond 
+</span></span><span style="display:flex;"><span>#
+</span></span><span style="display:flex;"><span># The PAM configuration file for the cron daemon
+</span></span><span style="display:flex;"><span>#
+</span></span><span style="display:flex;"><span>#
+</span></span><span style="display:flex;"><span># Although no PAM authentication is called, auth modules
+</span></span><span style="display:flex;"><span># are used for credential setting
+</span></span><span style="display:flex;"><span>auth       include    system-auth
+</span></span><span style="display:flex;"><span>account    required   pam_access.so
+</span></span><span style="display:flex;"><span>account    include    system-auth
+</span></span><span style="display:flex;"><span>session    required   pam_loginuid.so
+</span></span><span style="display:flex;"><span>session    include    system-auth
+</span></span></code></pre></div><ul>
+<li>
+<p><strong>Auth modülleri</strong>: Kullanıcının kimliğini doğrulamak için kullanılır. Kullanıcının kimlik doğrulama bilgileri (kullanıcı adı ve parola) girildiğinde, auth modülleri bu bilgileri doğrulamak ve kullanıcının sisteme erişmesine izin vermek veya reddetmek için kullanılır. Auth modülleri, kullanıcının kimliğini doğrularken, aynı zamanda parola doğrulama politikalarını uygulayabilir ve parola değişikliği işlemlerini de gerçekleştirebilir. Örnek auth modülleri: pam_unix, pam_ldap.</p>
+</li>
+<li>
+<p><strong>Account modülleri</strong>: Kullanıcının hesap durumunu kontrol etmek için kullanılır. Account modülleri, kullanıcının hesap durumunu kontrol eder ve hesapları etkinleştirir veya devre dışı bırakır. Örnek account modülleri: pam_unix, pam_ldap.</p>
+</li>
+<li>
+<p><strong>Session modülleri</strong>: Kullanıcının oturum açma ve oturumu kapatma işlemlerini kontrol etmek için kullanılır. Session modülleri, kullanıcının oturum açma işlemi tamamlandığında, kullanıcının oturum açtığı tarih ve saat gibi oturum bilgilerini tutar. Örnek session modülleri: pam_unix, pam_limits.</p>
+</li>
+</ul>
+<h2 id="control-flag">
+  Control-Flag
+  <a class="anchor" href="#control-flag">#</a>
+</h2>
+<p>İkinci sütun Control-Flag  anlamına gelir.</p>
+<ul>
+<li><strong>required</strong>: Modül başarısız olursa, oturum açma işlemi tamamlanamaz ve hata mesajı görüntülenir.</li>
+<li><strong>requisite</strong>: required gibi davranır, ancak daha önceki bir modül başarısız olursa modülün kendisi çalıştırılmaz.</li>
+<li><strong>sufficient</strong>: Bu modül, başarısız olursa bile oturum açma işlemi devam eder.</li>
+<li><strong>optional</strong>: Bu modül her zaman başarılı olur ve herhangi bir hata mesajı vermez.</li>
+</ul>
+<p><strong>include</strong> direktifi, PAM yapılandırma dosyasında başka bir dosyayı dahil etmek için kullanılır. Bu, PAM modülleri için ayrı dosyalar kullanarak yapılandırmayı daha kolay hale getirir.</p>
+<p>Örneğin, aşağıdaki yapılandırma dosyası, pam.d dizinindeki diğer dosyaları da dahil ederek SSH kimlik doğrulama işlemi için PAM modüllerini yapılandırır:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span># /etc/pam.d/sshd
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>auth       required     pam_sepermit.so
+</span></span><span style="display:flex;"><span>auth       include      password-auth
+</span></span></code></pre></div><h2 id="modüller">
+  Modüller
+  <a class="anchor" href="#mod%c3%bcller">#</a>
+</h2>
+<p>PAM modülleri, genellikle /lib/security/ veya /lib64/security/ dizinleri altında saklanır.</p>
+<ul>
+<li>
+<p><strong>pam_unix</strong>: Bu modül, kullanıcı kimlik doğrulama bilgilerini /etc/passwd ve /etc/shadow dosyalarından alır.</p>
+</li>
+<li>
+<p><strong>pam_limits</strong>: Bu modül, bir kullanıcının sistem kaynaklarına erişimini sınırlandırmak için kullanılır.</p>
+</li>
+<li>
+<p><strong>pam_env</strong>: Bu modül, bir kullanıcının çevresel değişkenlerini belirlemek için kullanılır.</p>
+</li>
+<li>
+<p><strong>pam_deny</strong>: Bu modül, bir kullanıcının kimlik doğrulama işlemini reddeder.</p>
+</li>
+<li>
+<p><strong>pam_access</strong> : Bu modül, belirli bir kullanıcının erişimini sınırlandırmak için IP tabanlı kısıtlamalar sağlar.</p>
+</li>
+<li>
+<p><strong>pam_faillock</strong> : Bu modül, kullanıcının başarısız giriş denemelerini izler ve hesaplarını kilitler.</p>
+</li>
+</ul>
+<h1 id="örnek-kullanımlar">
+  Örnek Kullanımlar
+  <a class="anchor" href="#%c3%b6rnek-kullan%c4%b1mlar">#</a>
+</h1>
+<h2 id="faillock">
+  faillock
+  <a class="anchor" href="#faillock">#</a>
+</h2>
+<p>Aşağıdaki örnek, kullanıcının hesabını 3 başarısız giriş denemesinden sonra kilitler:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span># /etc/pam.d/password-auth
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>auth        required      pam_faillock.so preauth silent deny=3 unlock_time=600
+</span></span><span style="display:flex;"><span>auth        required      pam_faillock.so authfail deny=3 unlock_time=600
+</span></span><span style="display:flex;"><span>account     required      pam_faillock.so
+</span></span><span style="display:flex;"><span>...
+</span></span></code></pre></div><blockquote>
+<p>İlk satır, preauth sırasında (pam_authenticate() çağrıldığında) pam_faillock modülünün kullanılmasını gerektirir. Bu, kullanıcının kimlik doğrulaması yapmadan önce sınırlandırma yapılacağı anlamına gelir. silent seçeneği, kullanıcıya kilitlendiğini bildirmemesini sağlar. deny=3 seçeneği, başarısız denemelerin sayısını 3 olarak ayarlar. Bu seçenek, üç başarısız deneme sonrasında kullanıcının hesabını kilitler. unlock_time=600 seçeneği, hesabın 10 dakika boyunca kilitli kalacağını belirtir.</p>
+</blockquote>
+<blockquote>
+<p>İkinci satır, authfail sırasında (pam_authenticate() çağrıldığında) pam_faillock modülünün kullanılmasını gerektirir. Bu satır, kullanıcının kimlik doğrulamasını yaptıktan sonra başarısız olması durumunda sınırlandırma yapılacağını belirtir.</p>
+</blockquote>
+<blockquote>
+<p>Son satır, account sırasında (pam_acct_mgmt() çağrıldığında) pam_faillock modülünün kullanılmasını gerektirir. Bu, hesabın kilidini açmak için kullanılır ve bir kullanıcının hesabının kilitli olup olmadığını kontrol eder.</p>
+</blockquote>
+<h3 id="kilitli-kullanıcılar">
+  Kilitli Kullanıcılar
+  <a class="anchor" href="#kilitli-kullan%c4%b1c%c4%b1lar">#</a>
+</h3>
+<p>Kilitli kullanıcıları  görmek için;</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>[root@localhost ~]# faillock 
+</span></span><span style="display:flex;"><span>test:
+</span></span><span style="display:flex;"><span>When                Type  Source                                           Valid
+</span></span><span style="display:flex;"><span>2023-05-09 15:06:19 RHOST 192.168.122.1                                        V
+</span></span><span style="display:flex;"><span>2023-05-09 15:06:24 RHOST 192.168.122.1                                        V
+</span></span><span style="display:flex;"><span>2023-05-09 15:06:28 RHOST 192.168.122.1                                        V
+</span></span></code></pre></div><p>Örnekte görüldüğü üzere test kullanıcısı kilitli durumuna düşmüştür.</p>
+<p>Kilidi kaldırmak için;</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>faillock  --reset --user test
+</span></span></code></pre></div><h2 id="access">
+  access
+  <a class="anchor" href="#access">#</a>
+</h2>
+<blockquote>
+<p>Öncelikle, /etc/security/access.conf dosyasını açarak pam_access modülünü kullanarak hangi kullanıcıların erişimine izin vermek istediğinizi belirleyin. Bu dosyada, her bir kullanıcının izinleri farklı satırlarda belirtilir.</p>
+</blockquote>
+<blockquote>
+<p>Ardından, /etc/pam.d/ dizinindeki gerekli servis dosyasını açarak pam_access modülünü etkinleştirin. Örneğin, SSH servisine erişim kontrolü eklemek istiyorsanız, sshd dosyasını açabilirsiniz.</p>
+</blockquote>
+<blockquote>
+<p>pam_access modülünü kullanarak erişim kontrolü için gereken şartları belirtin. Bu örnekte, tüm kullanıcıların erişimine izin vermek için pam_access.so modülünü kullanıyoruz, ancak sadece belirli kullanıcılara erişim izni vermek isterseniz pam_access.so modülünü belirli kullanıcılara yönelik yapılandırabilirsiniz.</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span># Herhangi bir host üzerinden root kullanıcısına bağlanabilir
+</span></span><span style="display:flex;"><span>+ : root : ALL
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># user1 sadece 192.168.1.100 hostundan  gelen bağlantılar kabul edilir 
+</span></span><span style="display:flex;"><span>+ : user1 : 192.168.1.100
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># user2 hiç bir hostan gelen istekleri kabul edemez
+</span></span><span style="display:flex;"><span>- : user2 : ALL
+</span></span></code></pre></div><p>Bu ayarlamaları <strong>/etc/security/access.conf</strong> gerçekleştirdikten sshd servisine uygulamak istersek;</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span># /etc/pam.d/sshd
+</span></span><span style="display:flex;"><span>#%PAM-1.0
+</span></span><span style="display:flex;"><span>auth       substack     password-auth
+</span></span><span style="display:flex;"><span>auth       include      postlogin
+</span></span><span style="display:flex;"><span>account    required     pam_access.so
+</span></span><span style="display:flex;"><span>...
+</span></span></code></pre></div><h2 id="limit">
+  limit
+  <a class="anchor" href="#limit">#</a>
+</h2>
+<p>Bu örnekte, bir kullanıcının açık olan dosya sayısını sınırlayacağız. Bunu yapmak için, /etc/security/limits.conf dosyasını düzenleyeceğiz. Bu dosya, pam_limits modülü tarafından kullanılır ve sistem kaynakları için farklı kısıtlamalar tanımlamamızı sağlar.</p>
+<p>Önce, /etc/security/limits.conf dosyasını düzenleyin ve aşağıdaki satırları ekleyin:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>test soft nofile 20
+</span></span><span style="display:flex;"><span>test hard nofile 21
+</span></span></code></pre></div><p>test kullanıcısının açık olan dosya sayısını 20 ila 21 arasında sınırlayacaktır. soft limit, kullanıcıyı uyarırken hard limit, kullanıcının maksimum sayıya ulaşmasını engeller.</p>
+<p>Daha sonra, /etc/pam.d/sshd dosyasını düzenleyin ve aşağıdaki satırları ekleyin:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>session required pam_limits.so
+</span></span></code></pre></div><p>Son olarak, test kullanıcısını oturum açtığınızda, dosya limit sayısına ulaşmak için <strong>ulimi</strong> kullanabilir.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>[test@localhost ~]$ ulimit -n
+</span></span><span style="display:flex;"><span>20
+</span></span></code></pre></div></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#aşamalar">Aşamalar</a></li>
+    <li><a href="#control-flag">Control-Flag</a></li>
+    <li><a href="#modüller">Modüller</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#faillock">faillock</a>
+      <ul>
+        <li><a href="#kilitli-kullanıcılar">Kilitli Kullanıcılar</a></li>
+      </ul>
+    </li>
+    <li><a href="#access">access</a></li>
+    <li><a href="#limit">limit</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

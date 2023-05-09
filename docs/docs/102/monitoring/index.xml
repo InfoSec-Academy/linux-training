@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux Eğitim</title>
+    <link>http://example.org/docs/102/monitoring/</link>
+    <description>Recent content on Linux Eğitim</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://example.org/docs/102/monitoring/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>atop</title>
+      <link>http://example.org/docs/102/monitoring/atop/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/102/monitoring/atop/</guid>
+      <description>atop Linux sistemlerinde sistem kaynaklarının takibini yapmak için kullanılan bir araçtır. atop, CPU, bellek, disk ve ağ kullanımı gibi sistem kaynaklarını izleyerek ayrıntılı raporlar sağlar. atop, birçok Linux dağıtımında varsayılan olarak yüklü olmayabilir, bu nedenle öncelikle sisteminize yüklemeniz gerekebilir.
+apt-get install atop yum install atop örnek bir atop çıktısı;
+PRC | sys 4.27s | user 3.46s | #proc 165 | #zombie 0 | #exit 0 | CPU | sys	5% | user 6% | irq 0% | idle 186% | wait 2% | cpu | sys	3% | user 4% | irq 0% | idle 91% | cpu001 w 2% | cpu | sys	2% | user 2% | irq 0% | idle 95% | cpu000 w 0% | CPL | numcpu 2 | avg1 0.</description>
+    </item>
+    
+    <item>
+      <title>iostat</title>
+      <link>http://example.org/docs/102/monitoring/iostat/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/102/monitoring/iostat/</guid>
+      <description>iostat komutu, disk aktivitelerini ve transfer oranlarını, I/O taleplerinin bekleyen sürelerini, CPU kullanım oranlarını ve daha birçok performans istatistiğini görüntüleyebilir. iostat komutu, sistemdeki farklı disklerin performansını ve kullanımını ayrı ayrı gösterir. Bu nedenle, sistem yöneticileri ve sistem performansını izlemek isteyen diğer kullanıcılar tarafından sıkça kullanılır.
+iostat, çoğu Linux dağıtımında varsayılan olarak kurulu gelen sysstat paketinin bir parçasıdır. Eğer sisteminizde sysstat paketi yüklü değilse, öncelikle sisteminizdeki paket yöneticisi ile sysstat paketini yüklemeniz gerekmektedir.</description>
+    </item>
+    
+    <item>
+      <title>lsof</title>
+      <link>http://example.org/docs/102/monitoring/lsof/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/102/monitoring/lsof/</guid>
+      <description>lsof (list open files) bir sistem aracıdır ve açık dosyaları listelemek için kullanılır. Bu araç, bir sistemde hangi dosyaların açık olduğunu, bu dosyaları hangi kullanıcıların açtığını, hangi proseslerin bu dosyalara eriştiğini ve açık dosyaların hangi bağlantı noktalarına sahip olduğunu görüntülemek için kullanılabilir.
+Tüm port ve bağlantıların listelenmesi #  Açık olan tüm network socketleri ve aktif bağlantıları listelemek için -i parametresi kullanılmaktadır.
+ lsof -i COMMAND PID USER FD TYPE DEVICE SIZE/OFF NODE NAME systemd 1 root 88u IPv6 21068 0t0 TCP *:websm (LISTEN) systemd-r 573 systemd-resolve 10u IPv4 21042 0t0 UDP *:hostmon systemd-r 573 systemd-resolve 11u IPv4 21043 0t0 TCP *:hostmon (LISTEN) systemd-r 573 systemd-resolve 12u IPv6 21045 0t0 UDP *:hostmon systemd-r 573 systemd-resolve 13u IPv6 21046 0t0 TCP *:hostmon (LISTEN) systemd-r 573 systemd-resolve 16u IPv4 21049 0t0 UDP _localdnsstub:domain systemd-r 573 systemd-resolve 17u IPv4 21050 0t0 TCP _localdnsstub:domain (LISTEN) systemd-r 573 systemd-resolve 18u IPv4 21051 0t0 UDP _localdnsproxy:domain systemd-r 573 systemd-resolve 19u IPv4 21052 0t0 TCP _localdnsproxy:domain (LISTEN) chronyd 653 chrony 5u IPv4 24322 0t0 UDP localhost:323 chronyd 653 chrony 6u IPv6 24323 0t0 UDP localhost:323 sshd 1338 root 3u IPv4 28190 0t0 TCP *:ssh (LISTEN) sshd 1338 root 4u IPv6 28199 0t0 TCP *:ssh (LISTEN) sshd 1656 root 4u IPv4 30988 0t0 TCP localhost.</description>
+    </item>
+    
+    <item>
+      <title>top</title>
+      <link>http://example.org/docs/102/monitoring/top/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/102/monitoring/top/</guid>
+      <description>top #  top bir Linux ve Unix tabanlı işletim sistemlerinde kullanılan bir sistem izleme aracıdır. Bu araç, sistemdeki işlemci, bellek, disk, ağ ve diğer sistem kaynaklarının kullanımını gerçek zamanlı olarak takip eder.
+top komutu, sistemdeki işlemci kullanımını, CPU zaman dilimlerini, işlemci kullanımını sıralar ve sistemdeki en çok CPU kaynağına sahip işlemleri ve diğer kaynakları tespit eder. Ayrıca, bu araç, sistemdeki tüm işlemleri, PID numaralarını, kullanılan bellek miktarını ve diğer ayrıntıları da gösterir.</description>
+    </item>
+    
+  </channel>
+</rss>

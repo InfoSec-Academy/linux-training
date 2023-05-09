@@ -7,13 +7,35 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="http://example.org/docs/102/kernel/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>kernel nedir</title>
-      <link>http://example.org/docs/102/kernel/kernel-nedir/</link>
+      <title>kernel</title>
+      <link>http://example.org/docs/102/kernel/kernel/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/docs/102/kernel/kernel-nedir/</guid>
+      <guid>http://example.org/docs/102/kernel/kernel/</guid>
       <description>Linux Kernel, Linux işletim sistemi için temel çekirdek bileşenidir. Linux&amp;rsquo;un temelini oluşturan, donanım kaynaklarını yöneten, işlemleri planlayan, bellek yönetimini sağlayan ve sistem çağrılarını işleyen bir yazılımdır. Linux Kernel, GPL (Genel Kamu Lisansı) altında özgür ve açık kaynaklı bir yazılımdır.
 Linux Kernel, başlangıçta Linus Torvalds tarafından geliştirilmiştir ve şimdi dünya çapında bir geliştirici topluluğu tarafından sürdürülmektedir. Çeşitli platformlar için uygun olan Linux Kernel, dünya genelinde birçok cihazda kullanılmaktadır, özellikle sunucu ve gömülü sistemlerde sıkça kullanılır.</description>
+    </item>
+    
+    <item>
+      <title>modprobe</title>
+      <link>http://example.org/docs/102/kernel/modprobe/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/102/kernel/modprobe/</guid>
+      <description>modprobe, Linux&amp;rsquo;ta bir kernel modülü yüklemek veya kaldırmak için kullanılan bir komuttur. Kernel modülleri, çekirdek içinde çalışan yazılım parçalarıdır ve donanımı yönetmek, sistem kaynaklarını kontrol etmek veya ek özellikler sağlamak gibi görevleri yerine getirirler. Modüller, Linux çekirdeği için dinamik olarak yüklenir ve kaldırılabilirler, bu da gerektiğinde kullanıcılara kernel işlevselliğini genişletme ve yönetme olanağı sağlar.
+lsmod #  Mevcut yüklü kernel modüllerini görüntülemek için lsmod komutunu kullanabilirsiniz. Bu komut, yüklü modüllerin bir listesini ve her bir modül için kullanılan bellek miktarını gösterir.</description>
+    </item>
+    
+    <item>
+      <title>grub</title>
+      <link>http://example.org/docs/102/kernel/grub/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/102/kernel/grub/</guid>
+      <description>GRUB (Grand Unified Bootloader), bilgisayarınızı açarken hangi işletim sistemini başlatacağınızı seçmenize izin veren bir önyükleme yükleyicisidir. GRUB, Linux ve diğer işletim sistemlerinin önyükleme işlemini kolaylaştırır.
+GRUB ayarları genellikle &amp;ldquo;/etc/default/grub&amp;rdquo; dosyasında bulunur. Bu dosyada, GRUB önyükleme menüsünün görünümünü ve davranışını değiştirebileceğiniz bir dizi değişken bulunur.
+Örneğin, &amp;ldquo;GRUB_TIMEOUT&amp;rdquo; değişkeni, önyükleme menüsünün görüntülenme süresini belirler. &amp;ldquo;GRUB_DEFAULT&amp;rdquo; değişkeni, önyükleme menüsünde varsayılan olarak seçilen işletim sistemini belirler. &amp;ldquo;GRUB_CMDLINE_LINUX&amp;rdquo; değişkeni, Linux çekirdeğinin önyükleme argümanlarını belirtir.
+GRUB ayarlarınızı değiştirmek için, &amp;ldquo;/etc/default/grub&amp;rdquo; dosyasını bir metin editörü ile açın, değişikliklerinizi yapın ve dosyayı kaydedin.</description>
     </item>
     
   </channel>

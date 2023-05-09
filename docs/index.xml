@@ -8,6 +8,50 @@
     <language>en-us</language>
     <lastBuildDate>Fri, 20 Aug 2021 15:13:10 +0300</lastBuildDate><atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Ağ Güvenliği</title>
+      <link>http://example.org/docs/102/network/network/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/102/network/network/</guid>
+      <description>Linux, birçok farklı ağ protokolü için destek sunar ve birçok ağ yönetimi aracı ve güvenlik aracı da içerir. Ağ yönetimi, ağınızı yapılandırmak, ağınızda bağlı cihazları görüntülemek, ağ bağlantılarını izlemek ve ağ sorunlarını çözmek için kullanabileceğiniz bir dizi aracı içerir. Güvenlik, Linux&amp;rsquo;ta oldukça önemli bir konudur ve bir dizi araç, güvenliği artırmak ve ağınızı korumak için kullanılabilir. Bazı popüler ağ yönetimi ve güvenlik araçları şunlardır:
+  tcpdump: Ağ trafiğini izlemek ve analiz etmek için kullanılan bir araçtır.</description>
+    </item>
+    
+    <item>
+      <title>atop</title>
+      <link>http://example.org/docs/102/monitoring/atop/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/102/monitoring/atop/</guid>
+      <description>atop Linux sistemlerinde sistem kaynaklarının takibini yapmak için kullanılan bir araçtır. atop, CPU, bellek, disk ve ağ kullanımı gibi sistem kaynaklarını izleyerek ayrıntılı raporlar sağlar. atop, birçok Linux dağıtımında varsayılan olarak yüklü olmayabilir, bu nedenle öncelikle sisteminize yüklemeniz gerekebilir.
+apt-get install atop yum install atop örnek bir atop çıktısı;
+PRC | sys 4.27s | user 3.46s | #proc 165 | #zombie 0 | #exit 0 | CPU | sys	5% | user 6% | irq 0% | idle 186% | wait 2% | cpu | sys	3% | user 4% | irq 0% | idle 91% | cpu001 w 2% | cpu | sys	2% | user 2% | irq 0% | idle 95% | cpu000 w 0% | CPL | numcpu 2 | avg1 0.</description>
+    </item>
+    
+    <item>
+      <title>bash script</title>
+      <link>http://example.org/docs/102/script/bash/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/102/script/bash/</guid>
+      <description>Bash script nedir? #  Bash scriptler, bir dizi komutu veya bir betiği çalıştıran, Linux veya diğer Unix benzeri işletim sistemlerinde çalışan betiklerdir.
+Bash scriptler neden kullanılır? #  Bash scriptler, işlem tekrarlamaları, rutin görevlerin otomatikleştirilmesi, sistem yapılandırmaları, programlama gibi birçok farklı amaçla kullanılabilirler.
+Bash script dosyası oluşturma #  Bir bash script dosyası oluşturmak için bir metin editörü kullanabilirsiniz. Örnek bir bash script dosyası adı: &amp;ldquo;my_script.sh&amp;rdquo;
+Bash script dosyası izinlerinin ayarlanması #  Bash script dosyasını çalıştırmak için dosyanın çalıştırılabilir olması gerekiyor.</description>
+    </item>
+    
+    <item>
+      <title>dmesg</title>
+      <link>http://example.org/docs/101/sorun-giderme/dmesg/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/101/sorun-giderme/dmesg/</guid>
+      <description>dmesg, Linux çekirdeği tarafından üretilen sistem günlüğü mesajlarını görüntülemek için kullanılan bir komut satırı aracıdır. &amp;ldquo;dmesg&amp;rdquo; kısaltması, &amp;ldquo;Donanım Mesajı&amp;rdquo; anlamına gelir ve işletim sistemi çekirdeğinin başlangıcından bu yana üretilen tüm günlük mesajlarını görüntüler. Bu mesajlar, donanım hataları, sürücü yüklemeleri, sistem zamanlaması ve diğer sistem olayları hakkında bilgi sağlayabilir. dmesg ayrıca sistemdeki donanım bileşenlerini tanımlamak için de kullanılabilir.
+dmesg komutu aşağıdaki gibi farklı şekillerde kullanılabilir:
+ En son sistem logları: dmesg komutu, en son sistem loglarını gösterir.</description>
+    </item>
+    
+    <item>
       <title>DPKG</title>
       <link>http://example.org/docs/101/paket-y%C3%B6netimi/dpkg/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -20,13 +64,43 @@ Paket kurulumu: &amp;ldquo;dpkg -i paket.deb&amp;rdquo; komutu kullanılarak bir
     </item>
     
     <item>
-      <title>kernel nedir</title>
-      <link>http://example.org/docs/102/kernel/kernel-nedir/</link>
+      <title>if</title>
+      <link>http://example.org/docs/102/script/if/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/docs/102/kernel/kernel-nedir/</guid>
+      <guid>http://example.org/docs/102/script/if/</guid>
+      <description>if koşulu, bir şartın doğru olup olmadığını kontrol etmek için kullanılır. Örneğin, belirli bir dosya varsa bir komutu çalıştırmak isteyebilirsiniz. Aşağıdaki örnekte, eğer &amp;ldquo;myfile.txt&amp;rdquo; adlı dosya varsa, o zaman &amp;ldquo;dosya var&amp;rdquo; yazdıracak, aksi takdirde &amp;ldquo;dosya yok&amp;rdquo; yazdıracak:
+if [ -f &amp;#34;myfile.txt&amp;#34; ] then  echo &amp;#34;dosya var&amp;#34; else  echo &amp;#34;dosya yok&amp;#34; fi Örnek #  #!/bin/bash # Bu script ile bir sayının tek mi çift mi olduğunu kontrol ediyoruz.  echo &amp;#34;Lütfen bir sayı giriniz: &amp;#34; read sayi  if (( $sayi % 2 == 0 )) then  echo &amp;#34;$sayi sayısı çifttir.</description>
+    </item>
+    
+    <item>
+      <title>iostat</title>
+      <link>http://example.org/docs/102/monitoring/iostat/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/102/monitoring/iostat/</guid>
+      <description>iostat komutu, disk aktivitelerini ve transfer oranlarını, I/O taleplerinin bekleyen sürelerini, CPU kullanım oranlarını ve daha birçok performans istatistiğini görüntüleyebilir. iostat komutu, sistemdeki farklı disklerin performansını ve kullanımını ayrı ayrı gösterir. Bu nedenle, sistem yöneticileri ve sistem performansını izlemek isteyen diğer kullanıcılar tarafından sıkça kullanılır.
+iostat, çoğu Linux dağıtımında varsayılan olarak kurulu gelen sysstat paketinin bir parçasıdır. Eğer sisteminizde sysstat paketi yüklü değilse, öncelikle sisteminizdeki paket yöneticisi ile sysstat paketini yüklemeniz gerekmektedir.</description>
+    </item>
+    
+    <item>
+      <title>kernel</title>
+      <link>http://example.org/docs/102/kernel/kernel/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/102/kernel/kernel/</guid>
       <description>Linux Kernel, Linux işletim sistemi için temel çekirdek bileşenidir. Linux&amp;rsquo;un temelini oluşturan, donanım kaynaklarını yöneten, işlemleri planlayan, bellek yönetimini sağlayan ve sistem çağrılarını işleyen bir yazılımdır. Linux Kernel, GPL (Genel Kamu Lisansı) altında özgür ve açık kaynaklı bir yazılımdır.
 Linux Kernel, başlangıçta Linus Torvalds tarafından geliştirilmiştir ve şimdi dünya çapında bir geliştirici topluluğu tarafından sürdürülmektedir. Çeşitli platformlar için uygun olan Linux Kernel, dünya genelinde birçok cihazda kullanılmaktadır, özellikle sunucu ve gömülü sistemlerde sıkça kullanılır.</description>
+    </item>
+    
+    <item>
+      <title>konteyner teknolojisi</title>
+      <link>http://example.org/docs/102/konteyner/konteyner/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/102/konteyner/konteyner/</guid>
+      <description>Linux konteyner teknolojisi, uygulamaları birbirinden izole edilmiş ortamlarda çalıştırmaya olanak tanıyan bir sanallaştırma teknolojisidir. Konteyner teknolojisi, ana işletim sistemi çekirdeğini paylaşan birden fazla uygulama arasında kaynak kullanımını optimize eder ve uygulamaların hızlı bir şekilde başlatılmasına, dağıtılmasına ve ölçeklendirilmesine olanak tanır.
+Konteyner teknolojisi, konteynerler adı verilen izole edilmiş uygulama ortamları oluşturur. Konteynerler, uygulamaların çalışması için gerekli olan tüm kütüphaneleri, dosyaları ve diğer bağımlılıkları içerir. Her konteyner, bir veya daha fazla işletim sistemi kaynağını kullanır, ancak her konteyner kendi dosya sistemi, ağ arabirimi, bellek ve CPU&amp;rsquo;ya sahiptir.</description>
     </item>
     
     <item>
@@ -50,6 +124,51 @@ useradd new_user Linux&amp;rsquo;ta &amp;lsquo;useradd&amp;rsquo; komutu ile yen
     </item>
     
     <item>
+      <title>listeler</title>
+      <link>http://example.org/docs/102/script/listeler/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/102/script/listeler/</guid>
+      <description>Bash script&amp;rsquo;inde listeler, ayrılmış öğelerden oluşan bir dizi gibi davranır. Listeleri oluşturmak için aşağıdaki gibi bir syntax kullanabilirsiniz:
+my_array=(item1 item2 item3) Listelerdeki öğeler, sıfırdan başlayan bir indeksle erişilir. Örneğin, my_array&amp;rsquo;in ikinci öğesine erişmek için aşağıdaki syntax kullanılabilir:
+echo ${my_array[1]} Yeni öğeleri listeye eklemek için, += işlemini kullanabilirsiniz:
+my_array+=(item4) Öğeleri silmek için, unset komutunu kullanabilirsiniz:
+unset my_array[1] # ikinci öğeyi sil # Bir liste oluşturmak fruits=(elma armut kiraz) echo ${fruits[1]} # armut  # Listeye yeni bir öğe eklemek fruits+=(portakal) echo ${fruits[@]} # elma armut kiraz portakal  # Bir öğe silmek unset fruits[2] echo ${fruits[@]} # elma armut portakal </description>
+    </item>
+    
+    <item>
+      <title>lsof</title>
+      <link>http://example.org/docs/102/monitoring/lsof/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/102/monitoring/lsof/</guid>
+      <description>lsof (list open files) bir sistem aracıdır ve açık dosyaları listelemek için kullanılır. Bu araç, bir sistemde hangi dosyaların açık olduğunu, bu dosyaları hangi kullanıcıların açtığını, hangi proseslerin bu dosyalara eriştiğini ve açık dosyaların hangi bağlantı noktalarına sahip olduğunu görüntülemek için kullanılabilir.
+Tüm port ve bağlantıların listelenmesi #  Açık olan tüm network socketleri ve aktif bağlantıları listelemek için -i parametresi kullanılmaktadır.
+ lsof -i COMMAND PID USER FD TYPE DEVICE SIZE/OFF NODE NAME systemd 1 root 88u IPv6 21068 0t0 TCP *:websm (LISTEN) systemd-r 573 systemd-resolve 10u IPv4 21042 0t0 UDP *:hostmon systemd-r 573 systemd-resolve 11u IPv4 21043 0t0 TCP *:hostmon (LISTEN) systemd-r 573 systemd-resolve 12u IPv6 21045 0t0 UDP *:hostmon systemd-r 573 systemd-resolve 13u IPv6 21046 0t0 TCP *:hostmon (LISTEN) systemd-r 573 systemd-resolve 16u IPv4 21049 0t0 UDP _localdnsstub:domain systemd-r 573 systemd-resolve 17u IPv4 21050 0t0 TCP _localdnsstub:domain (LISTEN) systemd-r 573 systemd-resolve 18u IPv4 21051 0t0 UDP _localdnsproxy:domain systemd-r 573 systemd-resolve 19u IPv4 21052 0t0 TCP _localdnsproxy:domain (LISTEN) chronyd 653 chrony 5u IPv4 24322 0t0 UDP localhost:323 chronyd 653 chrony 6u IPv6 24323 0t0 UDP localhost:323 sshd 1338 root 3u IPv4 28190 0t0 TCP *:ssh (LISTEN) sshd 1338 root 4u IPv6 28199 0t0 TCP *:ssh (LISTEN) sshd 1656 root 4u IPv4 30988 0t0 TCP localhost.</description>
+    </item>
+    
+    <item>
+      <title>modprobe</title>
+      <link>http://example.org/docs/102/kernel/modprobe/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/102/kernel/modprobe/</guid>
+      <description>modprobe, Linux&amp;rsquo;ta bir kernel modülü yüklemek veya kaldırmak için kullanılan bir komuttur. Kernel modülleri, çekirdek içinde çalışan yazılım parçalarıdır ve donanımı yönetmek, sistem kaynaklarını kontrol etmek veya ek özellikler sağlamak gibi görevleri yerine getirirler. Modüller, Linux çekirdeği için dinamik olarak yüklenir ve kaldırılabilirler, bu da gerektiğinde kullanıcılara kernel işlevselliğini genişletme ve yönetme olanağı sağlar.
+lsmod #  Mevcut yüklü kernel modüllerini görüntülemek için lsmod komutunu kullanabilirsiniz. Bu komut, yüklü modüllerin bir listesini ve her bir modül için kullanılan bellek miktarını gösterir.</description>
+    </item>
+    
+    <item>
+      <title>nano</title>
+      <link>http://example.org/docs/102/edit%C3%B6r/nano/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/102/edit%C3%B6r/nano/</guid>
+      <description>Nano, terminal tabanlı bir metin editörüdür. Temel olarak Linux ve UNIX işletim sistemlerinde kullanılır. Basit bir kullanıcı arayüzüne sahip olması, yeni kullanıcıların kolayca öğrenip kullanmalarını sağlar. Nano, Vim gibi diğer popüler terminal tabanlı metin editörlerine kıyasla daha az özellik ve daha kolay bir kullanım sunar.
+  Nano&amp;rsquo;yu açmak için terminal açın ve komut satırına &amp;ldquo;nano&amp;rdquo; yazın.
+  Dosyayı açmak için &amp;ldquo;nano dosya_adi&amp;rdquo; yazarak dosyayı açabilirsiniz. Eğer dosya yoksa, Nano yeni bir dosya oluşturur.</description>
+    </item>
+    
+    <item>
       <title>NIC</title>
       <link>http://example.org/docs/101/a%C4%9F-y%C3%B6netimi/nic/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -69,6 +188,52 @@ NIC, bir bilgisayarın ağa bağlanmasına izin veren bir ara yüz sağlar. Bir 
       <description>RPM (Red Hat Package Manager), Linux işletim sistemi için bir paket yönetim sistemidir. RPM, Red Hat ve diğer bazı Linux dağıtımları tarafından kullanılır ve paketlerin kurulumu, kaldırılması, güncellenmesi ve yönetimi için kullanılır.
 RPM, paketlerin dosya sistemine nasıl yerleştirileceği ve kurulum sırasında hangi diğer paketlerin gereksinimlerinin karşılanacağı gibi konuları ele alır. Ayrıca paketlerin diğer sistemlerle uyumlu olup olmadığını kontrol eder ve uyumsuzluk durumunda uygun hataları rapor eder.
 RPM, özellikle sunucu sistemleri gibi büyük ve karmaşık Linux sistemlerinde kullanımı yaygındır.</description>
+    </item>
+    
+    <item>
+      <title>shadow</title>
+      <link>http://example.org/docs/security/shadow/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/security/shadow/</guid>
+      <description>/etc/shadow dosyası, Linux işletim sistemlerinde kullanıcıların şifrelerinin şifrelenmiş halinin tutulduğu dosyadır. Bu dosya, /etc/passwd dosyasındaki kullanıcıların şifrelerinin tutulduğu satırların yerine gelir ve kullanıcı şifrelerini şifreleyerek saklar. Şifreleme, genellikle MD5, SHA256 veya Blowfish algoritmaları kullanılarak yapılır.
+/etc/shadow dosyası genellikle sadece root kullanıcısı tarafından okunabilir ve düzenlenebilir. Bu sayede, sadece sistem yöneticisi tarafından erişilebilen şifrelerin güvenliği artırılmış olur.
+/etc/shadow dosyasında her satır bir kullanıcıya aittir ve özellikleri iki nokta üst üste (:) karakteri ile ayrılmış beş alan ile tanımlanır:</description>
+    </item>
+    
+    <item>
+      <title>sözlükler</title>
+      <link>http://example.org/docs/102/script/s%C3%B6zl%C3%BCkler/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/102/script/s%C3%B6zl%C3%BCkler/</guid>
+      <description>Bash script&amp;rsquo;inde sözlükler, anahtar-değer çiftlerinden oluşan bir yapıdır. Sözlükler oluşturmak için aşağıdaki gibi bir syntax kullanabilirsiniz:
+declare -A my_dict # -A seçeneği, bir sözlük oluşturur my_dict=([key1]=value1 [key2]=value2 [key3]=value3) Yeni bir öğe eklemek için, aşağıdaki gibi bir syntax kullanabilirsiniz:
+my_dict[key4]=value4 Bir öğe silmek için, unset komutunu kullanabilirsiniz:
+unset my_dict[key2] Bir sözlükteki tüm anahtarları veya tüm değerleri almak için, ! işaretini kullanabilirsiniz:
+echo ${!my_dict[@]} # tüm anahtarları alır echo ${my_dict[@]} # tüm değerleri alır # Bir sözlük oluşturmak declare -A colors colors=([red]=FF0000 [green]=00FF00 [blue]=0000FF) echo ${colors[green]} # 00FF00  # Bir öğe eklemek colors[yellow]=FFFF00 echo ${colors[@]} # FF0000 00FF00 0000FF FFFF00  # Bir öğe silmek unset colors[blue] echo ${colors[@]} # FF0000 00FF00 FFFF00  # Tüm anahtarları almak echo ${!</description>
+    </item>
+    
+    <item>
+      <title>ssh</title>
+      <link>http://example.org/docs/102/remote-connection/ssh/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/102/remote-connection/ssh/</guid>
+      <description>SSH, Secure Shell&amp;rsquo;in kısaltmasıdır ve güvenli bir uzak erişim protokolüdür. SSH, şifreli bir bağlantı sağlayarak bilgisayarınıza uzaktan erişim sağlar ve verilerinizi şifreler. Ayrıca SSH, dosya transferleri, X11 bağlantıları ve TCP bağlantıları için de kullanılabilir.
+SSH, Linux ve Unix işletim sistemlerinde bulunur ve aynı zamanda birçok Windows sistemlerinde de kullanılabilir. Ayrıca, birçok bulut sunucu sağlayıcısı da SSH erişimi sağlar.
+Birçok Linux/Unix dağıtımında, SSH varsayılan olarak kurulu olarak gelir. Ancak, bir nedenle SSH kurulu değilse, şu adımları izleyerek kurabilirsiniz:</description>
+    </item>
+    
+    <item>
+      <title>systemd operasyonları</title>
+      <link>http://example.org/docs/102/systemd/servis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/102/systemd/servis/</guid>
+      <description>Systemd, modern Linux sistemlerinde başlatma ve durdurma işlemlerinin yönetimini sağlayan bir sistem yönetimi aracıdır. Systemd, birim dosyaları olarak adlandırılan yapılandırma dosyaları kullanarak sistem hizmetlerini yönetir. Bu birim dosyaları, hizmetin başlatma, durdurma, yeniden başlatma, devreye alma ve devre dışı bırakma gibi işlemlerini yönetmek için komutlar sağlar.
+Systemd ile kullanılan en temel işlemler şunlardır:
+ start: Bir hizmeti başlatmak için kullanılır. Örnek kullanım:  systemctl start nginx.service Bu komut, nginx hizmetini başlatır.</description>
     </item>
     
     <item>
@@ -104,6 +269,49 @@ Bu depolama alanı, birçok kişinin aynı proje üzerinde çalışmasına olana
     </item>
     
     <item>
+      <title>top</title>
+      <link>http://example.org/docs/102/monitoring/top/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/102/monitoring/top/</guid>
+      <description>top #  top bir Linux ve Unix tabanlı işletim sistemlerinde kullanılan bir sistem izleme aracıdır. Bu araç, sistemdeki işlemci, bellek, disk, ağ ve diğer sistem kaynaklarının kullanımını gerçek zamanlı olarak takip eder.
+top komutu, sistemdeki işlemci kullanımını, CPU zaman dilimlerini, işlemci kullanımını sıralar ve sistemdeki en çok CPU kaynağına sahip işlemleri ve diğer kaynakları tespit eder. Ayrıca, bu araç, sistemdeki tüm işlemleri, PID numaralarını, kullanılan bellek miktarını ve diğer ayrıntıları da gösterir.</description>
+    </item>
+    
+    <item>
+      <title>vim</title>
+      <link>http://example.org/docs/102/edit%C3%B6r/vim/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/102/edit%C3%B6r/vim/</guid>
+      <description>Vim, Linux ve UNIX sistemlerinde kullanılan bir metin düzenleyicisidir.
+  Metin dosyası açmak için aşağıdaki komutu kullanabilirsiniz:
+  Metin dosyası açıldıktan sonra Vim normal moduna geçer. Normal modda i tuşuna basarak insert moduna geçebilirsiniz. Insert modunda klavyeniz ile yazı yazabilirsiniz.
+  Insert modundan normal moda dönmek için ESC tuşuna basabilirsiniz.
+  Normal modda x tuşuna basarak karakterleri silerek düzenleyebilirsiniz. Örneğin, bir karakteri silmek için &amp;ldquo;x&amp;rdquo; tuşuna basabilirsiniz.</description>
+    </item>
+    
+    <item>
+      <title>while</title>
+      <link>http://example.org/docs/102/script/while/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/102/script/while/</guid>
+      <description>while döngüsü, belirli bir şart doğru olduğu sürece bir işlemi tekrar tekrar yapmak için kullanılır. Örneğin, bir dizi sayıyı toplamak isteyebilirsiniz. Aşağıdaki örnekte, 1&amp;rsquo;den 5&amp;rsquo;e kadar olan sayıları toplar:
+sum=0 i=1  while [ $i -le 5 ] do  sum=$((sum+i))  i=$((i+1)) done  echo &amp;#34;Toplam: $sum&amp;#34; Örnek #  #!/bin/bash # Bu script ile sayıları 1&amp;#39;den 10&amp;#39;a kadar yazdırıyoruz.  sayi=1 while [ $sayi -le 10 ] do  echo $sayi  sayi=$((sayi+1)) done Burada, sayi değişkenini 1&amp;rsquo;den başlatıyoruz.</description>
+    </item>
+    
+    <item>
+      <title>fail2ban</title>
+      <link>http://example.org/docs/102/network/fail2ban/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/102/network/fail2ban/</guid>
+      <description>Fail2ban, sunucularda otomatik olarak güvenlik önlemleri alarak, sisteme yapılan saldırıları engellemek için kullanılan bir açık kaynaklı bir yazılımdır. Fail2ban, güvenliği artırmak için sunucu log dosyalarını izleyerek saldırıları tespit eder ve bu saldırıların ardından saldırganın IP adresini belirler ve bu IP adresini engeller.
+Fail2ban, birden fazla protokolü destekleyen bir yazılımdır ve bir dizi filtreleme kuralları içerir. Örnek olarak, SSH sunucusunda başarısız oturum açma denemelerini tespit edebilir ve ardından bu IP adreslerini belirleyip firewall kurallarını kullanarak IP adreslerini engelleyebilir.</description>
+    </item>
+    
+    <item>
       <title>Fedora Kurulum</title>
       <link>http://example.org/docs/101/kurulum/fedora-server/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -114,6 +322,18 @@ Fedora, birçok kullanıcının özgür ve açık kaynak kodlu yazılımlarla ç
     </item>
     
     <item>
+      <title>grub</title>
+      <link>http://example.org/docs/102/kernel/grub/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/102/kernel/grub/</guid>
+      <description>GRUB (Grand Unified Bootloader), bilgisayarınızı açarken hangi işletim sistemini başlatacağınızı seçmenize izin veren bir önyükleme yükleyicisidir. GRUB, Linux ve diğer işletim sistemlerinin önyükleme işlemini kolaylaştırır.
+GRUB ayarları genellikle &amp;ldquo;/etc/default/grub&amp;rdquo; dosyasında bulunur. Bu dosyada, GRUB önyükleme menüsünün görünümünü ve davranışını değiştirebileceğiniz bir dizi değişken bulunur.
+Örneğin, &amp;ldquo;GRUB_TIMEOUT&amp;rdquo; değişkeni, önyükleme menüsünün görüntülenme süresini belirler. &amp;ldquo;GRUB_DEFAULT&amp;rdquo; değişkeni, önyükleme menüsünde varsayılan olarak seçilen işletim sistemini belirler. &amp;ldquo;GRUB_CMDLINE_LINUX&amp;rdquo; değişkeni, Linux çekirdeğinin önyükleme argümanlarını belirtir.
+GRUB ayarlarınızı değiştirmek için, &amp;ldquo;/etc/default/grub&amp;rdquo; dosyasını bir metin editörü ile açın, değişikliklerinizi yapın ve dosyayı kaydedin.</description>
+    </item>
+    
+    <item>
       <title>IP</title>
       <link>http://example.org/docs/101/a%C4%9F-y%C3%B6netimi/ip/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -121,6 +341,16 @@ Fedora, birçok kullanıcının özgür ve açık kaynak kodlu yazılımlarla ç
       <guid>http://example.org/docs/101/a%C4%9F-y%C3%B6netimi/ip/</guid>
       <description>İki farklı IP adresi türü mevcuttur: IPv4 (sürüm 4) ve IPv6 (sürüm 6). IPv4 daha eskidir ve çok daha yaygın olarak kullanılırken, IPv6 daha yenidir ve eski standardın doğasında bulunan sınırlamaları aşmak ve daha birçok olası adres sağlamak için tasarlanmıştır.
 IPv4, adresler için 32 bit kullanır; yalnızca 4,3 milyar benzersiz adres mevcuttur. Ayrıca, birçok adres tahsis edilir ve rezerve edilir, ancak gerçekte kullanılmaz. IPv4&amp;rsquo;ün gelecekteki ihtiyaçları karşılamak için yetersiz olduğu düşünülüyor çünkü küresel ağda bulunan cihazların sayısı son yıllarda çok arttı.</description>
+    </item>
+    
+    <item>
+      <title>iptables</title>
+      <link>http://example.org/docs/102/network/iptables/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/102/network/iptables/</guid>
+      <description>iptables, Linux işletim sistemi için geliştirilmiş bir güvenlik yazılımıdır. Paket filtreleme, ağ adresi çevirme (NAT) ve port yönlendirme gibi işlevleri yerine getirir. İptables, Linux&amp;rsquo;un dahili bir parçasıdır ve çoğu Linux dağıtımında mevcuttur. Ayrıca, birçok güvenlik duvarı uygulaması da iptables tabanlıdır.
+İptables, bir dizi kurala dayalı olarak çalışır. Her bir kural, bir paketin belirli bir eylem için uygun olup olmadığını belirler. Paketler, gelen ve giden trafiği kontrol etmek için farklı zincirlerde işlenir.</description>
     </item>
     
     <item>
@@ -145,6 +375,82 @@ Bu durumda, kullanıcının oturumunu kapatması ve kullanıcının çalışan t
     </item>
     
     <item>
+      <title>lxc</title>
+      <link>http://example.org/docs/102/konteyner/lxc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/102/konteyner/lxc/</guid>
+      <description>LXC (Linux Containers) bir konteynerleştirme teknolojisidir. LXC, Linux çekirdeği için bir sanallaştırma aracıdır ve birden fazla izole edilmiş Linux çevresi (container) çalıştırmaya olanak sağlar. Konteyner teknolojisi, her bir container&amp;rsquo;ın bağımsız çalışabilen bir işletim sistemi ve uygulama yığınına sahip olduğu bir yöntemdir.
+LXC, her bir container&amp;rsquo;ın host işletim sistemi üzerinde bir izolasyon katmanı sağlar. Bu izolasyon katmanı, container&amp;rsquo;ın bağımsız bir dosya sistemi, ağ arabirimi, kullanıcıları ve bağlı uygulamaları içerdiği anlamına gelir. LXC, container&amp;rsquo;ların kaynaklarını (CPU, bellek, disk alanı vb.</description>
+    </item>
+    
+    <item>
+      <title>secure</title>
+      <link>http://example.org/docs/101/sorun-giderme/secure/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/101/sorun-giderme/secure/</guid>
+      <description>Linux sistemlerinde, /var/log/secure dosyası, sistem güvenliğiyle ilgili bilgilerin kaydedildiği bir günlük dosyasıdır. Bu dosyaya genellikle şunlar kaydedilir:
+ Yetkilendirme işlemleri (login, logout, başarısız login denemeleri) Süper kullanıcı (root) işlemleri SSH oturum açma girişimleri PAM (Pluggable Authentication Modules) etkinlikleri Sudo komutu kullanımı Güvenlik duvarı etkinlikleri Bu dosya, sistem yöneticilerinin sistem güvenliğini izlemesine ve sorunları tespit etmelerine yardımcı olur.  Örnek bir çıktı;
+[root@localhost mnt]# tail -f /var/log/secure May 7 17:34:14 localhost sudo[142319]: ergunbilsel : TTY=pts/4 ; PWD=/home/ergunbilsel ; USER=root ; COMMAND=/usr/bin/dmesg -n 7 May 7 17:34:14 localhost sudo[142319]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000) May 7 17:34:14 localhost sudo[142319]: pam_unix(sudo:session): session closed for user root May 7 17:35:52 localhost sudo[142553]: ergunbilsel : TTY=pts/4 ; PWD=/opt ; USER=root ; COMMAND=/usr/bin/dd if=/dev/zero of=test.</description>
+    </item>
+    
+    <item>
+      <title>servis ekleme</title>
+      <link>http://example.org/docs/102/systemd/systemd/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/102/systemd/systemd/</guid>
+      <description>systemd, bir Linux sistem yönetimi sistemidir. Sistemin açılış, kapanış ve hizmet yönetimi işlemlerini yönetir. Aynı zamanda, sistem loglarını yönetir, süreçleri yönetir ve sistem zamanlamasını sağlar.
+Systemd, BSD init sistemine alternatif olarak geliştirilmiştir ve modern Linux dağıtımlarında varsayılan olarak kullanılır. Sistem yönetimi için daha yüksek seviyeli bir arayüz sağlar ve hizmetlerin birbirine bağımlılıklarını ve önceliklerini yönetebilir.
+Örnek olarak, systemd üzerinden bir hizmetin durumunu kontrol edebilir, başlatıp durdurabilir, hizmet konfigürasyonunu değiştirebilirsiniz. Sistem başlatılırken çalıştırılacak hizmetleri belirlemek de mümkündür.</description>
+    </item>
+    
+    <item>
+      <title>sudo</title>
+      <link>http://example.org/docs/security/sudo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/security/sudo/</guid>
+      <description>sudo #  sudo Linux sistemlerinde güvenli bir şekilde kullanıcıların kök veya başka bir kullanıcının yetkisine sahip olmalarına izin veren bir programdır. Genellikle sistem yöneticileri tarafından kullanılır.
+sudo komutu, sistemde belirtilen kullanıcının yetkilerini geçici olarak yükseltmek için kullanılır. Bu sayede kullanıcı kök yetkilerine sahip olmadan belirli işlemleri yapabilir. Bu işlem, kök kullanıcısı olarak giriş yapmak yerine belirli bir kullanıcının belirli bir işlemi yapmasına izin verir ve güvenliği artırır.
+sudoers #  sudoers dosyası, sudo komutunun hangi kullanıcıların hangi işlemleri yapabileceğini belirlemesine yardımcı olan yapılandırma dosyasıdır.</description>
+    </item>
+    
+    <item>
+      <title>tcpdump</title>
+      <link>http://example.org/docs/102/network/tcpdump/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/102/network/tcpdump/</guid>
+      <description>tcpdump, Linux ve Unix benzeri işletim sistemlerinde ağ trafiğini yakalamak ve analiz etmek için kullanılan bir komut satırı aracıdır. tcpdump, ağ trafiğini yakalamak için promiscuous modda çalışır ve birçok protokolü destekler.
+Tcpdump, ağ trafiğini kaydetmek için kullanılabilir ve kaydedilen veriler Wireshark gibi grafik arayüzüne sahip bir araçta analiz edilebilir.
+Tcpdump ayrıca, ağda meydana gelen sorunları tespit etmek için kullanılan bir araçtır. Örneğin, ağ trafiğinde neden gecikmeler veya düşük performans yaşandığını belirlemek için kullanılabilir.</description>
+    </item>
+    
+    <item>
+      <title>who</title>
+      <link>http://example.org/docs/security/who/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/security/who/</guid>
+      <description>who komutu, Linux ve Unix sistemlerinde mevcut kullanıcıların listesini gösteren bir komuttur. Ayrıca hangi terminal üzerinde oturum açtığınızı ve ne kadar süreyle oturum açık kaldığınızı da gösterir.
+who komutunun bazı yaygın seçenekleri şunlardır:
+-a: Tüm girişleri (normal, sistem ve son oturum) gösterir.
+[root@localhost ~]# who -a  system boot 2023-05-09 09:10  run-level 3 2023-05-09 09:10 root + tty1 2023-05-09 09:13 04:49 710 root + pts/0 2023-05-09 09:29 . 1386 (192.</description>
+    </item>
+    
+    <item>
+      <title>docker</title>
+      <link>http://example.org/docs/102/konteyner/docker/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/102/konteyner/docker/</guid>
+      <description>Docker, uygulamaların bir yazılım paketi olarak paketlenmesi, taşınması ve çalıştırılması için açık kaynaklı bir konteyner teknolojisidir. Docker, uygulamaların ve bağımlılıklarının sanal ortamlarda (konteynerler) çalıştırılmasını sağlar, bu sayede uygulamaların daha hızlı, güvenilir ve taşınabilir olmasını sağlar. Docker konteyner teknolojisi, farklı işletim sistemleri ve altyapılar üzerinde de çalışabilir.
+Docker kullanarak bir uygulama çalıştırmak için öncelikle Docker Engine yazılımının kurulması gerekiyor. Daha sonra, uygulamanın Dockerfile adı verilen bir dosyada tanımlanması ve Docker build komutu kullanılarak bir Docker imajının oluşturulması gerekiyor.</description>
+    </item>
+    
+    <item>
       <title>Kullanıcı Özelliklerini Değiştirme</title>
       <link>http://example.org/docs/101/kullan%C4%B1c%C4%B1-ve-yetkilendirme/kullan%C4%B1c%C4%B1-%C3%B6zellikleri-de%C4%9Fi%C5%9Ftirme/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -163,6 +469,27 @@ UID Değiştirme
       
       <guid>http://example.org/docs/101/linux/kurulum/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>pam</title>
+      <link>http://example.org/docs/security/pam/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/security/pam/</guid>
+      <description>PAM (Pluggable Authentication Modules), Linux sistemlerinde kullanıcı kimlik doğrulama mekanizmalarını yönetmek için kullanılan bir çerçevedir. Bu mekanizmalar, örneğin şifre denetimleri, hesap kilitleme, oturum açma sırasında iki faktörlü kimlik doğrulama gibi işlemleri gerçekleştirebilir.
+PAM, bir dizi modül kullanarak kimlik doğrulama işlemlerini yapılandırır. Her modül belirli bir görevi yerine getirir. Örneğin, bir modül kullanıcının şifresini kontrol ederken, diğer modüller hesap kilitleme ve oturum açma sırasında ek güvenlik önlemleri gibi işlemleri yapar.
+PAM, sistem yöneticilerine esnek bir yapı sağlar.</description>
+    </item>
+    
+    <item>
+      <title>switch/case</title>
+      <link>http://example.org/docs/102/script/switch/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/102/script/switch/</guid>
+      <description>switch/case koşulu, birden fazla koşulun kontrol edilmesi gerektiğinde kullanılır. Örneğin, bir seçim menüsü oluşturmak isteyebilirsiniz. Aşağıdaki örnekte, kullanıcının girdiği sayıya göre bir işlem yapılır:
+echo &amp;#34;1. İşlem&amp;#34; echo &amp;#34;2. İşlem&amp;#34; echo &amp;#34;3. İşlem&amp;#34; echo &amp;#34;Lütfen bir sayı girin:&amp;#34; read num  case $num in  1)  echo &amp;#34;İşlem 1&amp;#34;  ;;  2)  echo &amp;#34;İşlem 2&amp;#34;  ;;  3)  echo &amp;#34;İşlem 3&amp;#34;  ;;  *)  echo &amp;#34;Geçersiz sayı&amp;#34;  ;; esac Örnek #  #!</description>
     </item>
     
     <item>
@@ -219,6 +546,16 @@ nameserver 8.8.8.8 nameserver 8.8.4.4 Bu, bilgisayarın DNS sorgularını Google
     </item>
     
     <item>
+      <title>crontab</title>
+      <link>http://example.org/docs/101/crontab/crontab/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/101/crontab/crontab/</guid>
+      <description>Crontab, belirli aralıklarla çalıştırılmak üzere önceden planlanmış görevleri yönetmek için kullanılan bir programdır. Crontab, sistem yöneticilerinin belirli görevleri otomatikleştirmelerine ve zamanlarını daha verimli bir şekilde kullanmalarına olanak tanır. Bu nedenle, Crontab, Linux sistemi yönetimi için önemli bir araçtır.
+Crontab, ayrı bir dosya olarak tutulur ve crontab komutu kullanılarak düzenlenir. Crontab dosyası, kullanıcı adı ve çalıştırılacak görevlerin bir listesi içerir. Görevler, dakika, saat, gün, ay ve haftanın hangi günü gibi zamanlama parametreleriyle belirlenir.</description>
+    </item>
+    
+    <item>
       <title>dig</title>
       <link>http://example.org/docs/101/a%C4%9F-y%C3%B6netimi/dig/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -241,6 +578,16 @@ dig, DNS sorguları yaparak belirtilen bir alan adının IP adresi veya tersi bi
     </item>
     
     <item>
+      <title>fstab</title>
+      <link>http://example.org/docs/101/fstab/fstab/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/101/fstab/fstab/</guid>
+      <description>fstab (File System Table) Linux işletim sistemi dosya sistemi yönetiminde kullanılan bir dosyadır. Bu dosya, sistemin açılış sırasında otomatik olarak bağlanması gereken dosya sistemlerini belirler. Bu dosyadaki girdiler, işletim sistemi tarafından otomatik olarak yüklenir.
+fstab dosyası, dosya sistemi türleri ve parametreleri belirleyerek sistemdeki dosya sistemlerinin nasıl monte edileceğini belirler. Ayrıca bu dosya, sistem açılırken otomatik olarak monte edilecek dosya sistemleri, hangi kullanıcıların bunu yapabileceği, nasıl yapılandırılacağı ve bağlama seçenekleri hakkında bilgi içerir.</description>
+    </item>
+    
+    <item>
       <title>traceroute</title>
       <link>http://example.org/docs/101/a%C4%9F-y%C3%B6netimi/traceroute/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -259,6 +606,26 @@ Traceroute, bir hedefe yönelik veri paketleri gönderir ve her paketin TTL değ
       <description>ethtool bir Linux aracıdır ve Ethernet kartının ayarlarını değiştirmek için kullanılır. ethtool aracı, bir Ethernet kartının desteklediği özellikleri listelemek, NIC ayarlarını görüntülemek ve yapılandırmak için kullanılabilir.
 Birkaç kullanışlı ethtool komutu şunlardır:
  ethtool enp1s0: enp1s0 arayüzündeki NIC ayarlarını gösterir. ethtool -i enp1s0: enp1s0 arayüzündeki sürücü bilgilerini gösterir. ethtool -S enp1s0: enp1s0 arayüzündeki NIC istatistiklerini gösterir. ethtool -A enp1s0 autoneg on: enp1s0 arayüzündeki otomatik anlaşma özelliğini açar. ethtool -s enp1s0 speed 1000 duplex full: enp1s0 arayüzündeki hızı 1000Mbps ve tam çift yönlü (full duplex) modunu ayarlar.</description>
+    </item>
+    
+    <item>
+      <title>sed</title>
+      <link>http://example.org/docs/102/script/sed/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/102/script/sed/</guid>
+      <description>Sed (Stream Editor) bir metin düzenleyicisidir. Temel olarak, bir metin akışının (dosya veya bir veri akışı gibi) içeriğini değiştirmek için kullanılır. Genellikle komut satırı aracılığıyla kullanılır ve birçok işletim sisteminde öntanımlı olarak yüklüdür.
+Sed, düzenli ifadeler (regular expressions) kullanarak metin akışını işleyebilir. İşlem yaparken, orijinal veri akışını bozmadan yeni bir metin akışı oluşturur. Sed ayrıca, çeşitli sed komutları ve argümanları aracılığıyla, metin akışını filtrelemek, düzenlemek, eşleştirmek, değiştirmek, sıralamak ve biçimlendirmek gibi çeşitli işlemler gerçekleştirebilir.</description>
+    </item>
+    
+    <item>
+      <title>awk</title>
+      <link>http://example.org/docs/102/script/awk/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/102/script/awk/</guid>
+      <description>Awk, Linux ve Unix tabanlı sistemlerde bulunan bir komut satırı aracıdır. Adını oluşturan AWK, komutun yaratıcısı Alfred Aho, Peter Weinberger ve Brian Kernighan&amp;rsquo;ın isimlerinin baş harflerinden gelir. Awk, metin dosyalarında belirli bir düzen içinde arama yapmak, dosyalardan belirli verileri çekmek, düzenlemek ve filtrelemek için kullanılır.
+Awk, genellikle metin dosyalarındaki belirli satırları veya sütunları seçmek için kullanılır. Awk komutları, bir veya daha fazla eylem ve bir veya daha fazla desenden oluşur. Desenler, seçilen verilerin hangi kriterlere göre seçileceğini belirlerken, eylemler seçilen verilerin ne yapılacağını belirler.</description>
     </item>
     
     <item>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Security on Linux Eğitim</title>
+    <link>http://example.org/docs/security/</link>
+    <description>Recent content in Security on Linux Eğitim</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://example.org/docs/security/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>shadow</title>
+      <link>http://example.org/docs/security/shadow/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/security/shadow/</guid>
+      <description>/etc/shadow dosyası, Linux işletim sistemlerinde kullanıcıların şifrelerinin şifrelenmiş halinin tutulduğu dosyadır. Bu dosya, /etc/passwd dosyasındaki kullanıcıların şifrelerinin tutulduğu satırların yerine gelir ve kullanıcı şifrelerini şifreleyerek saklar. Şifreleme, genellikle MD5, SHA256 veya Blowfish algoritmaları kullanılarak yapılır.
+/etc/shadow dosyası genellikle sadece root kullanıcısı tarafından okunabilir ve düzenlenebilir. Bu sayede, sadece sistem yöneticisi tarafından erişilebilen şifrelerin güvenliği artırılmış olur.
+/etc/shadow dosyasında her satır bir kullanıcıya aittir ve özellikleri iki nokta üst üste (:) karakteri ile ayrılmış beş alan ile tanımlanır:</description>
+    </item>
+    
+    <item>
+      <title>sudo</title>
+      <link>http://example.org/docs/security/sudo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/security/sudo/</guid>
+      <description>sudo #  sudo Linux sistemlerinde güvenli bir şekilde kullanıcıların kök veya başka bir kullanıcının yetkisine sahip olmalarına izin veren bir programdır. Genellikle sistem yöneticileri tarafından kullanılır.
+sudo komutu, sistemde belirtilen kullanıcının yetkilerini geçici olarak yükseltmek için kullanılır. Bu sayede kullanıcı kök yetkilerine sahip olmadan belirli işlemleri yapabilir. Bu işlem, kök kullanıcısı olarak giriş yapmak yerine belirli bir kullanıcının belirli bir işlemi yapmasına izin verir ve güvenliği artırır.
+sudoers #  sudoers dosyası, sudo komutunun hangi kullanıcıların hangi işlemleri yapabileceğini belirlemesine yardımcı olan yapılandırma dosyasıdır.</description>
+    </item>
+    
+    <item>
+      <title>who</title>
+      <link>http://example.org/docs/security/who/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/security/who/</guid>
+      <description>who komutu, Linux ve Unix sistemlerinde mevcut kullanıcıların listesini gösteren bir komuttur. Ayrıca hangi terminal üzerinde oturum açtığınızı ve ne kadar süreyle oturum açık kaldığınızı da gösterir.
+who komutunun bazı yaygın seçenekleri şunlardır:
+-a: Tüm girişleri (normal, sistem ve son oturum) gösterir.
+[root@localhost ~]# who -a  system boot 2023-05-09 09:10  run-level 3 2023-05-09 09:10 root + tty1 2023-05-09 09:13 04:49 710 root + pts/0 2023-05-09 09:29 . 1386 (192.</description>
+    </item>
+    
+    <item>
+      <title>pam</title>
+      <link>http://example.org/docs/security/pam/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/security/pam/</guid>
+      <description>PAM (Pluggable Authentication Modules), Linux sistemlerinde kullanıcı kimlik doğrulama mekanizmalarını yönetmek için kullanılan bir çerçevedir. Bu mekanizmalar, örneğin şifre denetimleri, hesap kilitleme, oturum açma sırasında iki faktörlü kimlik doğrulama gibi işlemleri gerçekleştirebilir.
+PAM, bir dizi modül kullanarak kimlik doğrulama işlemlerini yapılandırır. Her modül belirli bir görevi yerine getirir. Örneğin, bir modül kullanıcının şifresini kontrol ederken, diğer modüller hesap kilitleme ve oturum açma sırasında ek güvenlik önlemleri gibi işlemleri yapar.
+PAM, sistem yöneticilerine esnek bir yapı sağlar.</description>
+    </item>
+    
+  </channel>
+</rss>
