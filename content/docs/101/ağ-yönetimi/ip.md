@@ -29,4 +29,4 @@ nslookup, alan adı sistemi (DNS) üzerinden bir alan adının veya IP adresinin
 
 IPv4'ün ortadan kalkmamasının bir nedeni, NAT (Ağ Adresi Çevirisi) gibi yöntemlerle çok daha fazla adresi etkili bir şekilde kullanılabilir hale getirmenin yaygın olarak kullanılan yollarının olmasıdır. NAT, her biri yalnızca yerel ağda görülen benzersiz bir adrese sahip, yerel olarak bağlı birçok bilgisayar arasında bir IP adresinin paylaşılmasını sağlar. Bu, kurumsal ortamlarda kullanılırken, basit ev ağlarında da kullanılır. Örneğin, İnternet Sağlayıcınıza bağlı bir yönlendiriciniz varsa (kablolu sistem gibi), size harici olarak görünür bir adres verir, ancak evinizdeki her cihaza, dış dünya tarafından görülemeyen, ayrı bir yerel adres verir.
 
-![](/images/nat-1.png)
+![](/linux-training/images/nat-1.png)

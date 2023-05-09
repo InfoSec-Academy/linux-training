@@ -48,7 +48,7 @@ DOD modelinin 7 katmanı şunlardır:
 - Yönetim güvenliği: Yönetim güvenliği, ağın yönetimini sağlayan cihazların güvenliğini sağlamayı amaçlar. 
 
 
-![](/images/networklayers.png)
+![](/linux-training/images/networklayers.png)
 
 
 # LAN, WAN ve MAN

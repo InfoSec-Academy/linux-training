@@ -10,7 +10,7 @@ Konteyner teknolojisi, konteynerler adı verilen izole edilmiş uygulama ortamla
 
 Konteyner teknolojisi, Docker ve Kubernetes gibi araçlarla yönetilir. Docker, uygulamaların konteynerlere paketlenmesini, dağıtılmasını ve çalıştırılmasını kolaylaştıran bir platformdur. Kubernetes ise, Docker konteynerlerinin yönetimini otomatikleştirerek, ölçeklendirme, yüksek erişilebilirlik ve yük dengeleme gibi özellikleri sağlar.
 
-![](/images/konteyner.png)
+![](/linux-training/images/konteyner.png)
 
 Bu diyagramda, tek bir fiziksel sunucuda birden fazla konteynerin nasıl çalıştığı gösterilir. Her konteyner, kendi işletim sistemi kaynağını kullanır ve birden fazla uygulama barındırabilir. Konteynerler, Docker aracılığıyla yönetilir ve Docker Hub gibi kaynaklardan hazır konteyner imajları indirilebilir. Kubernetes ise, birden fazla sunucuda çalışan konteynerlerin yönetimini sağlar.
 

@@ -77,7 +77,7 @@ rpmdb.sqlite  rpmdb.sqlite-shm  rpmdb.sqlite-wal
 ```
 
 {{< hint info >}} Bir RPM Paketinin İçeriği
-![](/images/rpm_include.png)
+![](/linux-training/images/rpm_include.png)
 
 
 {{< /hint >}}

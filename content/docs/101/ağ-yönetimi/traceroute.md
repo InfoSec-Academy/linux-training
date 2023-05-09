@@ -9,7 +9,7 @@ Traceroute, bir hedefe yönelik veri paketleri gönderir ve her paketin TTL değ
 
 Traceroute, genellikle ağ bağlantı sorunlarını tespit etmek ve ağdaki yavaş noktaları belirlemek için kullanılır. Traceroute sonuçları, ağ yöneticileri tarafından kullanılarak ağ sorunlarını gidermek ve ağ performansını optimize etmek için kullanılabilir.
 
-![](/images/traceroute.png)
+![](/linux-training/images/traceroute.png)
 
 ```tpl
 root@localhost network-scripts]# traceroute google.com
