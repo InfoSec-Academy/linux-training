@@ -10,16 +10,16 @@ sum=0 i=1  while [ $i -le 5 ] do  sum=$((sum&#43;i))  i=$((i&#43;1)) done  echo 
 <meta property="og:description" content="while döngüsü, belirli bir şart doğru olduğu sürece bir işlemi tekrar tekrar yapmak için kullanılır. Örneğin, bir dizi sayıyı toplamak isteyebilirsiniz. Aşağıdaki örnekte, 1&rsquo;den 5&rsquo;e kadar olan sayıları toplar:
 sum=0 i=1  while [ $i -le 5 ] do  sum=$((sum&#43;i))  i=$((i&#43;1)) done  echo &#34;Toplam: $sum&#34; Örnek #  #!/bin/bash # Bu script ile sayıları 1&#39;den 10&#39;a kadar yazdırıyoruz.  sayi=1 while [ $sayi -le 10 ] do  echo $sayi  sayi=$((sayi&#43;1)) done Burada, sayi değişkenini 1&rsquo;den başlatıyoruz." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://example.org/docs/102/script/while/" /><meta property="article:section" content="docs" />
+<meta property="og:url" content="https://infosec-academy.github.io/linux-training/docs/102/script/while/" /><meta property="article:section" content="docs" />
 
 
 
 <title>while | Linux Eğitim</title>
-<link rel="manifest" href="/manifest.json">
-<link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.33a48f5432973b8ff9a82679d9e45d67f2c15d4399bd2829269455cfe390b5e8.css" integrity="sha256-M6SPVDKXO4/5qCZ52eRdZ/LBXUOZvSgpJpRVz&#43;OQteg=" crossorigin="anonymous">
-  <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.85cda9532203e37480076126a5f58ef438d432d119ce107eaa81577660c359ce.js" integrity="sha256-hc2pUyID43SAB2EmpfWO9DjUMtEZzhB&#43;qoFXdmDDWc4=" crossorigin="anonymous"></script>
+<link rel="manifest" href="/linux-training/manifest.json">
+<link rel="icon" href="/linux-training/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/linux-training/book.min.33a48f5432973b8ff9a82679d9e45d67f2c15d4399bd2829269455cfe390b5e8.css" integrity="sha256-M6SPVDKXO4/5qCZ52eRdZ/LBXUOZvSgpJpRVz&#43;OQteg=" crossorigin="anonymous">
+  <script defer src="/linux-training/flexsearch.min.js"></script>
+  <script defer src="/linux-training/en.search.min.4b2419fdb14c8f345ebea75f0e676e4339a7af5a30b474a3fdbf4affb18eb66b.js" integrity="sha256-SyQZ/bFMjzRevqdfDmduQzmnr1owtHSj/b9K/7GOtms=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -35,7 +35,7 @@ https://github.com/alex-shpak/hugo-book
         
   <nav>
 <h2 class="book-brand">
-  <a class="flex align-center" href="/"><span>Linux Eğitim</span>
+  <a class="flex align-center" href="/linux-training/"><span>Linux Eğitim</span>
   </a>
 </h2>
 
@@ -103,7 +103,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/101/linux/nedir/" class="">Linux Nedir</a>
+    <a href="/linux-training/docs/101/linux/nedir/" class="">Linux Nedir</a>
   
 
         </li>
@@ -116,7 +116,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/101/linux/tarihcesi/" class="">Linux Tarihçesi</a>
+    <a href="/linux-training/docs/101/linux/tarihcesi/" class="">Linux Tarihçesi</a>
   
 
         </li>
@@ -131,7 +131,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/101/linux/da%C4%9F%C4%B1t%C4%B1mlar/" class="">Dağıtımlar</a>
+    <a href="/linux-training/docs/101/linux/da%C4%9F%C4%B1t%C4%B1mlar/" class="">Dağıtımlar</a>
   
 
         </li>
@@ -144,7 +144,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/101/linux/terminoloji/" class="">Terminoloji</a>
+    <a href="/linux-training/docs/101/linux/terminoloji/" class="">Terminoloji</a>
   
 
         </li>
@@ -178,7 +178,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/101/kurulum/terminoloji/" class="">Terminoloji</a>
+    <a href="/linux-training/docs/101/kurulum/terminoloji/" class="">Terminoloji</a>
   
 
         </li>
@@ -191,7 +191,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/101/kurulum/fedora-server/" class="">Fedora Kurulum</a>
+    <a href="/linux-training/docs/101/kurulum/fedora-server/" class="">Fedora Kurulum</a>
   
 
         </li>
@@ -204,7 +204,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/101/kurulum/ubuntu-server/" class="">Ubuntu Kurulum</a>
+    <a href="/linux-training/docs/101/kurulum/ubuntu-server/" class="">Ubuntu Kurulum</a>
   
 
         </li>
@@ -238,7 +238,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/101/komutlar/kabuk-komut/" class="">Temel komutlar</a>
+    <a href="/linux-training/docs/101/komutlar/kabuk-komut/" class="">Temel komutlar</a>
   
 
         </li>
@@ -272,7 +272,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/101/kullan%C4%B1c%C4%B1-ve-yetkilendirme/kullan%C4%B1c%C4%B1-olu%C5%9Fturma/" class="">Kullanıcı Oluşturma</a>
+    <a href="/linux-training/docs/101/kullan%C4%B1c%C4%B1-ve-yetkilendirme/kullan%C4%B1c%C4%B1-olu%C5%9Fturma/" class="">Kullanıcı Oluşturma</a>
   
 
         </li>
@@ -285,7 +285,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/101/kullan%C4%B1c%C4%B1-ve-yetkilendirme/kullan%C4%B1c%C4%B1-silme/" class="">Kullanıcı Silme</a>
+    <a href="/linux-training/docs/101/kullan%C4%B1c%C4%B1-ve-yetkilendirme/kullan%C4%B1c%C4%B1-silme/" class="">Kullanıcı Silme</a>
   
 
         </li>
@@ -298,7 +298,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/101/kullan%C4%B1c%C4%B1-ve-yetkilendirme/kullan%C4%B1c%C4%B1-%C3%B6zellikleri-de%C4%9Fi%C5%9Ftirme/" class="">Kullanıcı Özelliklerini Değiştirme</a>
+    <a href="/linux-training/docs/101/kullan%C4%B1c%C4%B1-ve-yetkilendirme/kullan%C4%B1c%C4%B1-%C3%B6zellikleri-de%C4%9Fi%C5%9Ftirme/" class="">Kullanıcı Özelliklerini Değiştirme</a>
   
 
         </li>
@@ -311,7 +311,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/101/kullan%C4%B1c%C4%B1-ve-yetkilendirme/dosya-yetkilendirme/" class="">Dosya Yetkilendirme</a>
+    <a href="/linux-training/docs/101/kullan%C4%B1c%C4%B1-ve-yetkilendirme/dosya-yetkilendirme/" class="">Dosya Yetkilendirme</a>
   
 
         </li>
@@ -345,7 +345,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/101/paket-y%C3%B6netimi/dpkg/" class="">DPKG</a>
+    <a href="/linux-training/docs/101/paket-y%C3%B6netimi/dpkg/" class="">DPKG</a>
   
 
         </li>
@@ -358,7 +358,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/101/paket-y%C3%B6netimi/rpm/" class="">RPM</a>
+    <a href="/linux-training/docs/101/paket-y%C3%B6netimi/rpm/" class="">RPM</a>
   
 
         </li>
@@ -371,7 +371,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/101/paket-y%C3%B6netimi/terminoloji/" class="">Terminoloji</a>
+    <a href="/linux-training/docs/101/paket-y%C3%B6netimi/terminoloji/" class="">Terminoloji</a>
   
 
         </li>
@@ -405,7 +405,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/101/crontab/crontab/" class="">crontab</a>
+    <a href="/linux-training/docs/101/crontab/crontab/" class="">crontab</a>
   
 
         </li>
@@ -439,7 +439,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/101/fstab/fstab/" class="">fstab</a>
+    <a href="/linux-training/docs/101/fstab/fstab/" class="">fstab</a>
   
 
         </li>
@@ -473,7 +473,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/nic/" class="">NIC</a>
+    <a href="/linux-training/docs/101/a%C4%9F-y%C3%B6netimi/nic/" class="">NIC</a>
   
 
         </li>
@@ -486,7 +486,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/ip/" class="">IP</a>
+    <a href="/linux-training/docs/101/a%C4%9F-y%C3%B6netimi/ip/" class="">IP</a>
   
 
         </li>
@@ -499,7 +499,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/resolv/" class="">resolv.conf</a>
+    <a href="/linux-training/docs/101/a%C4%9F-y%C3%B6netimi/resolv/" class="">resolv.conf</a>
   
 
         </li>
@@ -512,7 +512,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/hosts/" class="">hosts.conf</a>
+    <a href="/linux-training/docs/101/a%C4%9F-y%C3%B6netimi/hosts/" class="">hosts.conf</a>
   
 
         </li>
@@ -525,7 +525,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/dig/" class="">dig</a>
+    <a href="/linux-training/docs/101/a%C4%9F-y%C3%B6netimi/dig/" class="">dig</a>
   
 
         </li>
@@ -538,7 +538,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/static-ip/" class="">static IP</a>
+    <a href="/linux-training/docs/101/a%C4%9F-y%C3%B6netimi/static-ip/" class="">static IP</a>
   
 
         </li>
@@ -551,7 +551,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/traceroute/" class="">traceroute</a>
+    <a href="/linux-training/docs/101/a%C4%9F-y%C3%B6netimi/traceroute/" class="">traceroute</a>
   
 
         </li>
@@ -564,7 +564,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/ethtool/" class="">ethtool</a>
+    <a href="/linux-training/docs/101/a%C4%9F-y%C3%B6netimi/ethtool/" class="">ethtool</a>
   
 
         </li>
@@ -577,7 +577,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/101/a%C4%9F-y%C3%B6netimi/terminoloji/" class="">Terminoloji</a>
+    <a href="/linux-training/docs/101/a%C4%9F-y%C3%B6netimi/terminoloji/" class="">Terminoloji</a>
   
 
         </li>
@@ -611,7 +611,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/101/sorun-giderme/dmesg/" class="">dmesg</a>
+    <a href="/linux-training/docs/101/sorun-giderme/dmesg/" class="">dmesg</a>
   
 
         </li>
@@ -624,7 +624,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/101/sorun-giderme/secure/" class="">secure</a>
+    <a href="/linux-training/docs/101/sorun-giderme/secure/" class="">secure</a>
   
 
         </li>
@@ -679,7 +679,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/102/kernel/kernel/" class="">kernel</a>
+    <a href="/linux-training/docs/102/kernel/kernel/" class="">kernel</a>
   
 
         </li>
@@ -692,7 +692,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/102/kernel/modprobe/" class="">modprobe</a>
+    <a href="/linux-training/docs/102/kernel/modprobe/" class="">modprobe</a>
   
 
         </li>
@@ -705,7 +705,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/102/kernel/grub/" class="">grub</a>
+    <a href="/linux-training/docs/102/kernel/grub/" class="">grub</a>
   
 
         </li>
@@ -739,7 +739,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/102/monitoring/atop/" class="">atop</a>
+    <a href="/linux-training/docs/102/monitoring/atop/" class="">atop</a>
   
 
         </li>
@@ -752,7 +752,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/102/monitoring/iostat/" class="">iostat</a>
+    <a href="/linux-training/docs/102/monitoring/iostat/" class="">iostat</a>
   
 
         </li>
@@ -765,7 +765,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/102/monitoring/lsof/" class="">lsof</a>
+    <a href="/linux-training/docs/102/monitoring/lsof/" class="">lsof</a>
   
 
         </li>
@@ -778,7 +778,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/102/monitoring/top/" class="">top</a>
+    <a href="/linux-training/docs/102/monitoring/top/" class="">top</a>
   
 
         </li>
@@ -812,7 +812,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/102/network/network/" class="">Ağ Güvenliği</a>
+    <a href="/linux-training/docs/102/network/network/" class="">Ağ Güvenliği</a>
   
 
         </li>
@@ -825,7 +825,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/102/network/fail2ban/" class="">fail2ban</a>
+    <a href="/linux-training/docs/102/network/fail2ban/" class="">fail2ban</a>
   
 
         </li>
@@ -838,7 +838,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/102/network/iptables/" class="">iptables</a>
+    <a href="/linux-training/docs/102/network/iptables/" class="">iptables</a>
   
 
         </li>
@@ -851,7 +851,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/102/network/tcpdump/" class="">tcpdump</a>
+    <a href="/linux-training/docs/102/network/tcpdump/" class="">tcpdump</a>
   
 
         </li>
@@ -885,7 +885,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/102/edit%C3%B6r/nano/" class="">nano</a>
+    <a href="/linux-training/docs/102/edit%C3%B6r/nano/" class="">nano</a>
   
 
         </li>
@@ -898,7 +898,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/102/edit%C3%B6r/vim/" class="">vim</a>
+    <a href="/linux-training/docs/102/edit%C3%B6r/vim/" class="">vim</a>
   
 
         </li>
@@ -932,7 +932,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/102/konteyner/konteyner/" class="">konteyner teknolojisi</a>
+    <a href="/linux-training/docs/102/konteyner/konteyner/" class="">konteyner teknolojisi</a>
   
 
         </li>
@@ -945,7 +945,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/102/konteyner/lxc/" class="">lxc</a>
+    <a href="/linux-training/docs/102/konteyner/lxc/" class="">lxc</a>
   
 
         </li>
@@ -958,7 +958,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/102/konteyner/docker/" class="">docker</a>
+    <a href="/linux-training/docs/102/konteyner/docker/" class="">docker</a>
   
 
         </li>
@@ -992,7 +992,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/102/remote-connection/ssh/" class="">ssh</a>
+    <a href="/linux-training/docs/102/remote-connection/ssh/" class="">ssh</a>
   
 
         </li>
@@ -1026,7 +1026,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/102/script/bash/" class="">bash script</a>
+    <a href="/linux-training/docs/102/script/bash/" class="">bash script</a>
   
 
         </li>
@@ -1039,7 +1039,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/102/script/if/" class="">if</a>
+    <a href="/linux-training/docs/102/script/if/" class="">if</a>
   
 
         </li>
@@ -1052,7 +1052,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/102/script/listeler/" class="">listeler</a>
+    <a href="/linux-training/docs/102/script/listeler/" class="">listeler</a>
   
 
         </li>
@@ -1065,7 +1065,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/102/script/s%C3%B6zl%C3%BCkler/" class="">sözlükler</a>
+    <a href="/linux-training/docs/102/script/s%C3%B6zl%C3%BCkler/" class="">sözlükler</a>
   
 
         </li>
@@ -1078,7 +1078,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/102/script/while/" class="active">while</a>
+    <a href="/linux-training/docs/102/script/while/" class="active">while</a>
   
 
         </li>
@@ -1091,7 +1091,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/102/script/switch/" class="">switch/case</a>
+    <a href="/linux-training/docs/102/script/switch/" class="">switch/case</a>
   
 
         </li>
@@ -1104,7 +1104,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/102/script/sed/" class="">sed</a>
+    <a href="/linux-training/docs/102/script/sed/" class="">sed</a>
   
 
         </li>
@@ -1117,7 +1117,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/102/script/awk/" class="">awk</a>
+    <a href="/linux-training/docs/102/script/awk/" class="">awk</a>
   
 
         </li>
@@ -1151,7 +1151,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/102/systemd/servis/" class="">systemd operasyonları</a>
+    <a href="/linux-training/docs/102/systemd/servis/" class="">systemd operasyonları</a>
   
 
         </li>
@@ -1164,7 +1164,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/102/systemd/systemd/" class="">servis ekleme</a>
+    <a href="/linux-training/docs/102/systemd/systemd/" class="">servis ekleme</a>
   
 
         </li>
@@ -1203,7 +1203,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/security/shadow/" class="">shadow</a>
+    <a href="/linux-training/docs/security/shadow/" class="">shadow</a>
   
 
         </li>
@@ -1216,7 +1216,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/security/sudo/" class="">sudo</a>
+    <a href="/linux-training/docs/security/sudo/" class="">sudo</a>
   
 
         </li>
@@ -1229,7 +1229,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/security/who/" class="">who</a>
+    <a href="/linux-training/docs/security/who/" class="">who</a>
   
 
         </li>
@@ -1242,7 +1242,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/security/pam/" class="">pam</a>
+    <a href="/linux-training/docs/security/pam/" class="">pam</a>
   
 
         </li>
@@ -1286,14 +1286,14 @@ https://github.com/alex-shpak/hugo-book
         
   <div class="flex align-center justify-between">
   <label for="menu-control">
-    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+    <img src="/linux-training/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
   <strong>while</strong>
 
   <label for="toc-control">
     
-    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    <img src="/linux-training/svg/toc.svg" class="book-icon" alt="Table of Contents" />
     
   </label>
 </div>

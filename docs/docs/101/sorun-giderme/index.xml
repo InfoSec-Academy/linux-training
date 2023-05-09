@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Linux Eğitim</title>
-    <link>http://example.org/docs/101/sorun-giderme/</link>
+    <link>https://infosec-academy.github.io/linux-training/docs/101/sorun-giderme/</link>
     <description>Recent content on Linux Eğitim</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://example.org/docs/101/sorun-giderme/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://infosec-academy.github.io/linux-training/docs/101/sorun-giderme/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>dmesg</title>
-      <link>http://example.org/docs/101/sorun-giderme/dmesg/</link>
+      <link>https://infosec-academy.github.io/linux-training/docs/101/sorun-giderme/dmesg/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/docs/101/sorun-giderme/dmesg/</guid>
+      <guid>https://infosec-academy.github.io/linux-training/docs/101/sorun-giderme/dmesg/</guid>
       <description>dmesg, Linux çekirdeği tarafından üretilen sistem günlüğü mesajlarını görüntülemek için kullanılan bir komut satırı aracıdır. &amp;ldquo;dmesg&amp;rdquo; kısaltması, &amp;ldquo;Donanım Mesajı&amp;rdquo; anlamına gelir ve işletim sistemi çekirdeğinin başlangıcından bu yana üretilen tüm günlük mesajlarını görüntüler. Bu mesajlar, donanım hataları, sürücü yüklemeleri, sistem zamanlaması ve diğer sistem olayları hakkında bilgi sağlayabilir. dmesg ayrıca sistemdeki donanım bileşenlerini tanımlamak için de kullanılabilir.
 dmesg komutu aşağıdaki gibi farklı şekillerde kullanılabilir:
  En son sistem logları: dmesg komutu, en son sistem loglarını gösterir.</description>
@@ -19,10 +19,10 @@ dmesg komutu aşağıdaki gibi farklı şekillerde kullanılabilir:
     
     <item>
       <title>secure</title>
-      <link>http://example.org/docs/101/sorun-giderme/secure/</link>
+      <link>https://infosec-academy.github.io/linux-training/docs/101/sorun-giderme/secure/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/docs/101/sorun-giderme/secure/</guid>
+      <guid>https://infosec-academy.github.io/linux-training/docs/101/sorun-giderme/secure/</guid>
       <description>Linux sistemlerinde, /var/log/secure dosyası, sistem güvenliğiyle ilgili bilgilerin kaydedildiği bir günlük dosyasıdır. Bu dosyaya genellikle şunlar kaydedilir:
  Yetkilendirme işlemleri (login, logout, başarısız login denemeleri) Süper kullanıcı (root) işlemleri SSH oturum açma girişimleri PAM (Pluggable Authentication Modules) etkinlikleri Sudo komutu kullanımı Güvenlik duvarı etkinlikleri Bu dosya, sistem yöneticilerinin sistem güvenliğini izlemesine ve sorunları tespit etmelerine yardımcı olur.  Örnek bir çıktı;
 [root@localhost mnt]# tail -f /var/log/secure May 7 17:34:14 localhost sudo[142319]: ergunbilsel : TTY=pts/4 ; PWD=/home/ergunbilsel ; USER=root ; COMMAND=/usr/bin/dmesg -n 7 May 7 17:34:14 localhost sudo[142319]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000) May 7 17:34:14 localhost sudo[142319]: pam_unix(sudo:session): session closed for user root May 7 17:35:52 localhost sudo[142553]: ergunbilsel : TTY=pts/4 ; PWD=/opt ; USER=root ; COMMAND=/usr/bin/dd if=/dev/zero of=test.</description>

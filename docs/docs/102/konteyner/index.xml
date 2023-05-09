@@ -2,36 +2,36 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Linux Eğitim</title>
-    <link>http://example.org/docs/102/konteyner/</link>
+    <link>https://infosec-academy.github.io/linux-training/docs/102/konteyner/</link>
     <description>Recent content on Linux Eğitim</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://example.org/docs/102/konteyner/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://infosec-academy.github.io/linux-training/docs/102/konteyner/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>konteyner teknolojisi</title>
-      <link>http://example.org/docs/102/konteyner/konteyner/</link>
+      <link>https://infosec-academy.github.io/linux-training/docs/102/konteyner/konteyner/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/docs/102/konteyner/konteyner/</guid>
+      <guid>https://infosec-academy.github.io/linux-training/docs/102/konteyner/konteyner/</guid>
       <description>Linux konteyner teknolojisi, uygulamaları birbirinden izole edilmiş ortamlarda çalıştırmaya olanak tanıyan bir sanallaştırma teknolojisidir. Konteyner teknolojisi, ana işletim sistemi çekirdeğini paylaşan birden fazla uygulama arasında kaynak kullanımını optimize eder ve uygulamaların hızlı bir şekilde başlatılmasına, dağıtılmasına ve ölçeklendirilmesine olanak tanır.
 Konteyner teknolojisi, konteynerler adı verilen izole edilmiş uygulama ortamları oluşturur. Konteynerler, uygulamaların çalışması için gerekli olan tüm kütüphaneleri, dosyaları ve diğer bağımlılıkları içerir. Her konteyner, bir veya daha fazla işletim sistemi kaynağını kullanır, ancak her konteyner kendi dosya sistemi, ağ arabirimi, bellek ve CPU&amp;rsquo;ya sahiptir.</description>
     </item>
     
     <item>
       <title>lxc</title>
-      <link>http://example.org/docs/102/konteyner/lxc/</link>
+      <link>https://infosec-academy.github.io/linux-training/docs/102/konteyner/lxc/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/docs/102/konteyner/lxc/</guid>
+      <guid>https://infosec-academy.github.io/linux-training/docs/102/konteyner/lxc/</guid>
       <description>LXC (Linux Containers) bir konteynerleştirme teknolojisidir. LXC, Linux çekirdeği için bir sanallaştırma aracıdır ve birden fazla izole edilmiş Linux çevresi (container) çalıştırmaya olanak sağlar. Konteyner teknolojisi, her bir container&amp;rsquo;ın bağımsız çalışabilen bir işletim sistemi ve uygulama yığınına sahip olduğu bir yöntemdir.
 LXC, her bir container&amp;rsquo;ın host işletim sistemi üzerinde bir izolasyon katmanı sağlar. Bu izolasyon katmanı, container&amp;rsquo;ın bağımsız bir dosya sistemi, ağ arabirimi, kullanıcıları ve bağlı uygulamaları içerdiği anlamına gelir. LXC, container&amp;rsquo;ların kaynaklarını (CPU, bellek, disk alanı vb.</description>
     </item>
     
     <item>
       <title>docker</title>
-      <link>http://example.org/docs/102/konteyner/docker/</link>
+      <link>https://infosec-academy.github.io/linux-training/docs/102/konteyner/docker/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/docs/102/konteyner/docker/</guid>
+      <guid>https://infosec-academy.github.io/linux-training/docs/102/konteyner/docker/</guid>
       <description>Docker, uygulamaların bir yazılım paketi olarak paketlenmesi, taşınması ve çalıştırılması için açık kaynaklı bir konteyner teknolojisidir. Docker, uygulamaların ve bağımlılıklarının sanal ortamlarda (konteynerler) çalıştırılmasını sağlar, bu sayede uygulamaların daha hızlı, güvenilir ve taşınabilir olmasını sağlar. Docker konteyner teknolojisi, farklı işletim sistemleri ve altyapılar üzerinde de çalışabilir.
 Docker kullanarak bir uygulama çalıştırmak için öncelikle Docker Engine yazılımının kurulması gerekiyor. Daha sonra, uygulamanın Dockerfile adı verilen bir dosyada tanımlanması ve Docker build komutu kullanılarak bir Docker imajının oluşturulması gerekiyor.</description>
     </item>

@@ -1,14 +1,14 @@
 {
   "name": "Linux Eğitim",
   "short_name": "Linux Eğitim",
-  "start_url": "/",
-  "scope": "/",
+  "start_url": "/linux-training/",
+  "scope": "/linux-training/",
   "display": "standalone",
   "background_color": "#000000",
   "theme_color": "#000000",
   "icons": [
     {
-      "src": "/favicon.svg",
+      "src": "/linux-training/favicon.svg",
       "sizes": "512x512"
     }
   ]

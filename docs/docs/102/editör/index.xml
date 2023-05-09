@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Linux Eğitim</title>
-    <link>http://example.org/docs/102/edit%C3%B6r/</link>
+    <link>https://infosec-academy.github.io/linux-training/docs/102/edit%C3%B6r/</link>
     <description>Recent content on Linux Eğitim</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://example.org/docs/102/edit%C3%B6r/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://infosec-academy.github.io/linux-training/docs/102/edit%C3%B6r/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>nano</title>
-      <link>http://example.org/docs/102/edit%C3%B6r/nano/</link>
+      <link>https://infosec-academy.github.io/linux-training/docs/102/edit%C3%B6r/nano/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/docs/102/edit%C3%B6r/nano/</guid>
+      <guid>https://infosec-academy.github.io/linux-training/docs/102/edit%C3%B6r/nano/</guid>
       <description>Nano, terminal tabanlı bir metin editörüdür. Temel olarak Linux ve UNIX işletim sistemlerinde kullanılır. Basit bir kullanıcı arayüzüne sahip olması, yeni kullanıcıların kolayca öğrenip kullanmalarını sağlar. Nano, Vim gibi diğer popüler terminal tabanlı metin editörlerine kıyasla daha az özellik ve daha kolay bir kullanım sunar.
   Nano&amp;rsquo;yu açmak için terminal açın ve komut satırına &amp;ldquo;nano&amp;rdquo; yazın.
   Dosyayı açmak için &amp;ldquo;nano dosya_adi&amp;rdquo; yazarak dosyayı açabilirsiniz. Eğer dosya yoksa, Nano yeni bir dosya oluşturur.</description>
@@ -19,10 +19,10 @@
     
     <item>
       <title>vim</title>
-      <link>http://example.org/docs/102/edit%C3%B6r/vim/</link>
+      <link>https://infosec-academy.github.io/linux-training/docs/102/edit%C3%B6r/vim/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/docs/102/edit%C3%B6r/vim/</guid>
+      <guid>https://infosec-academy.github.io/linux-training/docs/102/edit%C3%B6r/vim/</guid>
       <description>Vim, Linux ve UNIX sistemlerinde kullanılan bir metin düzenleyicisidir.
   Metin dosyası açmak için aşağıdaki komutu kullanabilirsiniz:
   Metin dosyası açıldıktan sonra Vim normal moduna geçer. Normal modda i tuşuna basarak insert moduna geçebilirsiniz. Insert modunda klavyeniz ile yazı yazabilirsiniz.

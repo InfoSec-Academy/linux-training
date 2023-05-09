@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Linux Eğitim</title>
-    <link>http://example.org/docs/101/paket-y%C3%B6netimi/</link>
+    <link>https://infosec-academy.github.io/linux-training/docs/101/paket-y%C3%B6netimi/</link>
     <description>Recent content on Linux Eğitim</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://example.org/docs/101/paket-y%C3%B6netimi/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://infosec-academy.github.io/linux-training/docs/101/paket-y%C3%B6netimi/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>DPKG</title>
-      <link>http://example.org/docs/101/paket-y%C3%B6netimi/dpkg/</link>
+      <link>https://infosec-academy.github.io/linux-training/docs/101/paket-y%C3%B6netimi/dpkg/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/docs/101/paket-y%C3%B6netimi/dpkg/</guid>
+      <guid>https://infosec-academy.github.io/linux-training/docs/101/paket-y%C3%B6netimi/dpkg/</guid>
       <description>dpkg, tek bir paketi veya bir dizi paketi kurmak, kaldırmak, yeniden yapılandırmak, yükseltmek veya sorgulamak için kullanılabilir. Ayrıca, dpkg, sistemde yüklü olan tüm paketlerin listesini de görüntüleyebilir.
 dpkg, önceden hazırlanmış Debian paketlerinin yönetimini sağlar. Bu paketler, .deb uzantılı dosyalar olarak adlandırılır ve Debian veya Ubuntu depolarından indirilebilirler.
 dpkg komutu, aşağıdaki temel işlevleri sağlar:
@@ -20,10 +20,10 @@ Paket kurulumu: &amp;ldquo;dpkg -i paket.deb&amp;rdquo; komutu kullanılarak bir
     
     <item>
       <title>RPM</title>
-      <link>http://example.org/docs/101/paket-y%C3%B6netimi/rpm/</link>
+      <link>https://infosec-academy.github.io/linux-training/docs/101/paket-y%C3%B6netimi/rpm/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/docs/101/paket-y%C3%B6netimi/rpm/</guid>
+      <guid>https://infosec-academy.github.io/linux-training/docs/101/paket-y%C3%B6netimi/rpm/</guid>
       <description>RPM (Red Hat Package Manager), Linux işletim sistemi için bir paket yönetim sistemidir. RPM, Red Hat ve diğer bazı Linux dağıtımları tarafından kullanılır ve paketlerin kurulumu, kaldırılması, güncellenmesi ve yönetimi için kullanılır.
 RPM, paketlerin dosya sistemine nasıl yerleştirileceği ve kurulum sırasında hangi diğer paketlerin gereksinimlerinin karşılanacağı gibi konuları ele alır. Ayrıca paketlerin diğer sistemlerle uyumlu olup olmadığını kontrol eder ve uyumsuzluk durumunda uygun hataları rapor eder.
 RPM, özellikle sunucu sistemleri gibi büyük ve karmaşık Linux sistemlerinde kullanımı yaygındır.</description>
@@ -31,10 +31,10 @@ RPM, özellikle sunucu sistemleri gibi büyük ve karmaşık Linux sistemlerinde
     
     <item>
       <title>Terminoloji</title>
-      <link>http://example.org/docs/101/paket-y%C3%B6netimi/terminoloji/</link>
+      <link>https://infosec-academy.github.io/linux-training/docs/101/paket-y%C3%B6netimi/terminoloji/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/docs/101/paket-y%C3%B6netimi/terminoloji/</guid>
+      <guid>https://infosec-academy.github.io/linux-training/docs/101/paket-y%C3%B6netimi/terminoloji/</guid>
       <description>Repository #  Bir bilgi deposunu veya bir veritabanını ifade eder. Bilgisayar bilimlerinde, bir yazılım projesi veya kaynak kodu gibi diğer dijital materyallerin saklandığı, yönetildiği ve paylaşıldığı bir depoya genellikle &amp;ldquo;repository&amp;rdquo; denir.
 Bu depolama alanı, birçok kişinin aynı proje üzerinde çalışmasına olanak tanır ve bu nedenle, yazılım geliştirme ekibi, farklı sürümleri ve değişiklikleri yönetmek, düzenlemek ve takip etmek için bu depolama alanını kullanabilir.
 .deb #  Debian, Ubuntu, Mint ve tüm Debian ve Ubuntu türevleri .</description>

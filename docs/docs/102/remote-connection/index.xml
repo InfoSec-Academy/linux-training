@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Linux Eğitim</title>
-    <link>http://example.org/docs/102/remote-connection/</link>
+    <link>https://infosec-academy.github.io/linux-training/docs/102/remote-connection/</link>
     <description>Recent content on Linux Eğitim</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://example.org/docs/102/remote-connection/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://infosec-academy.github.io/linux-training/docs/102/remote-connection/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ssh</title>
-      <link>http://example.org/docs/102/remote-connection/ssh/</link>
+      <link>https://infosec-academy.github.io/linux-training/docs/102/remote-connection/ssh/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/docs/102/remote-connection/ssh/</guid>
+      <guid>https://infosec-academy.github.io/linux-training/docs/102/remote-connection/ssh/</guid>
       <description>SSH, Secure Shell&amp;rsquo;in kısaltmasıdır ve güvenli bir uzak erişim protokolüdür. SSH, şifreli bir bağlantı sağlayarak bilgisayarınıza uzaktan erişim sağlar ve verilerinizi şifreler. Ayrıca SSH, dosya transferleri, X11 bağlantıları ve TCP bağlantıları için de kullanılabilir.
 SSH, Linux ve Unix işletim sistemlerinde bulunur ve aynı zamanda birçok Windows sistemlerinde de kullanılabilir. Ayrıca, birçok bulut sunucu sağlayıcısı da SSH erişimi sağlar.
 Birçok Linux/Unix dağıtımında, SSH varsayılan olarak kurulu olarak gelir. Ancak, bir nedenle SSH kurulu değilse, şu adımları izleyerek kurabilirsiniz:</description>

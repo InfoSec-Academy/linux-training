@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Linux Eğitim</title>
-    <link>http://example.org/docs/101/kullan%C4%B1c%C4%B1-ve-yetkilendirme/</link>
+    <link>https://infosec-academy.github.io/linux-training/docs/101/kullan%C4%B1c%C4%B1-ve-yetkilendirme/</link>
     <description>Recent content on Linux Eğitim</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://example.org/docs/101/kullan%C4%B1c%C4%B1-ve-yetkilendirme/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://infosec-academy.github.io/linux-training/docs/101/kullan%C4%B1c%C4%B1-ve-yetkilendirme/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Kullanıcı Oluşturma</title>
-      <link>http://example.org/docs/101/kullan%C4%B1c%C4%B1-ve-yetkilendirme/kullan%C4%B1c%C4%B1-olu%C5%9Fturma/</link>
+      <link>https://infosec-academy.github.io/linux-training/docs/101/kullan%C4%B1c%C4%B1-ve-yetkilendirme/kullan%C4%B1c%C4%B1-olu%C5%9Fturma/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/docs/101/kullan%C4%B1c%C4%B1-ve-yetkilendirme/kullan%C4%B1c%C4%B1-olu%C5%9Fturma/</guid>
+      <guid>https://infosec-academy.github.io/linux-training/docs/101/kullan%C4%B1c%C4%B1-ve-yetkilendirme/kullan%C4%B1c%C4%B1-olu%C5%9Fturma/</guid>
       <description>Kullanıcı Oluşturma #  Linux da yeni bir kullanıcı oluşturmak için;
 useradd new_user Linux&amp;rsquo;ta &amp;lsquo;useradd&amp;rsquo; komutu ile yeni bir kullanıcı eklediğimizde, kilitli bir durumda oluşturulur ve o kullanıcı hesabının kilidini açmak için, &amp;lsquo;passwd&amp;rsquo; komutuyla o hesaba bir şifre belirlememiz gerekir.
 [root@026ddc54726b /]# passwd new_user Changing password for user new_user. New password: Retype new password: passwd: all authentication tokens updated successfully. Parola Atama #  Yeni bir kullanıcı oluşturulduğunda, (şayet yönlendirme yoksa) otomatik olarak &amp;ldquo;/etc/passwd&amp;rdquo; dosyasına eklenir.</description>
@@ -19,10 +19,10 @@ useradd new_user Linux&amp;rsquo;ta &amp;lsquo;useradd&amp;rsquo; komutu ile yen
     
     <item>
       <title>Kullanıcı Silme</title>
-      <link>http://example.org/docs/101/kullan%C4%B1c%C4%B1-ve-yetkilendirme/kullan%C4%B1c%C4%B1-silme/</link>
+      <link>https://infosec-academy.github.io/linux-training/docs/101/kullan%C4%B1c%C4%B1-ve-yetkilendirme/kullan%C4%B1c%C4%B1-silme/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/docs/101/kullan%C4%B1c%C4%B1-ve-yetkilendirme/kullan%C4%B1c%C4%B1-silme/</guid>
+      <guid>https://infosec-academy.github.io/linux-training/docs/101/kullan%C4%B1c%C4%B1-ve-yetkilendirme/kullan%C4%B1c%C4%B1-silme/</guid>
       <description>Kullanıcı Silme #  Linux&amp;rsquo;ta bir kullanıcı hesabını silmek için kullanılır. Bu komut, kullanıcının home dizinini ve mail kutusunu da siler.
 userdel new_user Ayrıca, userdel komutunu kullanarak kullanıcının home dizinini silmeden, sadece kullanıcı hesabını kaldırmak için -r seçeneğini kullanabilirsiniz:
 userdel -r new_user Kaldırmak istediğiniz kullanıcı hala oturum açmışsa veya bu kullanıcıya ait çalışan işlemler varsa userdel komutu kullanıcının kaldırılmasına izin vermez.
@@ -31,10 +31,10 @@ Bu durumda, kullanıcının oturumunu kapatması ve kullanıcının çalışan t
     
     <item>
       <title>Kullanıcı Özelliklerini Değiştirme</title>
-      <link>http://example.org/docs/101/kullan%C4%B1c%C4%B1-ve-yetkilendirme/kullan%C4%B1c%C4%B1-%C3%B6zellikleri-de%C4%9Fi%C5%9Ftirme/</link>
+      <link>https://infosec-academy.github.io/linux-training/docs/101/kullan%C4%B1c%C4%B1-ve-yetkilendirme/kullan%C4%B1c%C4%B1-%C3%B6zellikleri-de%C4%9Fi%C5%9Ftirme/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/docs/101/kullan%C4%B1c%C4%B1-ve-yetkilendirme/kullan%C4%B1c%C4%B1-%C3%B6zellikleri-de%C4%9Fi%C5%9Ftirme/</guid>
+      <guid>https://infosec-academy.github.io/linux-training/docs/101/kullan%C4%B1c%C4%B1-ve-yetkilendirme/kullan%C4%B1c%C4%B1-%C3%B6zellikleri-de%C4%9Fi%C5%9Ftirme/</guid>
       <description>usermod #  Linux&amp;rsquo;ta bir kullanıcının özelliklerini değiştirmek için kullanılır. Bu komut, bir kullanıcının adını, ev dizinini, parolasını, grup üyeliğini vb. değiştirmek için kullanılabilir.
 UID Değiştirme
 [root@026ddc54726b /]# id new_user uid=1000(new_user) gid=1000(new_user) groups=1000(new_user) [root@026ddc54726b /]# usermod -u 1005 new_user [root@026ddc54726b /]# id new_user uid=1005(new_user) gid=1000(new_user) groups=1000(new_user) GID Değiştirme
@@ -43,10 +43,10 @@ UID Değiştirme
     
     <item>
       <title>Dosya Yetkilendirme</title>
-      <link>http://example.org/docs/101/kullan%C4%B1c%C4%B1-ve-yetkilendirme/dosya-yetkilendirme/</link>
+      <link>https://infosec-academy.github.io/linux-training/docs/101/kullan%C4%B1c%C4%B1-ve-yetkilendirme/dosya-yetkilendirme/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/docs/101/kullan%C4%B1c%C4%B1-ve-yetkilendirme/dosya-yetkilendirme/</guid>
+      <guid>https://infosec-academy.github.io/linux-training/docs/101/kullan%C4%B1c%C4%B1-ve-yetkilendirme/dosya-yetkilendirme/</guid>
       <description>Bir Dosyanın Geçerli Sahibini ve Grup Sahipliğini Bulma #  Linux&amp;rsquo;ta bir dosya/dizinde yer alan izinleri gösteren güçlü ve muhtemelen tanıdık bir komut vardır. Bu, ls -l komutudur:
 [root@026ddc54726b opt]# ls -l -rwxr--r-- 1 root root 0 Apr 25 06:38 test.sh  ilk karakter dosya türünü belirtir. (-)  (-) dosya (d) dizin (I) sembolik link
   2-4 karakter kullanıcı için izinlerini belirtir.(rwx) 5-7 karakter group izinlerini belirtir.(r&amp;ndash;) 8-10 karakter diğerizinleri belirtir.</description>

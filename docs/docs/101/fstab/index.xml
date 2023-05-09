@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Linux Eğitim</title>
-    <link>http://example.org/docs/101/fstab/</link>
+    <link>https://infosec-academy.github.io/linux-training/docs/101/fstab/</link>
     <description>Recent content on Linux Eğitim</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://example.org/docs/101/fstab/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://infosec-academy.github.io/linux-training/docs/101/fstab/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>fstab</title>
-      <link>http://example.org/docs/101/fstab/fstab/</link>
+      <link>https://infosec-academy.github.io/linux-training/docs/101/fstab/fstab/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/docs/101/fstab/fstab/</guid>
+      <guid>https://infosec-academy.github.io/linux-training/docs/101/fstab/fstab/</guid>
       <description>fstab (File System Table) Linux işletim sistemi dosya sistemi yönetiminde kullanılan bir dosyadır. Bu dosya, sistemin açılış sırasında otomatik olarak bağlanması gereken dosya sistemlerini belirler. Bu dosyadaki girdiler, işletim sistemi tarafından otomatik olarak yüklenir.
 fstab dosyası, dosya sistemi türleri ve parametreleri belirleyerek sistemdeki dosya sistemlerinin nasıl monte edileceğini belirler. Ayrıca bu dosya, sistem açılırken otomatik olarak monte edilecek dosya sistemleri, hangi kullanıcıların bunu yapabileceği, nasıl yapılandırılacağı ve bağlama seçenekleri hakkında bilgi içerir.</description>
     </item>

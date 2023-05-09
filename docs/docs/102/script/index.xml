@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Linux Eğitim</title>
-    <link>http://example.org/docs/102/script/</link>
+    <link>https://infosec-academy.github.io/linux-training/docs/102/script/</link>
     <description>Recent content on Linux Eğitim</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://example.org/docs/102/script/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://infosec-academy.github.io/linux-training/docs/102/script/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>bash script</title>
-      <link>http://example.org/docs/102/script/bash/</link>
+      <link>https://infosec-academy.github.io/linux-training/docs/102/script/bash/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/docs/102/script/bash/</guid>
+      <guid>https://infosec-academy.github.io/linux-training/docs/102/script/bash/</guid>
       <description>Bash script nedir? #  Bash scriptler, bir dizi komutu veya bir betiği çalıştıran, Linux veya diğer Unix benzeri işletim sistemlerinde çalışan betiklerdir.
 Bash scriptler neden kullanılır? #  Bash scriptler, işlem tekrarlamaları, rutin görevlerin otomatikleştirilmesi, sistem yapılandırmaları, programlama gibi birçok farklı amaçla kullanılabilirler.
 Bash script dosyası oluşturma #  Bir bash script dosyası oluşturmak için bir metin editörü kullanabilirsiniz. Örnek bir bash script dosyası adı: &amp;ldquo;my_script.sh&amp;rdquo;
@@ -20,20 +20,20 @@ Bash script dosyası izinlerinin ayarlanması #  Bash script dosyasını çalı�
     
     <item>
       <title>if</title>
-      <link>http://example.org/docs/102/script/if/</link>
+      <link>https://infosec-academy.github.io/linux-training/docs/102/script/if/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/docs/102/script/if/</guid>
+      <guid>https://infosec-academy.github.io/linux-training/docs/102/script/if/</guid>
       <description>if koşulu, bir şartın doğru olup olmadığını kontrol etmek için kullanılır. Örneğin, belirli bir dosya varsa bir komutu çalıştırmak isteyebilirsiniz. Aşağıdaki örnekte, eğer &amp;ldquo;myfile.txt&amp;rdquo; adlı dosya varsa, o zaman &amp;ldquo;dosya var&amp;rdquo; yazdıracak, aksi takdirde &amp;ldquo;dosya yok&amp;rdquo; yazdıracak:
 if [ -f &amp;#34;myfile.txt&amp;#34; ] then  echo &amp;#34;dosya var&amp;#34; else  echo &amp;#34;dosya yok&amp;#34; fi Örnek #  #!/bin/bash # Bu script ile bir sayının tek mi çift mi olduğunu kontrol ediyoruz.  echo &amp;#34;Lütfen bir sayı giriniz: &amp;#34; read sayi  if (( $sayi % 2 == 0 )) then  echo &amp;#34;$sayi sayısı çifttir.</description>
     </item>
     
     <item>
       <title>listeler</title>
-      <link>http://example.org/docs/102/script/listeler/</link>
+      <link>https://infosec-academy.github.io/linux-training/docs/102/script/listeler/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/docs/102/script/listeler/</guid>
+      <guid>https://infosec-academy.github.io/linux-training/docs/102/script/listeler/</guid>
       <description>Bash script&amp;rsquo;inde listeler, ayrılmış öğelerden oluşan bir dizi gibi davranır. Listeleri oluşturmak için aşağıdaki gibi bir syntax kullanabilirsiniz:
 my_array=(item1 item2 item3) Listelerdeki öğeler, sıfırdan başlayan bir indeksle erişilir. Örneğin, my_array&amp;rsquo;in ikinci öğesine erişmek için aşağıdaki syntax kullanılabilir:
 echo ${my_array[1]} Yeni öğeleri listeye eklemek için, += işlemini kullanabilirsiniz:
@@ -43,10 +43,10 @@ unset my_array[1] # ikinci öğeyi sil # Bir liste oluşturmak fruits=(elma armu
     
     <item>
       <title>sözlükler</title>
-      <link>http://example.org/docs/102/script/s%C3%B6zl%C3%BCkler/</link>
+      <link>https://infosec-academy.github.io/linux-training/docs/102/script/s%C3%B6zl%C3%BCkler/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/docs/102/script/s%C3%B6zl%C3%BCkler/</guid>
+      <guid>https://infosec-academy.github.io/linux-training/docs/102/script/s%C3%B6zl%C3%BCkler/</guid>
       <description>Bash script&amp;rsquo;inde sözlükler, anahtar-değer çiftlerinden oluşan bir yapıdır. Sözlükler oluşturmak için aşağıdaki gibi bir syntax kullanabilirsiniz:
 declare -A my_dict # -A seçeneği, bir sözlük oluşturur my_dict=([key1]=value1 [key2]=value2 [key3]=value3) Yeni bir öğe eklemek için, aşağıdaki gibi bir syntax kullanabilirsiniz:
 my_dict[key4]=value4 Bir öğe silmek için, unset komutunu kullanabilirsiniz:
@@ -56,40 +56,40 @@ echo ${!my_dict[@]} # tüm anahtarları alır echo ${my_dict[@]} # tüm değerle
     
     <item>
       <title>while</title>
-      <link>http://example.org/docs/102/script/while/</link>
+      <link>https://infosec-academy.github.io/linux-training/docs/102/script/while/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/docs/102/script/while/</guid>
+      <guid>https://infosec-academy.github.io/linux-training/docs/102/script/while/</guid>
       <description>while döngüsü, belirli bir şart doğru olduğu sürece bir işlemi tekrar tekrar yapmak için kullanılır. Örneğin, bir dizi sayıyı toplamak isteyebilirsiniz. Aşağıdaki örnekte, 1&amp;rsquo;den 5&amp;rsquo;e kadar olan sayıları toplar:
 sum=0 i=1  while [ $i -le 5 ] do  sum=$((sum+i))  i=$((i+1)) done  echo &amp;#34;Toplam: $sum&amp;#34; Örnek #  #!/bin/bash # Bu script ile sayıları 1&amp;#39;den 10&amp;#39;a kadar yazdırıyoruz.  sayi=1 while [ $sayi -le 10 ] do  echo $sayi  sayi=$((sayi+1)) done Burada, sayi değişkenini 1&amp;rsquo;den başlatıyoruz.</description>
     </item>
     
     <item>
       <title>switch/case</title>
-      <link>http://example.org/docs/102/script/switch/</link>
+      <link>https://infosec-academy.github.io/linux-training/docs/102/script/switch/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/docs/102/script/switch/</guid>
+      <guid>https://infosec-academy.github.io/linux-training/docs/102/script/switch/</guid>
       <description>switch/case koşulu, birden fazla koşulun kontrol edilmesi gerektiğinde kullanılır. Örneğin, bir seçim menüsü oluşturmak isteyebilirsiniz. Aşağıdaki örnekte, kullanıcının girdiği sayıya göre bir işlem yapılır:
 echo &amp;#34;1. İşlem&amp;#34; echo &amp;#34;2. İşlem&amp;#34; echo &amp;#34;3. İşlem&amp;#34; echo &amp;#34;Lütfen bir sayı girin:&amp;#34; read num  case $num in  1)  echo &amp;#34;İşlem 1&amp;#34;  ;;  2)  echo &amp;#34;İşlem 2&amp;#34;  ;;  3)  echo &amp;#34;İşlem 3&amp;#34;  ;;  *)  echo &amp;#34;Geçersiz sayı&amp;#34;  ;; esac Örnek #  #!</description>
     </item>
     
     <item>
       <title>sed</title>
-      <link>http://example.org/docs/102/script/sed/</link>
+      <link>https://infosec-academy.github.io/linux-training/docs/102/script/sed/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/docs/102/script/sed/</guid>
+      <guid>https://infosec-academy.github.io/linux-training/docs/102/script/sed/</guid>
       <description>Sed (Stream Editor) bir metin düzenleyicisidir. Temel olarak, bir metin akışının (dosya veya bir veri akışı gibi) içeriğini değiştirmek için kullanılır. Genellikle komut satırı aracılığıyla kullanılır ve birçok işletim sisteminde öntanımlı olarak yüklüdür.
 Sed, düzenli ifadeler (regular expressions) kullanarak metin akışını işleyebilir. İşlem yaparken, orijinal veri akışını bozmadan yeni bir metin akışı oluşturur. Sed ayrıca, çeşitli sed komutları ve argümanları aracılığıyla, metin akışını filtrelemek, düzenlemek, eşleştirmek, değiştirmek, sıralamak ve biçimlendirmek gibi çeşitli işlemler gerçekleştirebilir.</description>
     </item>
     
     <item>
       <title>awk</title>
-      <link>http://example.org/docs/102/script/awk/</link>
+      <link>https://infosec-academy.github.io/linux-training/docs/102/script/awk/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/docs/102/script/awk/</guid>
+      <guid>https://infosec-academy.github.io/linux-training/docs/102/script/awk/</guid>
       <description>Awk, Linux ve Unix tabanlı sistemlerde bulunan bir komut satırı aracıdır. Adını oluşturan AWK, komutun yaratıcısı Alfred Aho, Peter Weinberger ve Brian Kernighan&amp;rsquo;ın isimlerinin baş harflerinden gelir. Awk, metin dosyalarında belirli bir düzen içinde arama yapmak, dosyalardan belirli verileri çekmek, düzenlemek ve filtrelemek için kullanılır.
 Awk, genellikle metin dosyalarındaki belirli satırları veya sütunları seçmek için kullanılır. Awk komutları, bir veya daha fazla eylem ve bir veya daha fazla desenden oluşur. Desenler, seçilen verilerin hangi kriterlere göre seçileceğini belirlerken, eylemler seçilen verilerin ne yapılacağını belirler.</description>
     </item>

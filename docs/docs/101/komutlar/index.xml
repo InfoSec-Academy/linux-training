@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Linux Eğitim</title>
-    <link>http://example.org/docs/101/komutlar/</link>
+    <link>https://infosec-academy.github.io/linux-training/docs/101/komutlar/</link>
     <description>Recent content on Linux Eğitim</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://example.org/docs/101/komutlar/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://infosec-academy.github.io/linux-training/docs/101/komutlar/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Temel komutlar</title>
-      <link>http://example.org/docs/101/komutlar/kabuk-komut/</link>
+      <link>https://infosec-academy.github.io/linux-training/docs/101/komutlar/kabuk-komut/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/docs/101/komutlar/kabuk-komut/</guid>
+      <guid>https://infosec-academy.github.io/linux-training/docs/101/komutlar/kabuk-komut/</guid>
       <description>Linux, bir işletim sistemi olarak, bilgisayar donanımını yönetir ve kullanıcıların bilgisayar kaynaklarını (dosyalar, yazılımlar, cihazlar vb.) yönetmelerine olanak tanır. Linux, çekirdek olarak adlandırılan temel bir bileşene sahiptir ve bu çekirdek, işletim sistemi işlevlerini yerine getirmek için kullanılır. Linux&amp;rsquo;un çalışması için, bir bilgisayarda öncelikle BIOS (Basic Input/Output System) adı verilen bir yazılım yüklü olmalıdır. BIOS, bilgisayarın temel işlevlerini sağlar, örneğin sabit disk, klavye ve fare gibi bileşenlere erişim sağlar.
 Daha sonra, bilgisayarın işletim sistemi yüklenebilmesi için bir önyükleme işlemi gerçekleştirilir.</description>
     </item>

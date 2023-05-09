@@ -1,4 +1,4 @@
-baseURL = 'http://example.org/'
+baseURL = 'https://infosec-academy.github.io/linux-training/'
 languageCode = 'en-us'
 title = 'Linux Eğitim'
 theme = 'hugo-book'

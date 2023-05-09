@@ -2,173 +2,173 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://example.org/docs/101/linux/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/101/linux/</loc>
   </url><url>
-    <loc>http://example.org/docs/102/kernel/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/102/kernel/</loc>
   </url><url>
-    <loc>http://example.org/docs/102/network/network/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/102/network/network/</loc>
   </url><url>
-    <loc>http://example.org/docs/102/monitoring/atop/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/102/monitoring/atop/</loc>
   </url><url>
-    <loc>http://example.org/docs/102/script/bash/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/102/script/bash/</loc>
   </url><url>
-    <loc>http://example.org/docs/101/sorun-giderme/dmesg/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/101/sorun-giderme/dmesg/</loc>
   </url><url>
-    <loc>http://example.org/docs/101/paket-y%C3%B6netimi/dpkg/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/101/paket-y%C3%B6netimi/dpkg/</loc>
   </url><url>
-    <loc>http://example.org/docs/102/script/if/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/102/script/if/</loc>
   </url><url>
-    <loc>http://example.org/docs/102/monitoring/iostat/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/102/monitoring/iostat/</loc>
   </url><url>
-    <loc>http://example.org/docs/102/kernel/kernel/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/102/kernel/kernel/</loc>
   </url><url>
-    <loc>http://example.org/docs/102/konteyner/konteyner/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/102/konteyner/konteyner/</loc>
   </url><url>
-    <loc>http://example.org/docs/101/kullan%C4%B1c%C4%B1-ve-yetkilendirme/kullan%C4%B1c%C4%B1-olu%C5%9Fturma/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/101/kullan%C4%B1c%C4%B1-ve-yetkilendirme/kullan%C4%B1c%C4%B1-olu%C5%9Fturma/</loc>
   </url><url>
-    <loc>http://example.org/docs/101/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/101/</loc>
   </url><url>
-    <loc>http://example.org/docs/101/linux/nedir/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/101/linux/nedir/</loc>
   </url><url>
-    <loc>http://example.org/docs/102/script/listeler/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/102/script/listeler/</loc>
   </url><url>
-    <loc>http://example.org/docs/102/monitoring/lsof/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/102/monitoring/lsof/</loc>
   </url><url>
-    <loc>http://example.org/docs/102/kernel/modprobe/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/102/kernel/modprobe/</loc>
   </url><url>
-    <loc>http://example.org/docs/102/edit%C3%B6r/nano/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/102/edit%C3%B6r/nano/</loc>
   </url><url>
-    <loc>http://example.org/docs/101/a%C4%9F-y%C3%B6netimi/nic/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/101/a%C4%9F-y%C3%B6netimi/nic/</loc>
   </url><url>
-    <loc>http://example.org/docs/101/paket-y%C3%B6netimi/rpm/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/101/paket-y%C3%B6netimi/rpm/</loc>
   </url><url>
-    <loc>http://example.org/docs/security/shadow/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/security/shadow/</loc>
   </url><url>
-    <loc>http://example.org/docs/102/script/s%C3%B6zl%C3%BCkler/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/102/script/s%C3%B6zl%C3%BCkler/</loc>
   </url><url>
-    <loc>http://example.org/docs/102/remote-connection/ssh/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/102/remote-connection/ssh/</loc>
   </url><url>
-    <loc>http://example.org/docs/102/systemd/servis/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/102/systemd/servis/</loc>
   </url><url>
-    <loc>http://example.org/docs/101/komutlar/kabuk-komut/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/101/komutlar/kabuk-komut/</loc>
   </url><url>
-    <loc>http://example.org/docs/101/kurulum/terminoloji/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/101/kurulum/terminoloji/</loc>
   </url><url>
-    <loc>http://example.org/docs/101/paket-y%C3%B6netimi/terminoloji/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/101/paket-y%C3%B6netimi/terminoloji/</loc>
   </url><url>
-    <loc>http://example.org/docs/102/monitoring/top/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/102/monitoring/top/</loc>
   </url><url>
-    <loc>http://example.org/docs/102/edit%C3%B6r/vim/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/102/edit%C3%B6r/vim/</loc>
   </url><url>
-    <loc>http://example.org/docs/102/script/while/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/102/script/while/</loc>
   </url><url>
-    <loc>http://example.org/docs/101/kurulum/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/101/kurulum/</loc>
   </url><url>
-    <loc>http://example.org/docs/102/monitoring/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/102/monitoring/</loc>
   </url><url>
-    <loc>http://example.org/docs/102/network/fail2ban/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/102/network/fail2ban/</loc>
   </url><url>
-    <loc>http://example.org/docs/101/kurulum/fedora-server/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/101/kurulum/fedora-server/</loc>
   </url><url>
-    <loc>http://example.org/docs/102/kernel/grub/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/102/kernel/grub/</loc>
   </url><url>
-    <loc>http://example.org/docs/101/a%C4%9F-y%C3%B6netimi/ip/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/101/a%C4%9F-y%C3%B6netimi/ip/</loc>
   </url><url>
-    <loc>http://example.org/docs/102/network/iptables/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/102/network/iptables/</loc>
   </url><url>
-    <loc>http://example.org/docs/101/kullan%C4%B1c%C4%B1-ve-yetkilendirme/kullan%C4%B1c%C4%B1-silme/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/101/kullan%C4%B1c%C4%B1-ve-yetkilendirme/kullan%C4%B1c%C4%B1-silme/</loc>
   </url><url>
-    <loc>http://example.org/docs/102/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/102/</loc>
   </url><url>
-    <loc>http://example.org/docs/101/linux/tarihcesi/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/101/linux/tarihcesi/</loc>
   </url><url>
-    <loc>http://example.org/docs/102/konteyner/lxc/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/102/konteyner/lxc/</loc>
   </url><url>
-    <loc>http://example.org/docs/101/sorun-giderme/secure/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/101/sorun-giderme/secure/</loc>
   </url><url>
-    <loc>http://example.org/docs/102/systemd/systemd/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/102/systemd/systemd/</loc>
   </url><url>
-    <loc>http://example.org/docs/security/sudo/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/security/sudo/</loc>
   </url><url>
-    <loc>http://example.org/docs/102/network/tcpdump/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/102/network/tcpdump/</loc>
   </url><url>
-    <loc>http://example.org/docs/security/who/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/security/who/</loc>
   </url><url>
-    <loc>http://example.org/docs/101/komutlar/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/101/komutlar/</loc>
   </url><url>
-    <loc>http://example.org/docs/101/kullan%C4%B1c%C4%B1-ve-yetkilendirme/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/101/kullan%C4%B1c%C4%B1-ve-yetkilendirme/</loc>
   </url><url>
-    <loc>http://example.org/docs/102/network/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/102/network/</loc>
   </url><url>
-    <loc>http://example.org/docs/102/konteyner/docker/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/102/konteyner/docker/</loc>
   </url><url>
-    <loc>http://example.org/docs/101/kullan%C4%B1c%C4%B1-ve-yetkilendirme/kullan%C4%B1c%C4%B1-%C3%B6zellikleri-de%C4%9Fi%C5%9Ftirme/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/101/kullan%C4%B1c%C4%B1-ve-yetkilendirme/kullan%C4%B1c%C4%B1-%C3%B6zellikleri-de%C4%9Fi%C5%9Ftirme/</loc>
   </url><url>
-    <loc>http://example.org/docs/101/linux/kurulum/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/101/linux/kurulum/</loc>
   </url><url>
-    <loc>http://example.org/docs/security/pam/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/security/pam/</loc>
   </url><url>
-    <loc>http://example.org/docs/security/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/security/</loc>
   </url><url>
-    <loc>http://example.org/docs/102/script/switch/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/102/script/switch/</loc>
   </url><url>
-    <loc>http://example.org/docs/101/kurulum/ubuntu-server/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/101/kurulum/ubuntu-server/</loc>
   </url><url>
-    <loc>http://example.org/docs/101/paket-y%C3%B6netimi/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/101/paket-y%C3%B6netimi/</loc>
   </url><url>
-    <loc>http://example.org/docs/101/linux/da%C4%9F%C4%B1t%C4%B1mlar/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/101/linux/da%C4%9F%C4%B1t%C4%B1mlar/</loc>
   </url><url>
-    <loc>http://example.org/docs/101/kullan%C4%B1c%C4%B1-ve-yetkilendirme/dosya-yetkilendirme/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/101/kullan%C4%B1c%C4%B1-ve-yetkilendirme/dosya-yetkilendirme/</loc>
   </url><url>
-    <loc>http://example.org/docs/101/a%C4%9F-y%C3%B6netimi/resolv/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/101/a%C4%9F-y%C3%B6netimi/resolv/</loc>
   </url><url>
-    <loc>http://example.org/docs/102/edit%C3%B6r/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/102/edit%C3%B6r/</loc>
   </url><url>
-    <loc>http://example.org/docs/102/konteyner/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/102/konteyner/</loc>
   </url><url>
-    <loc>http://example.org/docs/102/remote-connection/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/102/remote-connection/</loc>
   </url><url>
-    <loc>http://example.org/docs/102/script/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/102/script/</loc>
   </url><url>
-    <loc>http://example.org/docs/101/a%C4%9F-y%C3%B6netimi/hosts/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/101/a%C4%9F-y%C3%B6netimi/hosts/</loc>
   </url><url>
-    <loc>http://example.org/docs/101/crontab/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/101/crontab/</loc>
   </url><url>
-    <loc>http://example.org/docs/102/systemd/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/102/systemd/</loc>
   </url><url>
-    <loc>http://example.org/docs/101/crontab/crontab/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/101/crontab/crontab/</loc>
   </url><url>
-    <loc>http://example.org/docs/101/a%C4%9F-y%C3%B6netimi/dig/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/101/a%C4%9F-y%C3%B6netimi/dig/</loc>
   </url><url>
-    <loc>http://example.org/docs/101/a%C4%9F-y%C3%B6netimi/static-ip/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/101/a%C4%9F-y%C3%B6netimi/static-ip/</loc>
   </url><url>
-    <loc>http://example.org/docs/101/fstab/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/101/fstab/</loc>
   </url><url>
-    <loc>http://example.org/docs/101/fstab/fstab/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/101/fstab/fstab/</loc>
   </url><url>
-    <loc>http://example.org/docs/101/a%C4%9F-y%C3%B6netimi/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/101/a%C4%9F-y%C3%B6netimi/</loc>
   </url><url>
-    <loc>http://example.org/docs/101/a%C4%9F-y%C3%B6netimi/traceroute/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/101/a%C4%9F-y%C3%B6netimi/traceroute/</loc>
   </url><url>
-    <loc>http://example.org/docs/101/sorun-giderme/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/101/sorun-giderme/</loc>
   </url><url>
-    <loc>http://example.org/docs/101/a%C4%9F-y%C3%B6netimi/ethtool/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/101/a%C4%9F-y%C3%B6netimi/ethtool/</loc>
   </url><url>
-    <loc>http://example.org/docs/102/script/sed/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/102/script/sed/</loc>
   </url><url>
-    <loc>http://example.org/docs/102/script/awk/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/102/script/awk/</loc>
   </url><url>
-    <loc>http://example.org/docs/101/a%C4%9F-y%C3%B6netimi/terminoloji/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/101/a%C4%9F-y%C3%B6netimi/terminoloji/</loc>
   </url><url>
-    <loc>http://example.org/docs/101/linux/terminoloji/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/101/linux/terminoloji/</loc>
   </url><url>
-    <loc>http://example.org/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/</loc>
     <lastmod>2021-08-20T15:13:10+03:00</lastmod>
   </url><url>
-    <loc>http://example.org/categories/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/categories/</loc>
   </url><url>
-    <loc>http://example.org/docs/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/docs/</loc>
   </url><url>
-    <loc>http://example.org/tags/</loc>
+    <loc>https://infosec-academy.github.io/linux-training/tags/</loc>
   </url>
 </urlset>
